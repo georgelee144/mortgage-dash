@@ -26,6 +26,13 @@ app.layout = html.Div(
                     min=1,
                     style={"marginRight": "10px"},
                 ),
+                dcc.Input(
+                    id="loan_amount",
+                    type="number",
+                    placeholder="Loan Amount",
+                    min=1,
+                    style={"marginRight": "10px"},
+                ),
             ]
         ),
     ]
