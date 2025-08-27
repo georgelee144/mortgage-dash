@@ -33,6 +33,13 @@ app.layout = html.Div(
                     min=1,
                     style={"marginRight": "10px"},
                 ),
+                dcc.Input(
+                    id="annual_rate_percentage",
+                    type="number",
+                    placeholder="Interest Rate (%)",
+                    value = float(fred_data_service.get_most_recent_interest_rate()),
+                    style={"marginRight": "10px"},
+                ),
             ]
         ),
     ]
