@@ -1,4 +1,7 @@
 import os
+
+print(f"--- Is the FRED API Key loaded? -> '{os.getenv('FRED_API')}' ---")
+
 from dash import Dash, dcc, html, Input, Output, callback, dash_table
 from dash.exceptions import PreventUpdate
 import plotly.graph_objects as go
@@ -37,10 +40,23 @@ app.layout = html.Div(
                     id="annual_rate_percentage",
                     type="number",
                     placeholder="Interest Rate (%)",
-                    value = float(fred_data_service.get_most_recent_interest_rate()),
+                    value=float(fred_data_service.get_most_recent_interest_rate()),
                     style={"marginRight": "10px"},
                 ),
-            ]
+                dcc.Input(
+                    id="term_in_months",
+                    type="number",
+                    value=360,
+                    min=1,
+                    style={"marginRight": "10px"},
+                ),
+            ],
+            style={
+                "marginBottom": "20px",
+                "padding": "10px",
+                "border": "1px solid #ddd",
+                "borderRadius": "5px",
+            },
         ),
     ]
 )
