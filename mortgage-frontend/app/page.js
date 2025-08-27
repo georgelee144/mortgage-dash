@@ -1,6 +1,8 @@
+"use client";
 
-export default function Home() {
-  return (
-   
-  );
+import { useState, useEffect } from "react";
+import Plot from "react-plotly.js";
+
+export default function Home(){
+  
 }
