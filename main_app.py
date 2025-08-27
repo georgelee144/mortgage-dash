@@ -10,3 +10,5 @@ import property_math
 external_css = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = Dash(__name__, external_stylesheets=external_css)
 server = app.server #for deployment use
+
+fred_data_service = FRED_data_service.FRED_data(API_key=os.getenv("FRED_API",""))
