@@ -24,3 +24,27 @@ def get_current_rate():
         return jsonify({"rate": float(rate)})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/amortization", methods=["POST"])
+def get_amortization_schedule():
+    """Endpoint to calculate the mortgage amortization schedule."""
+    data = request.get_json()
+
+    # Basic validation
+    required_keys = ["loanAmount", "propertyValue", "annualRate", "termInMonths"]
+    if not all(key in data for key in required_keys):
+        return jsonify({"error": "Missing required fields"}), 400
+
+    try:
+        mortgage = property_math.Mortgage(
+            annual_rate_percentage=float(data["annualRate"]),
+            number_of_periods_for_loan_term=int(data["termInMonths"]),
+            loan_amount=float(data["loanAmount"]),
+            property_value=float(data["propertyValue"]),
+        )
+        df = mortgage.get_mortgage_ammortization()
+        # Convert DataFrame to a list of dictionaries for JSON compatibility
+        return jsonify(df.to_dict("records"))
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
