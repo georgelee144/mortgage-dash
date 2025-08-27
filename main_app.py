@@ -70,7 +70,9 @@ app.layout = html.Div(
                             dcc.Dropdown(
                                 ["Bar Graph", "Line Graph"], "Bar Graph", id="graph_selector",
                                 style={'width':'50%', 'marginTop':'20px'}
-                            )
+                            ),
+                            dcc.Graph(id="amortization-graph"),
+                            html.Button("Download Amortization Table", id=""),
                         ])
                     ],
                 )
