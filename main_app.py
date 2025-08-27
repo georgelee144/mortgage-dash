@@ -66,7 +66,12 @@ app.layout = html.Div(
                     label="Mortgage Amoritization Calculator",
                     value="tab-mortgage",
                     children=[
-                            
+                        html.Div([
+                            dcc.Dropdown(
+                                ["Bar Graph", "Line Graph"], "Bar Graph", id="graph_selector",
+                                style={'width':'50%', 'marginTop':'20px'}
+                            )
+                        ])
                     ],
                 )
             ],
