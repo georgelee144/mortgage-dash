@@ -58,5 +58,18 @@ app.layout = html.Div(
                 "borderRadius": "5px",
             },
         ),
+        dcc.Tabs(
+            id="tabs-main",
+            value="tab-mortage",
+            children=[
+                dcc.Tab(
+                    label="Mortgage Amoritization Calculator",
+                    value="tab-mortgage",
+                    children=[
+                            
+                    ],
+                )
+            ],
+        ),
     ]
 )
