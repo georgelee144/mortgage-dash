@@ -1,4 +1,5 @@
 import os
+from typing import Any, Dict, Tuple
 from dash import Dash, dcc, html, Input, Output, callback, dash_table
 from dash.exceptions import PreventUpdate
 import plotly.graph_objects as go
@@ -42,7 +43,7 @@ app.layout = html.Div(
             ]
         ),
         html.Div(
-            children=[dash_table.DataTable(id="property_value_table")],
+            children=[dash_table.DataTable(id="simulated_property_value_table")],
             id="table_div",
             title="Property value table",
         ),
@@ -60,14 +61,13 @@ def update_property_value(
     term_in_months: int,
     property_value: float,
     property_price_index: str,
-):
+) -> dcc.Graph:
     if term_in_months is None or property_value is None or property_price_index is None:
         raise PreventUpdate
 
     df_sample_data = fred_data_service.get_FRED_data_observations(
         series_key_or_series_id=property_price_index
     )
-    df_sample_data["returns"] = df_sample_data["Value"].pct_change()
 
     sample_data = df_sample_data["returns"]
     monte_carlo_property_value_simulator = property_math.MonteCarloPropertyValue(
@@ -84,7 +84,7 @@ def update_property_value(
     )
 
     fig.update_layout(
-        title_text="Mortgage Ammortization and Equity assuming contsant property value over time."
+        title_text=f"Simulated Property Value based on the past performance of {property_price_index}"
     )
     fig.update_layout(hovermode="x")
 
@@ -92,34 +92,32 @@ def update_property_value(
 
 
 @callback(
-    Output(component_id="ammortization_table", component_property="data"),
-    Output(component_id="ammortization_table", component_property="page_size"),
-    Input(component_id="loan_amount", component_property="value"),
-    Input(component_id="annual_rate_percentage", component_property="value"),
+    Output(component_id="simulated_property_value_table", component_property="data"),
+    Output(
+        component_id="simulated_property_value_table", component_property="page_size"
+    ),
     Input(component_id="term_in_months", component_property="value"),
     Input(component_id="property_value", component_property="value"),
+    Input(component_id="property_price_index", component_property="value"),
 )
-def update_ammortization_table(
-    loan_amount: float,
-    annual_rate_percentage: float,
+def update_summary_table(
     term_in_months: int,
     property_value: float,
-):
-    if (
-        loan_amount is None
-        or annual_rate_percentage is None
-        or term_in_months is None
-        or property_value is None
-    ):
+    property_price_index: str,
+) -> Tuple[Dict[Any, Any], int]:
+    if term_in_months is None or property_value is None or property_price_index is None:
         raise PreventUpdate
 
-    mortgage = property_math.Mortgage(
-        annual_rate_percentage=annual_rate_percentage,
-        number_of_periods_for_loan_term=term_in_months,
-        loan_amount=loan_amount,
-        property_value=property_value,
+    df_sample_data = fred_data_service.get_FRED_data_observations(
+        series_key_or_series_id=property_price_index
     )
-    df = mortgage.get_mortgage_ammortization()
+
+    sample_data = df_sample_data["returns"]
+    monte_carlo_property_value_simulator = property_math.MonteCarloPropertyValue(
+        starting_property_value=property_value, sample_data=sample_data
+    )
+
+    df = monte_carlo_property_value_simulator.summary_results()
 
     return df.to_dict("records"), len(df)
 

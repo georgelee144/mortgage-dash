@@ -15,7 +15,8 @@ class FRED_data:
 
     FRED_data_constants = {
         "average_30_year": "MORTGAGE30US",
-        "S&P CoreLogic Case-Shiller U.S. National Home Price Index": "CSUSHPISA",
+        "S&P CoreLogic Case-Shiller U.S. National Home Price Index (Seasonal Adjusted)": "CSUSHPISA",
+        "S&P CoreLogic Case-Shiller U.S. National Home Price Index": "CSUSHPINSA",
     }
 
     def make_FRED_parameters(
@@ -28,6 +29,8 @@ class FRED_data:
             "order_by": "observation_date",
             "sort_order": "asc",
             "file_type": "json",
+            "frequency": "m",
+            "aggregation_method": "eop",
             "series_id": series_id,
             "realtime_start": realtime_start,
             "realtime_end": realtime_end,
@@ -72,7 +75,14 @@ class FRED_data:
         )
         df_raw.dropna(subset=["Date"], inplace=True)
 
-        return df_raw[["Date", "Value"]]
+        aggregated_df = df_raw.groupby("Date").agg(
+            last_value_per_month=pd.NamedAgg(column="Value", aggfunc="last")
+        )
+        aggregated_df["returns"] = aggregated_df["last_value_per_month"].pct_change()
+
+        self.last_cleaned_df = {series_id: aggregated_df}
+
+        return aggregated_df
 
     def get_FRED_data_observations(
         self,

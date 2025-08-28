@@ -25,7 +25,7 @@ app.layout = html.Div(
             id="term_in_months",
             type="number",
             value=360,
-            min=1,
+            min=1
         ),
         html.Div(
             children=[
