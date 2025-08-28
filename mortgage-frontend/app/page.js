@@ -23,4 +23,6 @@ export default function Home() {
   const [isAmortizationLoading, setIsAmortizationLoading] = useState(false);
   const [isMonteCarloLoading, setIsMonteCarloLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const API_BASE_URL = "http://127.0.0.1:5000";
 }
