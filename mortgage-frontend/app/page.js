@@ -5,4 +5,5 @@ import Plot from "react-plotly.js";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("calculator");
+  const [loanAmount, setLoanAmount] = useState(500000);
 }
