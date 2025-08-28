@@ -28,13 +28,19 @@ export default function Home() {
 
   //--- Data Fetching ---
   // Fetch the initial interest rate when the component first loads.
-  useEffect(()=>{
-    const fetchInitalRate = async()=>{
-      try{
+  useEffect(() => {
+    const fetchInitalRate = async () => {
+      try {
         const response = await fetch(`${API_BASE_URL}/api/current-rate`);
-        
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
+        if (data.rate) {
+          setAnnualRate(data.rate.toFixed(2));
+        }
+      } catch (err) {
+        console.error("Failed to fetch current rate:", err);
+        setError("Could not fetch the current interest rate from the server.");
       }
-    }
-  })
-
+    };
+  });
 }
