@@ -21,4 +21,6 @@ export default function Home() {
   const [monteCarloData, setMonteCarloData] = useState(null);
 
   const [isAmortizationLoading, setIsAmortizationLoading] = useState(false);
+  const [isMonteCarloLoading, setIsMonteCarloLoading] = useState(false);
+  const [error, setError] = useState("");
 }
