@@ -19,4 +19,6 @@ export default function Home() {
   // Data states
   const [amortizationData, setAmortizationData] = useState([]);
   const [monteCarloData, setMonteCarloData] = useState(null);
+
+  const [isAmortizationLoading, setIsAmortizationLoading] = useState(false);
 }
