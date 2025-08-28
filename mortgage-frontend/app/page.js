@@ -29,7 +29,12 @@ export default function Home() {
   //--- Data Fetching ---
   // Fetch the initial interest rate when the component first loads.
   useEffect(()=>{
-    
+    const fetchInitalRate = async()=>{
+      try{
+        const response = await fetch(`${API_BASE_URL}/api/current-rate`);
+        
+      }
+    }
   })
 
 }
