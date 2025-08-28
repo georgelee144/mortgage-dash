@@ -15,4 +15,8 @@ export default function Home() {
   const [priceIndexKey, setPriceIndexKey] = useState(
     "S&P CoreLogic Case-Shiller U.S. National Home Price Index"
   );
+
+  // Data states
+  const [amortizationData, setAmortizationData] = useState([]);
+  const [monteCarloData, setMonteCarloData] = useState(null);
 }
