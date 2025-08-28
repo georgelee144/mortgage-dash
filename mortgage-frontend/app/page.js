@@ -42,5 +42,6 @@ export default function Home() {
         setError("Could not fetch the current interest rate from the server.");
       }
     };
+    fetchInitalRate();
   });
 }
