@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from decimal import Decimal, getcontext
-from typing import List
+from typing import List, Dict
 from numpy.typing import ArrayLike
 
 
@@ -9,7 +9,7 @@ def calculate_mortgage_payment(
     effective_interest_rate_per_compounding_period: float,
     number_of_periods_for_loan_term: int,
     loan_amount: float,
-):
+) -> Decimal:
     present_value_interest_factor = (
         1
         - (1 + effective_interest_rate_per_compounding_period)
@@ -21,7 +21,7 @@ def calculate_mortgage_payment(
     return convert_to_2_place_decimal(Decimal(payment))
 
 
-def convert_to_2_place_decimal(some_decimal: Decimal):
+def convert_to_2_place_decimal(some_decimal: Decimal) -> Decimal:
     return some_decimal.quantize(Decimal("1.00"))
 
 
@@ -31,7 +31,7 @@ def generate_mortgage_amortization_table(
     loan_amount: float,
     mortgage_payment: float | Decimal,
     property_value: float,
-):
+) -> pd.DataFrame:
     getcontext().prec = int(Decimal(loan_amount).log10().quantize(Decimal("1"))) + 2
 
     property_value = Decimal(property_value)
@@ -122,16 +122,23 @@ class MonteCarloPropertyValue:
         self,
         starting_property_value: float,
         sample_data: ArrayLike,
+        assumed_constant_annual_inflation: float = 0.02,
         seed: int | None = None,
         length_of_each_run: int = 360,
-        number_of_runs: int = 10000,
+        number_of_runs: int = 1000,
     ) -> None:
         self.starting_property_value = starting_property_value
-        self.sample_data = sample_data
+        self.sample_data = self.__clean_sample_data(sample_data)
+        self.assumed_constant_annual_inflation = assumed_constant_annual_inflation
         self.length_of_each_run = length_of_each_run
         self.number_of_runs = number_of_runs
 
         self.random_number_generator = np.random.default_rng(seed=seed)
+
+    def __clean_sample_data(self, sample_data: ArrayLike) -> np.ndarray:
+        np_sample_data = np.array(sample_data)
+
+        return np_sample_data[~np.isnan(np_sample_data)]
 
     def generate_sample_data(self):
         sampled_runs = self.random_number_generator.choice(
@@ -149,6 +156,80 @@ class MonteCarloPropertyValue:
             names=["period"]
         )
         return self.df
+
+    def summary_results(self):
+        if not hasattr(self, "df"):
+            self.generate_sample_data()
+
+        if hasattr(self, "df_stats"):
+            return self.df_stats
+
+        df_last_row = self.df.iloc[-1, 1:]
+
+        stats: Dict[str, float | np.floating] = {}
+
+        inflation_price = (
+            self.starting_property_value
+            * (1 + self.assumed_constant_annual_inflation / 12)
+            ** self.length_of_each_run
+        )
+        average_ending_price = np.average(df_last_row)
+
+        stats["Starting Price"] = self.starting_property_value
+        stats["Median End Price"] = np.median(df_last_row)
+        stats["Average End Price"] = average_ending_price
+
+        stats["Precent greater than starting price"] = (
+            len(df_last_row[df_last_row > self.starting_property_value].index)
+            / self.number_of_runs
+        )
+
+        stats["Starting Price adjusted for inflation"] = inflation_price
+        stats["Precent greater than inflation adjusted price"] = (
+            len(df_last_row[df_last_row > inflation_price].index) / self.number_of_runs
+        )
+        stats["Precent greater than average ending price"] = (
+            len(df_last_row[df_last_row > average_ending_price].index)
+            / self.number_of_runs
+        )
+
+        stats["Lowest Value"] = np.min(df_last_row)
+        stats["25th percentile"] = np.percentile(
+            a=df_last_row, q=25, method="inverted_cdf"
+        )
+        stats["75th percentile"] = np.percentile(
+            a=df_last_row, q=75, method="inverted_cdf"
+        )
+        stats["25th percentile"] = np.percentile(
+            a=df_last_row, q=25, method="inverted_cdf"
+        )
+        stats["Greatest Value"] = np.max(df_last_row)
+
+        keys = stats.keys()
+        values = [value for _, value in stats.items()]
+
+        self.df_stats = pd.DataFrame({"desc": keys, "value": values})
+
+        self.df_stats["total return based on starting value"] = (
+            self.df_stats["value"] / self.starting_property_value - 1
+        )
+        columns_to_nan_out = [
+            "Precent greater than starting price",
+            "Precent greater than inflation adjusted price",
+            "Precent greater than average ending price",
+        ]
+        self.df_stats["total return based on starting value"] = self.df_stats[
+            "total return based on starting value"
+        ].where(cond=~self.df_stats["desc"].isin(values=columns_to_nan_out), other=pd.NA)
+        self.df_stats["annual return based on starting value"] = (
+            1 + self.df_stats["total return based on starting value"]
+        ) ** (12 / self.length_of_each_run) - 1
+
+        return self.df_stats
+
+    def selective_runs_to_plot(self, max_number_runs=100):
+        # max_number_runs - 5
+        return
 
 
 if __name__ == "__main__":
