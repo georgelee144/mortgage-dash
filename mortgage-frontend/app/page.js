@@ -70,4 +70,6 @@ export default function Home() {
       setIsAmortizationLoading(false);
     }
   };
+
+  //Handler for the Monte Carlo Simulation
 }
