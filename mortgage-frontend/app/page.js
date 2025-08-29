@@ -76,5 +76,21 @@ export default function Home() {
     setIsMonteCarloLoading(true);
     setMonteCarloData(null);
     setError("");
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/monte-carlo`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ propertyValue, termInMonths, priceIndexKey }),
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || "Simulation failed");
+      setMonteCarloData(data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setIsMonteCarloLoading(false);
+    }
   };
 }
