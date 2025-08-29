@@ -43,5 +43,5 @@ export default function Home() {
       }
     };
     fetchInitalRate();
-  },[]);
+  },[]); //This is set to only run once on mount
 }
