@@ -93,4 +93,11 @@ export default function Home() {
       setIsMonteCarloLoading(false);
     }
   };
+
+  //---Rendering Logic---
+  return(
+    <main>
+      
+    </main>
+  );
 }
