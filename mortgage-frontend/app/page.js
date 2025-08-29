@@ -49,5 +49,24 @@ export default function Home() {
     setIsAmortizationLoading(true);
     setAmortizationData([]);
     setError("");
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/amortization`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          loanAmount,
+          propertyValue,
+          annualRate,
+          termInMonths,
+        }),
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || "Calculation failed");
+      setAmortizationData(data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setIsAmortizationLoading(false);
+    }
   };
 }
