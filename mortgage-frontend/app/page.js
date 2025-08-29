@@ -45,6 +45,7 @@ export default function Home() {
     fetchInitalRate();
   }, []); //This is set to only run once on mount
 
+  // Handler for the Amortization Calculator
   const handleCalculateAmortization = async () => {
     setIsAmortizationLoading(true);
     setAmortizationData([]);
