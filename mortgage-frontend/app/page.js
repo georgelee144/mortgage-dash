@@ -72,4 +72,7 @@ export default function Home() {
   };
 
   //Handler for the Monte Carlo Simulation
+  const handleRunSimulation = async () => {
+    
+  };
 }
