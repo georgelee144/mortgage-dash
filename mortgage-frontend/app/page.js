@@ -46,6 +46,8 @@ export default function Home() {
   }, []); //This is set to only run once on mount
 
   const handleCalculateAmortization = async () => {
-    
+    setIsAmortizationLoading(true);
+    setAmortizationData([]);
+    setError("");
   };
 }
