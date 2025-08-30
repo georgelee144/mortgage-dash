@@ -136,8 +136,16 @@ export default function Home() {
           />
         </div>
         <div className="inputGroup">
-          <label></label>
-          <input></input>
+          <label className="label" htmlFor="loanAmount">
+            Loan Amount ($)
+          </label>
+          <input
+            id="loanAmount"
+            className="input"
+            type="number"
+            value={loanAmount}
+            onChange={(e) => setLoanAmount(Number(e.target.value))}
+          />
         </div>
       </div>
     </main>
