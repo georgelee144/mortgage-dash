@@ -6,6 +6,7 @@ import Plot from "next/dynamic";
 const Plot = dynamic(() => import("react-plotly.js"), {
   ssr: false, // This is the key to fixing the error
 });
+
 export default function Home() {
   // --- State Management ---
   const [activeTab, setActiveTab] = useState("calculator");
@@ -23,6 +24,7 @@ export default function Home() {
   const [amortizationData, setAmortizationData] = useState([]);
   const [monteCarloData, setMonteCarloData] = useState(null);
 
+  // UI states
   const [isAmortizationLoading, setIsAmortizationLoading] = useState(false);
   const [isMonteCarloLoading, setIsMonteCarloLoading] = useState(false);
   const [error, setError] = useState("");
