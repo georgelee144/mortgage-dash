@@ -108,9 +108,15 @@ export default function Home() {
       <div className="tabs">
         <div
           className={`tab ${activeTab === "calculator" ? "active" : ""}`}
-          onClick={()=> setActiveTab('calculator')}
+          onClick={() => setActiveTab("calculator")}
         >
           Mortgage Calculator
+        </div>
+        <div
+          className={`tab ${activeTab === "simulation" ? "active" : ""}`}
+          onClick={() => setActiveTab("simulation")}
+        >
+          Property Value Simulation
         </div>
       </div>
     </main>
