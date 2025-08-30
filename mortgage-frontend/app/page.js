@@ -122,7 +122,9 @@ export default function Home() {
       </div>
 
       {/* Input Form */}
-      
+      <div className="inputGrid">
+
+      </div>
     </main>
   );
 }
