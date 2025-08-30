@@ -120,6 +120,8 @@ export default function Home() {
           Property Value Simulation
         </div>
       </div>
+
+      {/* Input Form */}
     </main>
   );
 }
