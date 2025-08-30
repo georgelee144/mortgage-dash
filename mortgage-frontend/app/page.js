@@ -147,6 +147,18 @@ export default function Home() {
             onChange={(e) => setLoanAmount(Number(e.target.value))}
           />
         </div>
+        <div className="inputGroup">
+          <label className="label" htmlFor="annualRate">
+            Annual Interest Rate (%)
+          </label>
+          <input
+            id="annualRate"
+            className="input"
+            type="number"
+            value={annualRate}
+            onChange={(e) => setAnnualRate(e.target.value)}
+          />
+        </div>
       </div>
     </main>
   );
