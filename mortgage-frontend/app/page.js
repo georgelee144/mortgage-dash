@@ -1,12 +1,14 @@
-"use client";
+"use client"; // This directive is required for using React hooks.
 
 import { useState, useEffect } from "react";
-import Plot from "next/dynamic";
+import dynamic from "next/dynamic";
 
+// --- Dynamically import the Plot component with SSR turned off ---
 const Plot = dynamic(() => import("react-plotly.js"), {
   ssr: false, // This is the key to fixing the error
 });
 
+// --- Main Component ---
 export default function Home() {
   // --- State Management ---
   const [activeTab, setActiveTab] = useState("calculator");
@@ -31,10 +33,11 @@ export default function Home() {
 
   const API_BASE_URL = "http://127.0.0.1:5000";
 
-  //--- Data Fetching ---
+  // --- Data Fetching ---
+
   // Fetch the initial interest rate when the component first loads.
   useEffect(() => {
-    const fetchInitalRate = async () => {
+    const fetchInitialRate = async () => {
       try {
         const response = await fetch(`${API_BASE_URL}/api/current-rate`);
         if (!response.ok) throw new Error("Network response was not ok");
@@ -47,8 +50,8 @@ export default function Home() {
         setError("Could not fetch the current interest rate from the server.");
       }
     };
-    fetchInitalRate();
-  }, []); //This is set to only run once on mount
+    fetchInitialRate();
+  }, []); // Empty dependency array means this runs only once on mount.
 
   // Handler for the Amortization Calculator
   const handleCalculateAmortization = async () => {
@@ -76,7 +79,7 @@ export default function Home() {
     }
   };
 
-  //Handler for the Monte Carlo Simulation
+  // Handler for the Monte Carlo Simulation
   const handleRunSimulation = async () => {
     setIsMonteCarloLoading(true);
     setMonteCarloData(null);
@@ -84,9 +87,7 @@ export default function Home() {
     try {
       const response = await fetch(`${API_BASE_URL}/api/monte-carlo`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ propertyValue, termInMonths, priceIndexKey }),
       });
       const data = await response.json();
