@@ -1,8 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Plot from "react-plotly.js";
+import Plot from "next/dynamic";
 
+const Plot = dynamic(() => import("react-plotly.js"), {
+  ssr: false, // This is the key to fixing the error
+});
 export default function Home() {
   // --- State Management ---
   const [activeTab, setActiveTab] = useState("calculator");
@@ -95,9 +98,9 @@ export default function Home() {
   };
 
   //---Rendering Logic---
-  return(
+  return (
     <main className="container">
-      
+      <h1></h1>
     </main>
   );
 }
