@@ -159,6 +159,18 @@ export default function Home() {
             onChange={(e) => setAnnualRate(e.target.value)}
           />
         </div>
+        <div className="inputGroup">
+          <label className="label" htmlFor="termInMonths">
+            Loan Term (Months)
+          </label>
+          <input
+            id="termInMonths"
+            className="input"
+            type="number"
+            value={termInMonths}
+            onChange={(e) => setTermInMonths(Number(e.target.value))}
+          />
+        </div>
       </div>
     </main>
   );
