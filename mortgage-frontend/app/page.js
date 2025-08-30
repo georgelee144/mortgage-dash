@@ -135,7 +135,7 @@ export default function Home() {
             onChange={(e) => setPropertyValue(Number(e.target.value))}
           />
         </div>
-        <div>
+        <div className="inputGroup">
           
         </div>
       </div>
