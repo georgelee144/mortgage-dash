@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 // --- Dynamically import the Plot component with SSR turned off ---
 const Plot = dynamic(() => import("react-plotly.js"), {
-  ssr: false, // This is the key to fixing the error
+  ssr: false,
 });
 
 // --- Main Component ---
@@ -103,7 +103,7 @@ export default function Home() {
   //---Rendering Logic---
   return (
     <main className="container">
-      <h1></h1>
+      <h1 className="header">Home Buyer's Financial Dashboard</h1>
     </main>
   );
 }
