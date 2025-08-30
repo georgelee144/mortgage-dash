@@ -137,6 +137,7 @@ export default function Home() {
         </div>
         <div className="inputGroup">
           <label></label>
+          <input></input>
         </div>
       </div>
     </main>
