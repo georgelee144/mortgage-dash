@@ -104,6 +104,10 @@ export default function Home() {
   return (
     <main className="container">
       <h1 className="header">Home Buyer's Financial Dashboard</h1>
+
+      <div className="tabs">
+        
+      </div>
     </main>
   );
 }
