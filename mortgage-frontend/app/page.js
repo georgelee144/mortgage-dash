@@ -106,9 +106,11 @@ export default function Home() {
       <h1 className="header">Home Buyer's Financial Dashboard</h1>
 
       <div className="tabs">
-        <div className={`tab ${activeTab === 'calculator' ? 'active':''}`}
+        <div
+          className={`tab ${activeTab === "calculator" ? "active" : ""}`}
+          onClick={()=> setActiveTab('calculator')}
         >
-
+          Mortgage Calculator
         </div>
       </div>
     </main>
