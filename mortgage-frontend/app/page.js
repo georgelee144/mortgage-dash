@@ -96,7 +96,7 @@ export default function Home() {
 
   //---Rendering Logic---
   return(
-    <main>
+    <main className="container">
       
     </main>
   );
