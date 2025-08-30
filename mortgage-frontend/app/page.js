@@ -127,6 +127,13 @@ export default function Home() {
           <label className="label" htmlFor="propertyValue">
             Property Value ($)
           </label>
+          <input
+            id="propertyValue"
+            className="input"
+            type="number"
+            value={propertyValue}
+            onChange={(e) => setPropertyValue(Number(e.target.value))}
+          />
         </div>
       </div>
     </main>
