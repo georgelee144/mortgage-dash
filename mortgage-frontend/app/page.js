@@ -105,6 +105,7 @@ export default function Home() {
     <main className="container">
       <h1 className="header">Home Buyer's Financial Dashboard</h1>
 
+      {/* Tab Navigation */}
       <div className="tabs">
         <div
           className={`tab ${activeTab === "calculator" ? "active" : ""}`}
