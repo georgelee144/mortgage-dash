@@ -106,7 +106,10 @@ export default function Home() {
       <h1 className="header">Home Buyer's Financial Dashboard</h1>
 
       <div className="tabs">
-        
+        <div className={`tab ${activeTab === 'calculator' ? 'active':''}`}
+        >
+
+        </div>
       </div>
     </main>
   );
