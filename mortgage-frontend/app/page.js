@@ -124,7 +124,9 @@ export default function Home() {
       {/* Input Form */}
       <div className="inputGrid">
         <div className="inputGroup">
-
+          <label className="label" htmlFor="propertyValue">
+            Property Value ($)
+          </label>
         </div>
       </div>
     </main>
