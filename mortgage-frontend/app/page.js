@@ -172,7 +172,8 @@ export default function Home() {
           />
         </div>
         {activeTab === 'simulation' &&(
-          
+          <div>
+          </div>
         )}
       </div>
     </main>
