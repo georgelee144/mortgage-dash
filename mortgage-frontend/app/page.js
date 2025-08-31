@@ -201,7 +201,11 @@ export default function Home() {
             )}
           </button>
         ) : (
-          <button></button>
+          <button
+            className="button"
+            onClick={handleRunSimulation}
+            disabled={isMonteCarloLoading}
+          ></button>
         )}
       </div>
     </main>
