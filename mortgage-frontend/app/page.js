@@ -172,7 +172,7 @@ export default function Home() {
           />
         </div>
         {activeTab === 'simulation' &&(
-          <div>
+           <div className="inputGroup">
           </div>
         )}
       </div>
