@@ -214,6 +214,8 @@ export default function Home() {
           </button>
         )}
       </div>
+
+      {error && <div className="error">{error}</div>}
     </main>
   );
 }
