@@ -188,6 +188,9 @@ export default function Home() {
             </select>
           </div>
         )}
+        {activeTab === 'calculator'?(
+          <button></button>
+        )}
       </div>
     </main>
   );
