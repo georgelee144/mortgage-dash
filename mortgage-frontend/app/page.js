@@ -188,10 +188,20 @@ export default function Home() {
             </select>
           </div>
         )}
-        {activeTab === 'calculator'?(
-            <button className="button" onClick={handleCalculateAmortization} disabled={isAmortizationLoading}>
-            
+        {activeTab === "calculator" ? (
+          <button
+            className="button"
+            onClick={handleCalculateAmortization}
+            disabled={isAmortizationLoading}
+          >
+            {isAmortizationLoading ? (
+              <div className="spinner"></div>
+            ) : (
+              "Calculate Amortization"
+            )}
           </button>
+        ) : (
+          <button></button>
         )}
       </div>
     </main>
