@@ -176,7 +176,15 @@ export default function Home() {
             <label className="label" htmlFor="priceIndex">
               Price Index for Simulation
             </label>
-            <select id="priceIndex" className="select" value={priceIndexKey} onChange={e => setPriceIndexKey(e.target.value)}>
+            <select
+              id="priceIndex"
+              className="select"
+              value={priceIndexKey}
+              onChange={(e) => setPriceIndexKey(e.target.value)}
+            >
+              <option>
+                S&P CoreLogic Case-Shiller U.S. National Home Price Index
+              </option>
             </select>
           </div>
         )}
