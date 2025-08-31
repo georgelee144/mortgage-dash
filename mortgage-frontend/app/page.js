@@ -171,8 +171,11 @@ export default function Home() {
             onChange={(e) => setTermInMonths(Number(e.target.value))}
           />
         </div>
-        {activeTab === 'simulation' &&(
-           <div className="inputGroup">
+        {activeTab === "simulation" && (
+          <div className="inputGroup">
+            <label className="label" htmlFor="priceIndex">
+              Price Index for Simulation
+            </label>
           </div>
         )}
       </div>
