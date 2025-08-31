@@ -189,7 +189,9 @@ export default function Home() {
           </div>
         )}
         {activeTab === 'calculator'?(
-          <button></button>
+            <button className="button" onClick={handleCalculateAmortization} disabled={isAmortizationLoading}>
+            
+          </button>
         )}
       </div>
     </main>
