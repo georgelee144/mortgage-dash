@@ -176,6 +176,8 @@ export default function Home() {
             <label className="label" htmlFor="priceIndex">
               Price Index for Simulation
             </label>
+            <select id="priceIndex" className="select" value={priceIndexKey} onChange={e => setPriceIndexKey(e.target.value)}>
+            </select>
           </div>
         )}
       </div>
