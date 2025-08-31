@@ -171,6 +171,9 @@ export default function Home() {
             onChange={(e) => setTermInMonths(Number(e.target.value))}
           />
         </div>
+        {activeTab === 'simulation' &&(
+          
+        )}
       </div>
     </main>
   );
