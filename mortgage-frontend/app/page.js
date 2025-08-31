@@ -205,7 +205,13 @@ export default function Home() {
             className="button"
             onClick={handleRunSimulation}
             disabled={isMonteCarloLoading}
-          ></button>
+          >
+            {isMonteCarloLoading ? (
+              <div className="spinner"></div>
+            ) : (
+              "Run Simulation"
+            )}
+          </button>
         )}
       </div>
     </main>
