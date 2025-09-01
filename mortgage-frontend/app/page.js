@@ -231,8 +231,15 @@ export default function Home() {
                 stackgroup: "one",
                 marker: { color: "#68d391" },
               },
-                            { name: 'Remaining Debt', x: amortizationData.map(d => d.period), y: amortizationData.map(d => d.ending_principal), type: 'scatter', mode: 'lines', stackgroup: 'one', marker: { color: '#fc8181' } },
-
+              {
+                name: "Remaining Debt",
+                x: amortizationData.map((d) => d.period),
+                y: amortizationData.map((d) => d.ending_principal),
+                type: "scatter",
+                mode: "lines",
+                stackgroup: "one",
+                marker: { color: "#fc8181" },
+              },
             ]}
           />
         )}
