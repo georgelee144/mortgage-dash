@@ -2,6 +2,8 @@ import os
 import pandas as pd
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from dotenv import load_dotenv
+load_dotenv()
 print(f"--- API KEY LOADED: '{os.getenv('FRED_API')}' ---")
 
 import FRED_data_service
@@ -67,7 +69,7 @@ def get_monte_carlo_simulation():
         df_sample_data = fred_data_service.get_FRED_data_observations(
             series_key_or_series_id=data["priceIndexKey"]
         )
-        df_sample_data["returns"] = df_sample_data["Value"].pct_change()
+        df_sample_data["returns"] = df_sample_data["last_value_per_month"].pct_change()
         sample_data = df_sample_data["returns"].dropna()  # Drop NaN values
 
         # Run the simulation using data from the request
