@@ -218,7 +218,7 @@ export default function Home() {
       {error && <div className="error">{error}</div>}
 
       {/* Conditional Rendering for Plots */}
-      <div>
+      <div className="plotContainer">
         
       </div>
     </main>
