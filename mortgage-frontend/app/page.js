@@ -220,9 +220,19 @@ export default function Home() {
       {/* Conditional Rendering for Plots */}
       <div className="plotContainer">
         {activeTab === "calculator" && amortizationData.length > 0 && (
-          <Plot data={[
-            
-          ]} />
+          <Plot
+            data={[
+              {
+                name: "Equity",
+                x: amortizationData.map((d) => d.period),
+                y: amortizationData.map((d) => d.equity),
+                type: "scatter",
+                mode: "lines",
+                stackgroup: "one",
+                marker: { color: "#68d391" },
+              },
+            ]}
+          />
         )}
       </div>
     </main>
