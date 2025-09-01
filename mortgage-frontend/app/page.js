@@ -247,6 +247,7 @@ export default function Home() {
               xaxis: { title: "Month" },
             }}
             style={{ width: "100%", height: "500px" }}
+            useResizeHandler
           />
         )}
       </div>
