@@ -112,7 +112,7 @@ class FRED_data:
             series_key_or_series_id="average_30_year"
         )
 
-        return df_interest_rates["Value"].values[-1]
+        return df_interest_rates["last_value_per_month"].values[-1]
 
 
 if __name__ == "__main__":
