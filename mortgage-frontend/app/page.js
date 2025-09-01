@@ -289,6 +289,7 @@ export default function Home() {
             ]}
                         layout={{ title: 'Monte Carlo Property Value Simulation', yaxis: { title: 'Projected Property Value ($)' }, xaxis: { title: 'Month' } }}
             style={{ width: '100%', height: '500px' }}
+            useResizeHandler
 
           />
         )}
