@@ -287,6 +287,8 @@ export default function Home() {
                 line: { color: "#fc8181", dash: "dash" },
               },
             ]}
+                        layout={{ title: 'Monte Carlo Property Value Simulation', yaxis: { title: 'Projected Property Value ($)' }, xaxis: { title: 'Month' } }}
+
           />
         )}
       </div>
