@@ -250,6 +250,8 @@ export default function Home() {
             useResizeHandler
           />
         )}
+        {activeTab === "simulation" && monteCarloData && <Plot 
+        />}
       </div>
     </main>
   );
