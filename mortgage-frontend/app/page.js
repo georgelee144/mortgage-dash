@@ -241,6 +241,11 @@ export default function Home() {
                 marker: { color: "#fc8181" },
               },
             ]}
+            layout={{
+              title: "Equity vs. Debt Over Time",
+              yaxis: { title: "Amount ($)" },
+              xaxis: { title: "Month" },
+            }}
           />
         )}
       </div>
