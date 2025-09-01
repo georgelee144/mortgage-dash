@@ -219,8 +219,10 @@ export default function Home() {
 
       {/* Conditional Rendering for Plots */}
       <div className="plotContainer">
-        {activeTab === 'calculator' && amortizationData.length>0 &&(
-          
+        {activeTab === "calculator" && amortizationData.length > 0 && (
+          <Plot data={[
+            
+          ]} />
         )}
       </div>
     </main>
