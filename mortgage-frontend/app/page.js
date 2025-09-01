@@ -250,8 +250,11 @@ export default function Home() {
             useResizeHandler
           />
         )}
-        {activeTab === "simulation" && monteCarloData && <Plot 
-        />}
+        {activeTab === "simulation" && monteCarloData && (
+          <Plot
+            data={[...Object.keys(monteCarloData.runs).map((runKey) => ({}))]}
+          />
+        )}
       </div>
     </main>
   );
