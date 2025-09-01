@@ -252,7 +252,17 @@ export default function Home() {
         )}
         {activeTab === "simulation" && monteCarloData && (
           <Plot
-            data={[...Object.keys(monteCarloData.runs).map((runKey) => ({}))]}
+            data={[
+              ...Object.keys(monteCarloData.runs).map((runKey) => ({
+                name: `Run ${runKey}`,
+                x: monteCarloData.periods,
+                y: monteCarloData.runs[runKey],
+                type: "scatter",
+                mode: "lines",
+                line: { color: "#cbd5e0", width: 1 },
+                showlegend: false,
+              })),
+            ]}
           />
         )}
       </div>
