@@ -278,6 +278,14 @@ export default function Home() {
                 mode: "lines",
                 line: { color: "#4299e1", width: 4 },
               },
+              {
+                name: "25th Percentile",
+                x: monteCarloData.periods,
+                y: monteCarloData.quantile_25,
+                type: "scatter",
+                mode: "lines",
+                line: { color: "#fc8181", dash: "dash" },
+              },
             ]}
           />
         )}
