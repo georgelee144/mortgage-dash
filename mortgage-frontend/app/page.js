@@ -262,6 +262,14 @@ export default function Home() {
                 line: { color: "#cbd5e0", width: 1 },
                 showlegend: false,
               })),
+              {
+                name: "75th Percentile",
+                x: monteCarloData.periods,
+                y: monteCarloData.quantile_75,
+                type: "scatter",
+                mode: "lines",
+                line: { color: "#68d391", dash: "dash" },
+              },
             ]}
           />
         )}
