@@ -270,6 +270,14 @@ export default function Home() {
                 mode: "lines",
                 line: { color: "#68d391", dash: "dash" },
               },
+              {
+                name: "Median Projection",
+                x: monteCarloData.periods,
+                y: monteCarloData.median,
+                type: "scatter",
+                mode: "lines",
+                line: { color: "#4299e1", width: 4 },
+              },
             ]}
           />
         )}
