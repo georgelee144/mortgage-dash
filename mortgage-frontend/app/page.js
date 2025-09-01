@@ -246,6 +246,7 @@ export default function Home() {
               yaxis: { title: "Amount ($)" },
               xaxis: { title: "Month" },
             }}
+            style={{ width: "100%", height: "500px" }}
           />
         )}
       </div>
