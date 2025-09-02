@@ -12,12 +12,12 @@ const Plot = dynamic(() => import("react-plotly.js"), {
 export default function Home() {
   // --- State Management ---
   const [activeTab, setActiveTab] = useState("calculator");
-  const [graphType, setGraphType] = useState("area");
+  const [graphType, setGraphType] = useState("area"); // 'bar', 'line', or 'area'
 
   // Input states
-  const [loanAmount, setLoanAmount] = useState();
-  const [propertyValue, setPropertyValue] = useState();
-  const [annualRate, setAnnualRate] = useState(0);
+  const [loanAmount, setLoanAmount] = useState("");
+  const [propertyValue, setPropertyValue] = useState("");
+  const [annualRate, setAnnualRate] = useState("0");
   const [termInMonths, setTermInMonths] = useState(360);
   const [priceIndexKey, setPriceIndexKey] = useState(
     "S&P CoreLogic Case-Shiller U.S. National Home Price Index"
@@ -26,6 +26,10 @@ export default function Home() {
   // Data states
   const [amortizationData, setAmortizationData] = useState([]);
   const [monteCarloData, setMonteCarloData] = useState(null);
+  const [amortizationPlot, setAmortizationPlot] = useState({
+    data: [],
+    layout: {},
+  });
 
   // UI states
   const [isAmortizationLoading, setIsAmortizationLoading] = useState(false);
@@ -34,27 +38,31 @@ export default function Home() {
 
   const API_BASE_URL = "http://127.0.0.1:5000";
 
-  // --- Data Fetching ---
+  // --- Data Fetching & Handlers ---
 
-  // Fetch the initial interest rate when the component first loads.
   useEffect(() => {
     const fetchInitialRate = async () => {
       try {
         const response = await fetch(`${API_BASE_URL}/api/current-rate`);
         if (!response.ok) throw new Error("Network response was not ok");
         const data = await response.json();
-        if (data.rate) {
-          setAnnualRate(data.rate.toFixed(2));
-        }
+        if (data.rate) setAnnualRate(data.rate.toFixed(2));
       } catch (err) {
         console.error("Failed to fetch current rate:", err);
         setError("Could not fetch the current interest rate from the server.");
       }
     };
     fetchInitialRate();
-  }, []); // Empty dependency array means this runs only once on mount.
+  }, []);
 
-  // Handler for the Amortization Calculator
+  // This hook updates the plot object whenever the amortization data or graph type changes.
+  useEffect(() => {
+    if (amortizationData.length > 0) {
+      const newPlotData = getAmortizationPlotData();
+      setAmortizationPlot(newPlotData);
+    }
+  }, [amortizationData, graphType]);
+
   const handleCalculateAmortization = async () => {
     setIsAmortizationLoading(true);
     setAmortizationData([]);
@@ -80,7 +88,6 @@ export default function Home() {
     }
   };
 
-  // Handler for the Monte Carlo Simulation
   const handleRunSimulation = async () => {
     setIsMonteCarloLoading(true);
     setMonteCarloData(null);
@@ -100,7 +107,7 @@ export default function Home() {
       setIsMonteCarloLoading(false);
     }
   };
-  //Handler to download the amortization table as a CSV file.
+
   const handleDownloadCSV = () => {
     if (amortizationData.length === 0) return;
 
@@ -111,6 +118,7 @@ export default function Home() {
         headers.map((header) => row[header]).join(",")
       ),
     ].join("\n");
+
     const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
     const link = document.createElement("a");
     if (link.href) {
@@ -137,18 +145,18 @@ export default function Home() {
         return {
           data: [
             {
-              name: "Equity",
-              x: amortizationData.map((d) => d.period),
-              y: amortizationData.map((d) => d.equity),
-              type: "bar",
-              marker: { color: "#68d391" },
-            },
-            {
               name: "Remaining Debt",
               x: amortizationData.map((d) => d.period),
               y: amortizationData.map((d) => d.ending_principal),
               type: "bar",
               marker: { color: "#fc8181" },
+            },
+            {
+              name: "Equity",
+              x: amortizationData.map((d) => d.period),
+              y: amortizationData.map((d) => d.equity),
+              type: "bar",
+              marker: { color: "#68d391" },
             },
           ],
           layout: { ...baseLayout, barmode: "stack" },
@@ -179,16 +187,6 @@ export default function Home() {
         return {
           data: [
             {
-              name: "Equity",
-              x: amortizationData.map((d) => d.period),
-              y: amortizationData.map((d) => d.equity),
-              type: "scatter",
-              mode: "lines",
-              fill: "tozeroy",
-              stackgroup: "one",
-              line: { color: "#68d391" },
-            },
-            {
               name: "Remaining Debt",
               x: amortizationData.map((d) => d.period),
               y: amortizationData.map((d) => d.ending_principal),
@@ -198,6 +196,16 @@ export default function Home() {
               stackgroup: "one",
               line: { color: "#fc8181" },
             },
+            {
+              name: "Equity",
+              x: amortizationData.map((d) => d.period),
+              y: amortizationData.map((d) => d.equity),
+              type: "scatter",
+              mode: "lines",
+              fill: "tozeroy",
+              stackgroup: "one",
+              line: { color: "#68d391" },
+            },
           ],
           layout: baseLayout,
         };
@@ -205,12 +213,11 @@ export default function Home() {
         return { data: [], layout: baseLayout };
     }
   };
-  //---Rendering Logic---
+
+  // --- Render Logic ---
   return (
     <main className="container">
       <h1 className="header">Home Buyer's Financial Dashboard</h1>
-
-      {/* Tab Navigation */}
       <div className="tabs">
         <div
           className={`tab ${activeTab === "calculator" ? "active" : ""}`}
@@ -231,8 +238,6 @@ export default function Home() {
           Frequently Asked Questions (FAQ)
         </div>
       </div>
-
-      {/* Input Form */}
       <div className="inputGrid">
         <div className="inputGroup">
           <label className="label" htmlFor="loanAmount">
@@ -243,6 +248,7 @@ export default function Home() {
             className="input"
             type="number"
             value={loanAmount}
+            placeholder="e.g., 500000"
             onChange={(e) => setLoanAmount(Number(e.target.value))}
           />
         </div>
@@ -255,6 +261,7 @@ export default function Home() {
             className="input"
             type="number"
             value={propertyValue}
+            placeholder="e.g., 600000"
             onChange={(e) => setPropertyValue(Number(e.target.value))}
           />
         </div>
@@ -282,7 +289,6 @@ export default function Home() {
             onChange={(e) => setTermInMonths(Number(e.target.value))}
           />
         </div>
-        {/*---Dropdown menu to select the graph type---*/}
         {activeTab === "calculator" && (
           <div className="inputGroup">
             <label className="label" htmlFor="graphType">
@@ -294,9 +300,9 @@ export default function Home() {
               value={graphType}
               onChange={(e) => setGraphType(e.target.value)}
             >
+              <option value="area">Area Graph</option>
               <option value="bar">Bar Graph</option>
               <option value="line">Line Graph</option>
-              <option value="area">Area Graph</option>
             </select>
           </div>
         )}
@@ -358,13 +364,12 @@ export default function Home() {
 
       {error && <div className="error">{error}</div>}
 
-      {/* Conditional Rendering for Plots */}
       <div className="plotContainer">
-        {activeTab === 'calculator' && amortizationData.length > 0 && (
+        {activeTab === "calculator" && amortizationData.length > 0 && (
           <Plot
-            data={getAmortizationPlotData().data}
-            layout={getAmortizationPlotData().layout}
-            style={{ width: '100%', height: '500px' }}
+            data={amortizationPlot.data}
+            layout={amortizationPlot.layout}
+            style={{ width: "100%", height: "500px" }}
             useResizeHandler
           />
         )}
@@ -415,6 +420,7 @@ export default function Home() {
           />
         )}
       </div>
+
       {activeTab === "calculator" && amortizationData.length > 0 && (
         <div className="tableContainer">
           <div className="tableHeader">
@@ -441,7 +447,6 @@ export default function Home() {
                   <tr key={rowIndex}>
                     {Object.keys(row).map((key, cellIndex) => {
                       const value = row[key];
-                      // Conditionally format numbers. 'period' remains an integer.
                       const displayValue =
                         typeof value === "number" && key !== "period"
                           ? value.toFixed(2)
