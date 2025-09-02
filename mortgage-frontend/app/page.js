@@ -110,6 +110,8 @@ export default function Home() {
         headers.map((header) => row[header]).join(",")
       ),
     ].join("\n");
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
   };
   //---Rendering Logic---
   return (
