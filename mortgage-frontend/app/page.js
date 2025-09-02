@@ -290,6 +290,7 @@ export default function Home() {
             >
               <option value="bar">Bar Graph</option>
               <option value="line">Line Graph</option>
+              <option value="area">Area Graph</option>
             </select>
           </div>
         )}
