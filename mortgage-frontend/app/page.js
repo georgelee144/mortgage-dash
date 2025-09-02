@@ -188,16 +188,6 @@ export default function Home() {
         return {
           data: [
             {
-              name: "Remaining Debt",
-              x: amortizationData.map((d) => d.period),
-              y: amortizationData.map((d) => d.ending_principal),
-              type: "scatter",
-              mode: "lines",
-              fill: "tozeroy",
-              stackgroup: "one",
-              line: { color: "#fc8181" },
-            },
-            {
               name: "Equity",
               x: amortizationData.map((d) => d.period),
               y: amortizationData.map((d) => d.equity),
@@ -207,6 +197,17 @@ export default function Home() {
               stackgroup: "one",
               line: { color: "#68d391" },
             },
+            {
+              name: "Remaining Debt",
+              x: amortizationData.map((d) => d.period),
+              y: amortizationData.map((d) => d.ending_principal),
+              type: "scatter",
+              mode: "lines",
+              fill: "tozeroy",
+              stackgroup: "one",
+              line: { color: "#fc8181" },
+            },
+            
           ],
           layout: baseLayout,
         };
