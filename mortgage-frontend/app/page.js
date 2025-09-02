@@ -12,7 +12,8 @@ const Plot = dynamic(() => import("react-plotly.js"), {
 export default function Home() {
   // --- State Management ---
   const [activeTab, setActiveTab] = useState("calculator");
-  const [graphType,setGraphType]= useState('bar');
+  const [graphType, setGraphType] = useState("bar");
+
   // Input states
   const [loanAmount, setLoanAmount] = useState(500000);
   const [propertyValue, setPropertyValue] = useState(600000);
@@ -392,6 +393,42 @@ export default function Home() {
           />
         )}
       </div>
+      {activeTab === "calculator" && amortizationData.length > 0 && (
+        <div className="tableContainer">
+          <div className="tableHeader">
+            <h2>Amortization Schedule</h2>
+            <button className="button" onClick={handleDownloadCSV}>
+              Download CSV
+            </button>
+          </div>
+          <div className="tableWrapper">
+            <table>
+              <thead>
+                <tr>
+                  {Object.keys(amortizationData[0]).map((key) => (
+                    <th key={key}>
+                      {key
+                        .replace(/_/g, " ")
+                        .replace(/\b\w/g, (l) => l.toUpperCase())}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {amortizationData.map((row, index) => (
+                  <tr key={index}>
+                    {Object.values(row).map((val, i) => (
+                      <td key={i}>
+                        {typeof val === "number" ? val.toFixed(2) : val}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
