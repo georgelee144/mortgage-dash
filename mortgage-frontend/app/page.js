@@ -342,34 +342,11 @@ export default function Home() {
 
       {/* Conditional Rendering for Plots */}
       <div className="plotContainer">
-        {activeTab === "calculator" && amortizationData.length > 0 && (
+        {activeTab === 'calculator' && amortizationData.length > 0 && (
           <Plot
-            data={[
-              {
-                name: "Equity",
-                x: amortizationData.map((d) => d.period),
-                y: amortizationData.map((d) => d.equity),
-                type: "scatter",
-                mode: "lines",
-                stackgroup: "one",
-                marker: { color: "#68d391" },
-              },
-              {
-                name: "Remaining Debt",
-                x: amortizationData.map((d) => d.period),
-                y: amortizationData.map((d) => d.ending_principal),
-                type: "scatter",
-                mode: "lines",
-                stackgroup: "one",
-                marker: { color: "#fc8181" },
-              },
-            ]}
-            layout={{
-              title: "Equity vs. Debt Over Time",
-              yaxis: { title: "Amount ($)" },
-              xaxis: { title: "Month" },
-            }}
-            style={{ width: "100%", height: "500px" }}
+            data={getAmortizationPlotData().data}
+            layout={getAmortizationPlotData().layout}
+            style={{ width: '100%', height: '500px' }}
             useResizeHandler
           />
         )}
