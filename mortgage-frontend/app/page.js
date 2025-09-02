@@ -100,9 +100,9 @@ export default function Home() {
     }
   };
   //Handler to download the amortization table as a CSV file.
-  const handleDownloadCSV =()=>{
-    
-  }
+  const handleDownloadCSV = () => {
+    if (amortizationData.length === 0) return;
+  };
   //---Rendering Logic---
   return (
     <main className="container">
