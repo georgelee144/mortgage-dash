@@ -104,7 +104,12 @@ export default function Home() {
     if (amortizationData.length === 0) return;
 
     const headers = Object.keys(amortizationData[0]);
-    const csvContent =[].join('\n');
+    const csvContent = [
+      headers.join(","),
+      ...amortizationData.map((row) =>
+        headers.map((header) => row[header]).join(",")
+      ),
+    ].join("\n");
   };
   //---Rendering Logic---
   return (
