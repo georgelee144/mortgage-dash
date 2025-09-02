@@ -150,6 +150,33 @@ export default function Home() {
         },
       };
     }
+    return {
+      data: [
+        {
+          name: "Equity",
+          x: amortizationData.map((d) => d.period),
+          y: amortizationData.map((d) => d.equity),
+          type: "scatter",
+          mode: "lines",
+          fill: "tozeroy",
+          marker: { color: "#68d391" },
+        },
+        {
+          name: "Remaining Debt",
+          x: amortizationData.map((d) => d.period),
+          y: amortizationData.map((d) => d.ending_principal),
+          type: "scatter",
+          mode: "lines",
+          fill: "tozeroy",
+          marker: { color: "#fc8181" },
+        },
+      ],
+      layout: {
+        title: "Equity vs. Debt Over Time",
+        yaxis: { title: "Amount ($)" },
+        xaxis: { title: "Month" },
+      },
+    };
   };
   //---Rendering Logic---
   return (
