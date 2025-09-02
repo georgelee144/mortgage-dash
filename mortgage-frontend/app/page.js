@@ -117,6 +117,10 @@ export default function Home() {
     }
     const url = URL.createObjectURL(blob);
     link.href = url;
+    link.setAttribute('download', 'amortization_schedule.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
   //---Rendering Logic---
   return (
