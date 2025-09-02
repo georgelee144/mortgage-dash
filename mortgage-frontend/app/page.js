@@ -115,6 +115,8 @@ export default function Home() {
     if (link.href) {
       URL.revokeObjectURL(link.href);
     }
+    const url = URL.createObjectURL(blob);
+    link.href = url;
   };
   //---Rendering Logic---
   return (
