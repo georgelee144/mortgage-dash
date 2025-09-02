@@ -224,6 +224,12 @@ export default function Home() {
         >
           Property Value Simulation
         </div>
+        <div
+          className={`tab ${activeTab === "FAQ" ? "active" : ""}`}
+          onClick={() => setActiveTab("FAQ")}
+        >
+          Frequently Asked Questions (FAQ)
+        </div>
       </div>
 
       {/* Input Form */}
@@ -335,6 +341,18 @@ export default function Home() {
               "Run Simulation"
             )}
           </button>
+        )}
+        {activeTab==="FAQ"&&(
+          <div>
+          <h4>Mortgage Calculation</h4>
+          <p>By default the interest rate and term in months is already populated. The default interest rate is taken as the most recent average weekly 30 year mortgage rate from Freddie Mac via FRED. Term in months is the number of months for 30 years, the typical number of years for a mortgage.</p>
+          <p>Mortgage payment is calculated, using by solving for payment of the annuity formula</p>
+          {/* Insert annuity formula using latex and solve for payment */}
+          <p>If extra level payments was added, we assumed that it was done at the end of the month.</p>
+          <p></p>
+
+          </div>
+
         )}
       </div>
 
