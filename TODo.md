@@ -6,3 +6,9 @@ Add other price indices, also include a feature where users can upload a txt fil
 
 Find a way to have one object to be passed 
 
+see the new update on the dashboard 
+Add in a faq to tell people how the things are calculated 
+
+
+shelved: financial
+and an annoying feature

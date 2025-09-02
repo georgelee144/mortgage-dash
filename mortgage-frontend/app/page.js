@@ -122,6 +122,10 @@ export default function Home() {
     link.click();
     document.body.removeChild(link);
   };
+
+  const getAmortizationPlotData =() =>{
+    
+  }
   //---Rendering Logic---
   return (
     <main className="container">
