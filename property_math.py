@@ -30,7 +30,7 @@ def generate_mortgage_amortization_table(
     number_of_periods_per_compounding_term: int,
     loan_amount: float,
     mortgage_payment: float | Decimal,
-    property_value: float,
+    property_value: float | Decimal,
 ) -> pd.DataFrame:
     getcontext().prec = int(Decimal(loan_amount).log10().quantize(Decimal("1"))) + 2
 
@@ -68,8 +68,15 @@ def generate_mortgage_amortization_table(
         "ending_principal": ending_principal,
         "equity": equity,
     }
+
     df = pd.DataFrame(data=data).reset_index(names=["period"])
     df["period"] = df["period"] + 1
+    df["percent of payment to principal"] = df["principal_payment"].div(
+        mortgage_payment
+    )
+    df["percent of payment to interest"] = df["interest_to_pay"].div(mortgage_payment)
+    df["percent of property still debt"] = df["ending_principal"].div(property_value)
+    df["percent of property owned"] = df["equity"].div(property_value)
 
     return df
 
@@ -220,7 +227,9 @@ class MonteCarloPropertyValue:
         ]
         self.df_stats["total return based on starting value"] = self.df_stats[
             "total return based on starting value"
-        ].where(cond=~self.df_stats["desc"].isin(values=columns_to_nan_out), other=pd.NA)
+        ].where(
+            cond=~self.df_stats["desc"].isin(values=columns_to_nan_out), other=pd.NA
+        )
         self.df_stats["annual return based on starting value"] = (
             1 + self.df_stats["total return based on starting value"]
         ) ** (12 / self.length_of_each_run) - 1

@@ -29,6 +29,11 @@ class FRED_data:
             "order_by": "observation_date",
             "sort_order": "asc",
             "file_type": "json",
+<<<<<<< Updated upstream
+=======
+            # "frequency": "m",
+            # "aggregation_method": "eop",
+>>>>>>> Stashed changes
             "series_id": series_id,
             "realtime_start": realtime_start,
             "realtime_end": realtime_end,
