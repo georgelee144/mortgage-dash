@@ -441,13 +441,17 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody>
-                {amortizationData.map((row, index) => (
-                  <tr key={index}>
-                    {Object.values(row).map((val, i) => (
-                      <td key={i}>
-                        {typeof val === "number" ? val.toFixed(2) : val}
-                      </td>
-                    ))}
+                {amortizationData.map((row, rowIndex) => (
+                  <tr key={rowIndex}>
+                    {Object.keys(row).map((key, cellIndex) => {
+                      const value = row[key];
+                      // Conditionally format numbers. 'period' remains an integer.
+                      const displayValue =
+                        typeof value === "number" && key !== "period"
+                          ? value.toFixed(2)
+                          : value;
+                      return <td key={cellIndex}>{displayValue}</td>;
+                    })}
                   </tr>
                 ))}
               </tbody>
