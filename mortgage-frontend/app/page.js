@@ -134,10 +134,11 @@ export default function Home() {
 
   const getAmortizationPlotData = () => {
     const baseLayout = {
-      title: "Equity vs. Debt Over Time",
-      yaxis: { title: "Amount ($)" },
-      xaxis: { title: "Month" },
+      title: "Mortgage Amortization: Equity vs. Debt",
+      yaxis: { title: "Dollars ($)" },
+      xaxis: { title: "Periods (Months)" },
       legend: { x: 0.01, y: 0.98 },
+      hovermode: "x unified", // Shows data for both traces on hover
     };
 
     switch (graphType) {
@@ -348,17 +349,27 @@ export default function Home() {
             )}
           </button>
         )}
-        {activeTab==="FAQ"&&(
+        {activeTab === "FAQ" && (
           <div>
-          <h4>Mortgage Calculation</h4>
-          <p>By default the interest rate and term in months is already populated. The default interest rate is taken as the most recent average weekly 30 year mortgage rate from Freddie Mac via FRED. Term in months is the number of months for 30 years, the typical number of years for a mortgage.</p>
-          <p>Mortgage payment is calculated, using by solving for payment of the annuity formula</p>
-          {/* Insert annuity formula using latex and solve for payment */}
-          <p>If extra level payments was added, we assumed that it was done at the end of the month.</p>
-          <p></p>
-
+            <h4>Mortgage Calculation</h4>
+            <p>
+              By default the interest rate and term in months is already
+              populated. The default interest rate is taken as the most recent
+              average weekly 30 year mortgage rate from Freddie Mac via FRED.
+              Term in months is the number of months for 30 years, the typical
+              number of years for a mortgage.
+            </p>
+            <p>
+              Mortgage payment is calculated, using by solving for payment of
+              the annuity formula
+            </p>
+            {/* Insert annuity formula using latex and solve for payment */}
+            <p>
+              If extra level payments was added, we assumed that it was done at
+              the end of the month.
+            </p>
+            <p></p>
           </div>
-
         )}
       </div>
 
