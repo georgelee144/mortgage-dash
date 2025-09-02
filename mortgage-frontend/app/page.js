@@ -17,7 +17,7 @@ export default function Home() {
   // Input states
   const [loanAmount, setLoanAmount] = useState();
   const [propertyValue, setPropertyValue] = useState();
-  const [annualRate, setAnnualRate] = useState("");
+  const [annualRate, setAnnualRate] = useState(0);
   const [termInMonths, setTermInMonths] = useState(360);
   const [priceIndexKey, setPriceIndexKey] = useState(
     "S&P CoreLogic Case-Shiller U.S. National Home Price Index"
@@ -125,59 +125,85 @@ export default function Home() {
   };
 
   const getAmortizationPlotData = () => {
-    if (graphType === "bar") {
-      return {
-        data: [
-          {
-            name: "Equity",
-            x: amortizationData.map((d) => d.period),
-            y: amortizationData.map((d) => d.equity),
-            type: "bar",
-            marker: { color: "#68d391" },
-          },
-          {
-            name: "Remaining Debt",
-            x: amortizationData.map((d) => d.period),
-            y: amortizationData.map((d) => d.ending_principal),
-            type: "bar",
-            marker: { color: "#fc8181" },
-          },
-        ],
-        layout: {
-          title: "Equity vs. Debt Over Time",
-          barmode: "stack",
-          yaxis: { title: "Amount ($)" },
-          xaxis: { title: "Month" },
-        },
-      };
-    }
-    return {
-      data: [
-        {
-          name: "Equity",
-          x: amortizationData.map((d) => d.period),
-          y: amortizationData.map((d) => d.equity),
-          type: "scatter",
-          mode: "lines",
-          fill: "tozeroy",
-          marker: { color: "#68d391" },
-        },
-        {
-          name: "Remaining Debt",
-          x: amortizationData.map((d) => d.period),
-          y: amortizationData.map((d) => d.ending_principal),
-          type: "scatter",
-          mode: "lines",
-          fill: "tozeroy",
-          marker: { color: "#fc8181" },
-        },
-      ],
-      layout: {
-        title: "Equity vs. Debt Over Time",
-        yaxis: { title: "Amount ($)" },
-        xaxis: { title: "Month" },
-      },
+    const baseLayout = {
+      title: "Equity vs. Debt Over Time",
+      yaxis: { title: "Amount ($)" },
+      xaxis: { title: "Month" },
+      legend: { x: 0.01, y: 0.98 },
     };
+
+    switch (graphType) {
+      case "bar":
+        return {
+          data: [
+            {
+              name: "Equity",
+              x: amortizationData.map((d) => d.period),
+              y: amortizationData.map((d) => d.equity),
+              type: "bar",
+              marker: { color: "#68d391" },
+            },
+            {
+              name: "Remaining Debt",
+              x: amortizationData.map((d) => d.period),
+              y: amortizationData.map((d) => d.ending_principal),
+              type: "bar",
+              marker: { color: "#fc8181" },
+            },
+          ],
+          layout: { ...baseLayout, barmode: "stack" },
+        };
+      case "line":
+        return {
+          data: [
+            {
+              name: "Equity",
+              x: amortizationData.map((d) => d.period),
+              y: amortizationData.map((d) => d.equity),
+              type: "scatter",
+              mode: "lines",
+              line: { color: "#68d391" },
+            },
+            {
+              name: "Remaining Debt",
+              x: amortizationData.map((d) => d.period),
+              y: amortizationData.map((d) => d.ending_principal),
+              type: "scatter",
+              mode: "lines",
+              line: { color: "#fc8181" },
+            },
+          ],
+          layout: baseLayout,
+        };
+      case "area":
+        return {
+          data: [
+            {
+              name: "Equity",
+              x: amortizationData.map((d) => d.period),
+              y: amortizationData.map((d) => d.equity),
+              type: "scatter",
+              mode: "lines",
+              fill: "tozeroy",
+              stackgroup: "one",
+              line: { color: "#68d391" },
+            },
+            {
+              name: "Remaining Debt",
+              x: amortizationData.map((d) => d.period),
+              y: amortizationData.map((d) => d.ending_principal),
+              type: "scatter",
+              mode: "lines",
+              fill: "tozeroy",
+              stackgroup: "one",
+              line: { color: "#fc8181" },
+            },
+          ],
+          layout: baseLayout,
+        };
+      default:
+        return { data: [], layout: baseLayout };
+    }
   };
   //---Rendering Logic---
   return (
@@ -203,18 +229,6 @@ export default function Home() {
       {/* Input Form */}
       <div className="inputGrid">
         <div className="inputGroup">
-          <label className="label" htmlFor="propertyValue">
-            Property Value ($)
-          </label>
-          <input
-            id="propertyValue"
-            className="input"
-            type="number"
-            value={propertyValue}
-            onChange={(e) => setPropertyValue(Number(e.target.value))}
-          />
-        </div>
-        <div className="inputGroup">
           <label className="label" htmlFor="loanAmount">
             Loan Amount ($)
           </label>
@@ -224,6 +238,18 @@ export default function Home() {
             type="number"
             value={loanAmount}
             onChange={(e) => setLoanAmount(Number(e.target.value))}
+          />
+        </div>
+        <div className="inputGroup">
+          <label className="label" htmlFor="propertyValue">
+            Property Value ($)
+          </label>
+          <input
+            id="propertyValue"
+            className="input"
+            type="number"
+            value={propertyValue}
+            onChange={(e) => setPropertyValue(Number(e.target.value))}
           />
         </div>
         <div className="inputGroup">
