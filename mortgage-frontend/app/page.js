@@ -15,8 +15,8 @@ export default function Home() {
   const [graphType, setGraphType] = useState("bar");
 
   // Input states
-  const [loanAmount, setLoanAmount] = useState(500000);
-  const [propertyValue, setPropertyValue] = useState(600000);
+  const [loanAmount, setLoanAmount] = useState();
+  const [propertyValue, setPropertyValue] = useState();
   const [annualRate, setAnnualRate] = useState("");
   const [termInMonths, setTermInMonths] = useState(360);
   const [priceIndexKey, setPriceIndexKey] = useState(
