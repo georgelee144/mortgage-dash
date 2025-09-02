@@ -12,7 +12,7 @@ const Plot = dynamic(() => import("react-plotly.js"), {
 export default function Home() {
   // --- State Management ---
   const [activeTab, setActiveTab] = useState("calculator");
-  const [graphType, setGraphType] = useState("bar");
+  const [graphType, setGraphType] = useState("area");
 
   // Input states
   const [loanAmount, setLoanAmount] = useState();
