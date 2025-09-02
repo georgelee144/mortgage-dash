@@ -102,6 +102,14 @@ export default function Home() {
   //Handler to download the amortization table as a CSV file.
   const handleDownloadCSV = () => {
     if (amortizationData.length === 0) return;
+
+    const headers = Object.keys(amortizationData[0]);
+    const csvContent = [
+      headers.join(","),
+      ...amortizationData.map((row) =>
+        headers.map((header) => row[header]).join(",")
+      ),
+    ].join("\n");
   };
   //---Rendering Logic---
   return (
