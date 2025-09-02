@@ -53,7 +53,12 @@ export default function Home() {
     };
     fetchInitialRate();
   }, []); // Empty dependency array means this runs only once on mount.
-
+  useEffect(() => {
+    if (amortizationData.length > 0) {
+      const newPlotData = getAmortizationPlotData();
+      setAmortizationPlot(newPlotData);
+    }
+  }, [amortizationData, graphTypedd]);
   // Handler for the Amortization Calculator
   const handleCalculateAmortization = async () => {
     setIsAmortizationLoading(true);
@@ -342,11 +347,11 @@ export default function Home() {
 
       {/* Conditional Rendering for Plots */}
       <div className="plotContainer">
-        {activeTab === 'calculator' && amortizationData.length > 0 && (
+        {activeTab === "calculator" && amortizationData.length > 0 && (
           <Plot
             data={getAmortizationPlotData().data}
             layout={getAmortizationPlotData().layout}
-            style={{ width: '100%', height: '500px' }}
+            style={{ width: "100%", height: "500px" }}
             useResizeHandler
           />
         )}
