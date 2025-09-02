@@ -112,6 +112,9 @@ export default function Home() {
     ].join("\n");
     const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
     const link = document.createElement("a");
+    if (link.href) {
+      URL.revokeObjectURL(link.href);
+    }
   };
   //---Rendering Logic---
   return (
