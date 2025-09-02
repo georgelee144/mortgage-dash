@@ -117,15 +117,40 @@ export default function Home() {
     }
     const url = URL.createObjectURL(blob);
     link.href = url;
-    link.setAttribute('download', 'amortization_schedule.csv');
+    link.setAttribute("download", "amortization_schedule.csv");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
-  const getAmortizationPlotData =() =>{
-    
-  }
+  const getAmortizationPlotData = () => {
+    if (graphType === "bar") {
+      return {
+        data: [
+          {
+            name: "Equity",
+            x: amortizationData.map((d) => d.period),
+            y: amortizationData.map((d) => d.equity),
+            type: "bar",
+            marker: { color: "#68d391" },
+          },
+          {
+            name: "Remaining Debt",
+            x: amortizationData.map((d) => d.period),
+            y: amortizationData.map((d) => d.ending_principal),
+            type: "bar",
+            marker: { color: "#fc8181" },
+          },
+        ],
+        layout: {
+          title: "Equity vs. Debt Over Time",
+          barmode: "stack",
+          yaxis: { title: "Amount ($)" },
+          xaxis: { title: "Month" },
+        },
+      };
+    }
+  };
   //---Rendering Logic---
   return (
     <main className="container">
