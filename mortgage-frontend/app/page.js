@@ -99,7 +99,8 @@ export default function Home() {
       setIsMonteCarloLoading(false);
     }
   };
-
+  //Handler to download the amortization table as a CSV file.
+  
   //---Rendering Logic---
   return (
     <main className="container">
