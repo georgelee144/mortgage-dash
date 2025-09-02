@@ -249,6 +249,23 @@ export default function Home() {
             onChange={(e) => setTermInMonths(Number(e.target.value))}
           />
         </div>
+        {/*---Dropdown menu to select the graph type---*/}
+        {activeTab === "calculator" && (
+          <div className="inputGroup">
+            <label className="label" htmlFor="graphType">
+              Graph Type
+            </label>
+            <select
+              id="graphType"
+              className="select"
+              value={graphType}
+              onChange={(e) => setGraphType(e.target.value)}
+            >
+              <option value="bar">Bar Graph</option>
+              <option value="line">Line Graph</option>
+            </select>
+          </div>
+        )}
         {activeTab === "simulation" && (
           <div className="inputGroup">
             <label className="label" htmlFor="priceIndex">
