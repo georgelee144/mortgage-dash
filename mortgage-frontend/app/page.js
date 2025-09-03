@@ -335,6 +335,15 @@ export default function Home() {
               variable of the present value annuity formula.
             </p>
             {/* Insert annuity formula using latex and solve for payment */}
+            {/* present\_value\_of\_annuity = payment * \frac{(1-(1+i/n)^{-mn})}{i/n} */}
+            {/* <p>payment is a constant</p>
+            <p>i is the annual nominal interest rate</p>
+            <p>n is the number of compounding periods in a year</p>
+            <p>m is the number of years</p>
+            <p>We can substitute present_value_of_annuity for loan_amount, i for the APR and n for 12</p> */}
+            {/* loan\_amount = payment * \frac{(1-(1+APR/12)^{-12m})}{APR/12} */}
+            {/* <p>Solving for payment we get</p> */}
+            {/* payment = loan\_amount * \frac{APR/12}{(1-(1+APR/12)^{-12m})} */}
             {/* <p>If extra payments were added, we assumed that it was done at the end of the month.</p> */}
             <h4>Property Value Simulation</h4>
             <p>
