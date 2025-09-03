@@ -152,20 +152,33 @@ export default function Home() {
       case "bar":
         return {
           data: [
-            // Plotting Equity first makes it the base of the stack.
             {
               name: "Equity",
               x: amortizationData.map((d) => d.period),
               y: amortizationData.map((d) => d.equity),
               type: "bar",
-              marker: { color: "#4299e1" }, // A distinct blue for Equity
+              marker: {
+                color: "#4299e1",
+                // Adds a thin black line to each bar to make them distinct.
+                line: {
+                  color: "black",
+                  width: 0.5,
+                },
+              },
             },
             {
               name: "Remaining Debt",
               x: amortizationData.map((d) => d.period),
               y: amortizationData.map((d) => d.ending_principal),
               type: "bar",
-              marker: { color: "#fc8181" }, // A clear red for Debt
+              marker: {
+                color: "#fc8181",
+                // Adds a thin black line to each bar.
+                line: {
+                  color: "black",
+                  width: 0.5,
+                },
+              },
             },
           ],
           // 'barmode: "stack"' is the key to making the bars stack correctly.
