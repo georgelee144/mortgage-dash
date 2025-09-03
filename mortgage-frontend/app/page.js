@@ -351,9 +351,10 @@ export default function Home() {
           <Plot
             data={getAmortizationPlotData()}
             layout={{
-              title: "Mortgage Amortization: Equity vs. Debt",
-              xaxis: { title: "Periods (Months)" },
-              yaxis: { title: "Dollars ($)" },
+              title: { text: "Mortgage Amortization: Equity vs. Debt" },
+              xaxis: { title: { text: "Periods (Months)" } },
+              yaxis: { title: { text: "Dollars ($)" } },
+              margin: { l: 60, r: 20, t: 80, b: 60 },
               legend: {
                 orientation: "h",
                 yanchor: "bottom",
@@ -406,9 +407,10 @@ export default function Home() {
               },
             ]}
             layout={{
-              title: "Monte Carlo Property Value Simulation",
-              yaxis: { title: "Projected Property Value ($)" },
-              xaxis: { title: "Month" },
+              title: { text: "Monte Carlo Property Value Simulation" },
+              yaxis: { title: { text: "Projected Property Value ($)" } },
+              xaxis: { title: { text: "Month" } },
+              margin: { l: 60, r: 20, t: 80, b: 60 },
             }}
             style={{ width: "100%", height: "500px" }}
             useResizeHandler
