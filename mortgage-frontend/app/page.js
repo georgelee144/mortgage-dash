@@ -181,8 +181,7 @@ export default function Home() {
               },
             },
           ],
-          // 'barmode: "stack"' is the key to making the bars stack correctly.
-          layout: { ...baseLayout, barmode: "stack" },
+          layout: { ...baseLayout, barmode: "stack", bargap: 0 },
         };
 
       case "line":
