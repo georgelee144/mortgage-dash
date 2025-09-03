@@ -133,6 +133,7 @@ export default function Home() {
   };
 
   const getAmortizationPlotData = () => {
+
     const baseLayout = {
       title: "Mortgage Amortization: Equity vs. Debt",
       xaxis: { title: "Periods (Months)" },
@@ -144,7 +145,6 @@ export default function Home() {
         xanchor: "right",
         x: 1,
       },
-      // 'x unified' provides a much better tooltip experience, showing all values at once.
       hovermode: "x unified",
     };
 
@@ -157,33 +157,18 @@ export default function Home() {
               x: amortizationData.map((d) => d.period),
               y: amortizationData.map((d) => d.equity),
               type: "bar",
-              marker: {
-                color: "#4299e1",
-                // Adds a thin black line to each bar to make them distinct.
-                line: {
-                  color: "black",
-                  width: 0.5,
-                },
-              },
+              marker: { color: "#4299e1" }, // Blue for Equity
             },
             {
               name: "Remaining Debt",
               x: amortizationData.map((d) => d.period),
-              y: amortizationData.map((d) => d.ending_principal),
+              y: amortizationData.map((d) => d.ending_principal * -1),
               type: "bar",
-              marker: {
-                color: "#fc8181",
-                // Adds a thin black line to each bar.
-                line: {
-                  color: "black",
-                  width: 0.5,
-                },
-              },
+              marker: { color: "#fc8181" }, // Red for Debt
             },
           ],
-          layout: { ...baseLayout, barmode: "stack", bargap: 0 },
+          layout: { ...baseLayout, barmode: "relative" },
         };
-
       case "line":
         return {
           data: [
@@ -206,18 +191,15 @@ export default function Home() {
           ],
           layout: baseLayout,
         };
-
       case "area":
         return {
           data: [
-            // Equity is the base layer.
             {
               name: "Equity",
               x: amortizationData.map((d) => d.period),
               y: amortizationData.map((d) => d.equity),
               type: "scatter",
               mode: "lines",
-              // 'tozeroy' fills the area from this trace down to the x-axis.
               fill: "tozeroy",
               stackgroup: "one",
               line: { color: "#4299e1" },
@@ -228,7 +210,6 @@ export default function Home() {
               y: amortizationData.map((d) => d.ending_principal),
               type: "scatter",
               mode: "lines",
-              // THIS IS THE FIX: 'tonexty' fills the area up to the previous trace in the stackgroup.
               fill: "tonexty",
               stackgroup: "one",
               line: { color: "#fc8181" },
@@ -240,7 +221,6 @@ export default function Home() {
         return { data: [], layout: baseLayout };
     }
   };
-
   // --- Render Logic ---
   return (
     <main className="container">
