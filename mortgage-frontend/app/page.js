@@ -26,10 +26,6 @@ export default function Home() {
   // Data states
   const [amortizationData, setAmortizationData] = useState([]);
   const [monteCarloData, setMonteCarloData] = useState(null);
-  const [amortizationPlot, setAmortizationPlot] = useState({
-    data: [],
-    layout: {},
-  });
 
   // UI states
   const [isAmortizationLoading, setIsAmortizationLoading] = useState(false);
@@ -54,14 +50,6 @@ export default function Home() {
     };
     fetchInitialRate();
   }, []);
-
-  // This hook updates the plot object whenever the amortization data or graph type changes.
-  useEffect(() => {
-    if (amortizationData.length > 0) {
-      const newPlotData = getAmortizationPlotData();
-      setAmortizationPlot(newPlotData);
-    }
-  }, [amortizationData, graphType]);
 
   const handleCalculateAmortization = async () => {
     setIsAmortizationLoading(true);
@@ -133,94 +121,71 @@ export default function Home() {
   };
 
   const getAmortizationPlotData = () => {
-
-    const baseLayout = {
-      title: "Mortgage Amortization: Equity vs. Debt",
-      xaxis: { title: "Periods (Months)" },
-      yaxis: { title: "Dollars ($)" },
-      legend: {
-        orientation: "h",
-        yanchor: "bottom",
-        y: 1.02,
-        xanchor: "right",
-        x: 1,
-      },
-      hovermode: "x unified",
-    };
-
     switch (graphType) {
       case "bar":
-        return {
-          data: [
-            {
-              name: "Equity",
-              x: amortizationData.map((d) => d.period),
-              y: amortizationData.map((d) => d.equity),
-              type: "bar",
-              marker: { color: "#4299e1" }, // Blue for Equity
-            },
-            {
-              name: "Remaining Debt",
-              x: amortizationData.map((d) => d.period),
-              y: amortizationData.map((d) => d.ending_principal * -1),
-              type: "bar",
-              marker: { color: "#fc8181" }, // Red for Debt
-            },
-          ],
-          layout: { ...baseLayout, barmode: "relative" },
-        };
+        return [
+          {
+            name: "Equity",
+            x: amortizationData.map((d) => d.period),
+            y: amortizationData.map((d) => d.equity),
+            type: "bar",
+            marker: { color: "#4299e1" }, // Blue for Equity
+          },
+          {
+            name: "Remaining Debt",
+            x: amortizationData.map((d) => d.period),
+            y: amortizationData.map((d) => d.ending_principal * -1),
+            type: "bar",
+            marker: { color: "#fc8181" }, // Red for Debt
+          },
+        ];
       case "line":
-        return {
-          data: [
-            {
-              name: "Equity",
-              x: amortizationData.map((d) => d.period),
-              y: amortizationData.map((d) => d.equity),
-              type: "scatter",
-              mode: "lines",
-              line: { color: "#4299e1" },
-            },
-            {
-              name: "Remaining Debt",
-              x: amortizationData.map((d) => d.period),
-              y: amortizationData.map((d) => d.ending_principal),
-              type: "scatter",
-              mode: "lines",
-              line: { color: "#fc8181" },
-            },
-          ],
-          layout: baseLayout,
-        };
+        return [
+          {
+            name: "Equity",
+            x: amortizationData.map((d) => d.period),
+            y: amortizationData.map((d) => d.equity),
+            type: "scatter",
+            mode: "lines",
+            line: { color: "#4299e1" },
+          },
+          {
+            name: "Remaining Debt",
+            x: amortizationData.map((d) => d.period),
+            y: amortizationData.map((d) => d.ending_principal),
+            type: "scatter",
+            mode: "lines",
+            line: { color: "#fc8181" },
+          },
+        ];
       case "area":
-        return {
-          data: [
-            {
-              name: "Equity",
-              x: amortizationData.map((d) => d.period),
-              y: amortizationData.map((d) => d.equity),
-              type: "scatter",
-              mode: "lines",
-              fill: "tozeroy",
-              stackgroup: "one",
-              line: { color: "#4299e1" },
-            },
-            {
-              name: "Remaining Debt",
-              x: amortizationData.map((d) => d.period),
-              y: amortizationData.map((d) => d.ending_principal),
-              type: "scatter",
-              mode: "lines",
-              fill: "tonexty",
-              stackgroup: "one",
-              line: { color: "#fc8181" },
-            },
-          ],
-          layout: baseLayout,
-        };
+        return [
+          {
+            name: "Equity",
+            x: amortizationData.map((d) => d.period),
+            y: amortizationData.map((d) => d.equity),
+            type: "scatter",
+            mode: "lines",
+            fill: "tozeroy",
+            stackgroup: "one",
+            line: { color: "#4299e1" },
+          },
+          {
+            name: "Remaining Debt",
+            x: amortizationData.map((d) => d.period),
+            y: amortizationData.map((d) => d.ending_principal),
+            type: "scatter",
+            mode: "lines",
+            fill: "tonexty",
+            stackgroup: "one",
+            line: { color: "#fc8181" },
+          },
+        ];
       default:
-        return { data: [], layout: baseLayout };
+        return [];
     }
   };
+
   // --- Render Logic ---
   return (
     <main className="container">
@@ -384,8 +349,21 @@ export default function Home() {
       <div className="plotContainer">
         {activeTab === "calculator" && amortizationData.length > 0 && (
           <Plot
-            data={amortizationPlot.data}
-            layout={amortizationPlot.layout}
+            data={getAmortizationPlotData()}
+            layout={{
+              title: "Mortgage Amortization: Equity vs. Debt",
+              xaxis: { title: "Periods (Months)" },
+              yaxis: { title: "Dollars ($)" },
+              legend: {
+                orientation: "h",
+                yanchor: "bottom",
+                y: 1.02,
+                xanchor: "right",
+                x: 1,
+              },
+              hovermode: "x unified",
+              barmode: graphType === "bar" ? "relative" : undefined,
+            }}
             style={{ width: "100%", height: "500px" }}
             useResizeHandler
           />
