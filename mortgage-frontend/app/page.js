@@ -137,7 +137,13 @@ export default function Home() {
       title: "Mortgage Amortization: Equity vs. Debt",
       xaxis: { title: "Periods (Months)" },
       yaxis: { title: "Dollars ($)" },
-      legend: { x: 0.01, y: 0.98 },
+      legend: {
+        orientation: "h",
+        yanchor: "bottom",
+        y: 1.02,
+        xanchor: "right",
+        x: 1,
+      },
       // 'x unified' provides a much better tooltip experience, showing all values at once.
       hovermode: "x unified",
     };
