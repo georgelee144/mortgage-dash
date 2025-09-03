@@ -1,4 +1,5 @@
 Find optimal number of runs to have a decent simulation
+Add a Cumaltive Distrubtuin Frequncy CDF to results and general probalities
 
 Prune trials displayed by identifying important looking trails and ploting those, if optimal number of runs is too much
 

@@ -348,17 +348,88 @@ export default function Home() {
             )}
           </button>
         )}
-        {activeTab==="FAQ"&&(
+        {activeTab === "FAQ" && (
           <div>
-          <h4>Mortgage Calculation</h4>
-          <p>By default the interest rate and term in months is already populated. The default interest rate is taken as the most recent average weekly 30 year mortgage rate from Freddie Mac via FRED. Term in months is the number of months for 30 years, the typical number of years for a mortgage.</p>
-          <p>Mortgage payment is calculated, using by solving for payment of the annuity formula</p>
-          {/* Insert annuity formula using latex and solve for payment */}
-          <p>If extra level payments was added, we assumed that it was done at the end of the month.</p>
-          <p></p>
-
+            <h4>Mortgage Calculation</h4>
+            <p>
+              By default the interest rate and term in months is already
+              populated. The default interest rate is the most recent average
+              weekly 30 year mortgage rate from Freddie Mac, taken via FRED.
+              Term in months is the number of months for 30 years, the typical
+              number of years for a mortgage.
+            </p>
+            <p>
+              Mortgage payment is calculated, by solving for the payment
+              variable of the present value annuity formula.
+            </p>
+            {/* Insert annuity formula using latex and solve for payment */}
+            {/* <p>If extra payments were added, we assumed that it was done at the end of the month.</p> */}
+            <h4>Property Value Simulation</h4>
+            <p>
+              The property value simulation should be taken with a grain of salt
+              as past performance is no guarantee of future results. It is a
+              monte carlo simulation that takes the past monthly performance of
+              a selected index and randomly samples monthly performance for the
+              inputted loan term. There is an option to replace or not to
+              replace numbers when sampling. If no indices are to your liking
+              then you may upload your own monthly returns.
+            </p>
+            <h6>General Caution on Simulations</h6>
+            <ul>
+              <li>
+                As stated earlier: "Past performance is no guarantee of future
+                performance". However, it is widely considered to be a decent
+                starting point but one should note that past performance,
+                especially over long periods of time, are riddled with issues
+                that make predictions hard. Data such as real estate prices can
+                be considered non-stationary, statistics used to facilitate
+                predictions such as the average and variance changes over time.
+                This may be due to valuation paradigms, social views, and laws
+                regarding real estate. The effect of those may have
+                significantly influenced prices with varying intensity and over
+                different time frames. Quantifying their effects is a herculean
+                effort. On the other hand, interest rates is a significant
+                determinant of real estate prices and have definitely changed
+                over long periods.{" "}
+              </li>
+              <li>
+                Price indices are a messy average. You should research how the
+                index was constructed and whether or not they are relevant to
+                your property. A broad general index may be deceptive.
+                Weaknesses from declining prices in some locations and/or
+                property types, may be covered up by strong sales in very
+                popular locations.
+              </li>
+              <li>
+                Price indices on illiquid assets like real estate are generally
+                derived from one of two methods, either by transactions or by
+                appraisals. Appraisals are subjective and should not be taken
+                seriously unless transactions are not present. Ironically most
+                appraisals are based on recent transactions but, based on
+                personal experience, can be and usually manipulated to get a
+                desired valuation. An appraisal based on transactions should
+                incorporate other properties with similar features to yours. If
+                there are no such transactions then a cost approach, what would
+                it cost to buy and build the property, or discounted cash flow
+                model, valuation based on if this was a rental property, could
+                be used instead. <br></br> While transactions are preferred as
+                it is what one would expect in real markets, they are still
+                flawed. Real estate is a unique asset and idiosyncrasies may
+                drastically change the price, an index is a dirty average of all
+                that. The included properties may not be representative of your
+                property in terms of property type (single family vs condo vs
+                multifamily), location, local laws, neighborhood, etc.
+              </li>
+              <li>
+                Transactions may not account for the specifics of the sale.
+                Transactions are more likely to happen during favorable market
+                conditions. Transactions during unfavorable market conditions
+                may be overcrowded by distressed sales, like during the Great
+                Financial Crisis.
+              </li>
+              <li>Simulation does not include any selling costs.</li>
+            </ul>
           </div>
-
         )}
       </div>
 
