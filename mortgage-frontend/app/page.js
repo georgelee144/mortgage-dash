@@ -321,7 +321,7 @@ export default function Home() {
           </button>
         )}
         {activeTab === "FAQ" && (
-          <div>
+          <div className="faqContainer">
             <h4>Mortgage Calculation</h4>
             <p>
               By default the interest rate and term in months is already
