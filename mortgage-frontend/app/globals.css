@@ -226,3 +226,10 @@ tbody tr:hover {
 .faqSection:last-child {
   margin-bottom: 0;
 }
+.faqSection h2 {
+  font-size: 1.75rem;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
