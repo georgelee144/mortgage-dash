@@ -276,3 +276,7 @@ tbody tr:hover {
   list-style: none;
   padding-left: 0;
 }
+
+.formula-vars li {
+  margin-bottom: 0.25rem;
+}
