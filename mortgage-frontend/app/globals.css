@@ -240,3 +240,8 @@ tbody tr:hover {
   margin-bottom: 1rem;
   border: 1px solid #e2e8f0;
 }
+.faqCard h4 {
+  margin-top: 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
