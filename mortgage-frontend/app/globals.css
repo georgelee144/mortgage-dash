@@ -211,5 +211,11 @@ tbody tr:hover {
   background-color: #edf2f7;
 }
 
-
 /*--- FAQ Section Styles ---*/
+
+.faqContainer {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
