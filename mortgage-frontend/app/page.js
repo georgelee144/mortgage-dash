@@ -347,6 +347,33 @@ export default function Home() {
                 Mortgage payment is calculated, by solving for the payment
                 variable of the present value annuity formula.
               </p>
+              <div className="formula">
+                <p>
+                  PV = Payment × [ (1 - (1 + r)<sup>-n</sup>) / r ]
+                </p>
+              </div>
+              <ul className="formula-vars">
+                <li>
+                  <strong>PV (Present Value)</strong>: The total amount of the
+                  loan.
+                </li>
+                <li>
+                  <strong>Payment</strong>: The amount paid per period (what we
+                  are solving for).
+                </li>
+                <li>
+                  <strong>r (Rate)</strong>: The interest rate per period (the
+                  annual rate divided by 12).
+                </li>
+                <li>
+                  <strong>n (Number of Periods)</strong>: The total number of
+                  payments (the loan term in months).
+                </li>
+              </ul>
+              <p>
+                If extra payments were added, we assumed that it was done at the
+                end of the month.
+              </p>
             </div>
           </div>
           <div className="faqSection">
