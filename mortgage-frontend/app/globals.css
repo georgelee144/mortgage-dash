@@ -272,3 +272,7 @@ tbody tr:hover {
   white-space: nowrap;
   overflow-x: auto;
 }
+.formula-vars {
+  list-style: none;
+  padding-left: 0;
+}
