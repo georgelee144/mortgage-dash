@@ -223,3 +223,6 @@ tbody tr:hover {
 .faqSection {
   margin-bottom: 2.5rem;
 }
+.faqSection:last-child {
+  margin-bottom: 0;
+}
