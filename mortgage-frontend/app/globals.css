@@ -310,3 +310,9 @@ tbody tr:hover {
 .optionsTable th {
   background-color: #f7fafc;
 }
+
+.optionsTable .term-header {
+  text-align: left;
+  font-weight: 600;
+  background-color: #f7fafc;
+}
