@@ -3,6 +3,7 @@ import pandas as pd
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from dotenv import load_dotenv
+
 load_dotenv()
 print(f"--- API KEY LOADED: '{os.getenv('FRED_API')}' ---")
 
@@ -97,10 +98,15 @@ def get_monte_carlo_simulation():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-    
-@app.route("/api/mortgage-options",methods=["POST"])
+
+
+@app.route("/api/mortgage-options", methods=["POST"])
 def get_mortgage_option():
     data = request.get_json()
-    
+    required_keys = ["loanAmount", "annualRate", "termInMonths"]
+    if not all(key in data for key in required_keys):
+        return jsonify({"error": "Missing required fields"}), 400
