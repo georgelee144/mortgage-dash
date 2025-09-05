@@ -602,7 +602,7 @@ export default function Home() {
               <tr>
                 <th className="term-header">Term (Months)</th>
                 {mortgageOptions.columns.map((rate) => (
-                  <th key={rate}>{(parseFloat(rate) * 100).toFixed(2)}%</th>
+                  <th key={rate}>{parseFloat(rate).toFixed(2)}%</th>
                 ))}
               </tr>
             </thead>
@@ -655,13 +655,13 @@ export default function Home() {
               <tbody>
                 {amortizationData.map((row, rowIndex) => (
                   <tr key={rowIndex}>
-                    {Object.keys(row).map((cellIndex, key) => {
-                      const value = row[key];
+                    {Object.keys(row).map((keyName, index) => {
+                      const value = row[keyName];
                       const displayValue =
-                        typeof value === "number" && key !== "period"
+                        typeof value === "number" && keyName !== "period"
                           ? value.toFixed(2)
                           : value;
-                      return <td key={cellIndex}>{displayValue}</td>;
+                      return <td key={index}>{displayValue}</td>;
                     })}
                   </tr>
                 ))}
