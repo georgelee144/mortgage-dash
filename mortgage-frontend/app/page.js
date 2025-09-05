@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import { BlockMath } from "react-katex";
 
 // --- Dynamically import the Plot component with SSR turned off ---
 const Plot = dynamic(() => import("react-plotly.js"), {
@@ -307,7 +308,7 @@ export default function Home() {
               "Calculate Amortization"
             )}
           </button>
-        ) : (
+        ) : activeTab === "simulation" ? (
           <button
             className="button"
             onClick={handleRunSimulation}
@@ -319,9 +320,12 @@ export default function Home() {
               "Run Simulation"
             )}
           </button>
-        )}
-        {activeTab === "FAQ" && (
-          <div>
+        ) : null}
+      </div>
+
+      {activeTab === "FAQ" && (
+        <div className="faqContainer">
+          <div className="faqContent">
             <h4>Mortgage Calculation</h4>
             <p>
               By default the interest rate and term in months is already
@@ -334,17 +338,27 @@ export default function Home() {
               Mortgage payment is calculated, by solving for the payment
               variable of the present value annuity formula.
             </p>
-            {/* Insert annuity formula using latex and solve for payment */}
-            {/* present\_value\_of\_annuity = payment * \frac{(1-(1+i/n)^{-mn})}{i/n} */}
-            {/* <p>payment is a constant</p>
+            <BlockMath math="present\_value\_of\_annuity = payment * \frac{(1-(1+\frac{i}{n})^{-mn})}{\frac{i}{n}}" />
+            <p>
+              payment is a constant amount we pay at the end of each compounding
+              period, for mortgages it is at the end of the month
+            </p>
             <p>i is the annual nominal interest rate</p>
             <p>n is the number of compounding periods in a year</p>
             <p>m is the number of years</p>
-            <p>We can substitute present_value_of_annuity for loan_amount, i for the APR and n for 12</p> */}
-            {/* loan\_amount = payment * \frac{(1-(1+APR/12)^{-12m})}{APR/12} */}
-            {/* <p>Solving for payment we get</p> */}
-            {/* payment = loan\_amount * \frac{APR/12}{(1-(1+APR/12)^{-12m})} */}
-            {/* <p>If extra payments were added, we assumed that it was done at the end of the month.</p> */}
+            <p>
+              We can substitute present_value_of_annuity for loan_amount, i for
+              the APR and n for 12
+            </p>
+            <BlockMath math="loan\_amount = payment * \frac{(1-(1+\frac{APR}{12})^{-12m})}{\frac{APR}{12}}" />
+
+            <p>Solving for payment we get</p>
+            <BlockMath math="payment = loan\_amount * \frac{\frac{APR}{12}}{(1-(1+\frac{APR}{12})^{-12m})}" />
+
+            <p>
+              If extra payments were added, we assumed that it was done at the
+              end of the month.
+            </p>
             <h4>Property Value Simulation</h4>
             <p>
               The property value simulation should be taken with a grain of salt
@@ -411,8 +425,8 @@ export default function Home() {
               <li>Simulation does not include any selling costs.</li>
             </ul>
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
       {error && <div className="error">{error}</div>}
 
@@ -527,6 +541,59 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      <style jsx>{`
+        @import url("https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css");
+
+        .faqContainer {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          padding: 20px 0;
+        }
+
+        .faqContent {
+          width: 100%;
+          min-width: 300px;
+          max-width: 600px;
+          text-align: left;
+          line-height: 1.6;
+        }
+
+        .faqContent h4 {
+          color: #2d3748;
+          margin-top: 24px;
+          margin-bottom: 12px;
+        }
+
+        .faqContent h6 {
+          color: #4a5568;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+
+        .faqContent p {
+          margin-bottom: 12px;
+          color: #4a5568;
+        }
+
+        .faqContent ul {
+          margin-left: 20px;
+          margin-bottom: 16px;
+        }
+
+        .faqContent li {
+          margin-bottom: 12px;
+          color: #4a5568;
+        }
+
+        @media (max-width: 768px) {
+          .faqContent {
+            width: 90%;
+            min-width: unset;
+          }
+        }
+      `}</style>
     </main>
   );
 }
