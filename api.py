@@ -115,3 +115,15 @@ def get_mortgage_option():
         loan_amount = float(data["loanAmount"])
         annual_rate_percentage = float(data["annualRate"])
         term_in_months = int(data["termInMonths"])
+
+        term_in_months_to_display = [15 * 12, 30 * 12]
+        if term_in_months not in term_in_months_to_display:
+            term_in_months_to_display.append(term_in_months)
+            term_in_months_to_display.sort()
+
+        rates = []
+        for rate_int in range(
+            int(annual_rate_percentage * 1000) - 500,
+            int(annual_rate_percentage * 1000) + 750,
+            250,
+        ):
