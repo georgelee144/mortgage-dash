@@ -280,3 +280,12 @@ tbody tr:hover {
 .formula-vars li {
   margin-bottom: 0.25rem;
 }
+
+.optionsTableContainer {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
