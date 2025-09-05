@@ -139,4 +139,12 @@ def get_mortgage_option():
                     property_value=0, 
                 )
                 row[f"{rate:.3f}"] = float(mortgage.mortgage_payment)
-            table_data.append(row)
+            table_data.append(row)  response_data = {
+            "columns": [f"{rate:.3f}" for rate in rates],
+            "data": table_data
+        }
+
+        return jsonify(response_data)
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
