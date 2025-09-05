@@ -53,17 +53,21 @@ export default function Home() {
     fetchInitialRate();
   }, []);
 
-  const handleCalculate = async (rate, term) => {
+  const handleCalculate = async (rateOverride, termOverride) => {
     setIsAmortizationLoading(true);
     setError("");
 
     const rateToUse =
-      rate !== undefined ? parseFloat(rate) : parseFloat(annualRate);
+      rateOverride !== undefined
+        ? parseFloat(rateOverride)
+        : parseFloat(annualRate);
     const termToUse =
-      term !== undefined ? parseInt(term) : parseInt(termInMonths);
+      termOverride !== undefined
+        ? parseInt(termOverride)
+        : parseInt(termInMonths);
 
-    if (!loanAmount || !propertyValue || !rateToUse || !termToUse) {
-      setError("Please fill in all required fields.");
+    if (!loanAmount || !propertyValue || isNaN(rateToUse) || isNaN(termToUse)) {
+      setError("Please fill in all required fields with valid numbers.");
       setIsAmortizationLoading(false);
       return;
     }
@@ -83,7 +87,6 @@ export default function Home() {
         }),
       });
 
-      // The options table is always based on the main input fields, not the clicked cell.
       const optionsPromise = fetch(`${API_BASE_URL}/api/mortgage-options`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -115,8 +118,15 @@ export default function Home() {
   };
 
   const handleOptionClick = (term, rate) => {
-    // This function now just calls the main handler with the specific values from the clicked cell.
-    handleCalculate(rate, term);
+    const rateFloat = parseFloat(rate);
+    const termInt = parseInt(term);
+
+    // Update the main input fields to reflect the selection
+    setAnnualRate(rateFloat.toFixed(3));
+    setTermInMonths(termInt);
+
+    // Recalculate everything using the new values
+    handleCalculate(rateFloat, termInt);
   };
 
   const handleRunSimulation = async () => {
