@@ -100,10 +100,6 @@ def get_monte_carlo_simulation():
         return jsonify({"error": str(e)}), 500
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
-
-
 @app.route("/api/mortgage-options", methods=["POST"])
 def get_mortgage_options():
     data = request.get_json()
@@ -140,9 +136,8 @@ def get_mortgage_options():
                     property_value=0,
                 )
                 row[f"{rate:.3f}"] = float(mortgage.mortgage_payment)
-            table_data.append(row
-                              
-                              
+            table_data.append(row)
+
         response_data = {
             "columns": [f"{rate:.3f}" for rate in rates],
             "data": table_data,
@@ -152,3 +147,7 @@ def get_mortgage_options():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
