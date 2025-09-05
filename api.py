@@ -105,12 +105,12 @@ if __name__ == "__main__":
 
 
 @app.route("/api/mortgage-options", methods=["POST"])
-def get_mortgage_option():
+def get_mortgage_options():
     data = request.get_json()
     required_keys = ["loanAmount", "annualRate", "termInMonths"]
     if not all(key in data for key in required_keys):
         return jsonify({"error": "Missing required fields"}), 400
-    
+
     try:
         loan_amount = float(data["loanAmount"])
         annual_rate_percentage = float(data["annualRate"])
@@ -128,7 +128,8 @@ def get_mortgage_option():
             250,
         ):
             rates.append(rate_int / 1000.0)
-            table_data = []
+
+        table_data = []
         for term in term_in_months_to_display:
             row = {"term": term}
             for rate in rates:
@@ -136,12 +137,15 @@ def get_mortgage_option():
                     annual_rate_percentage=rate,
                     number_of_periods_for_loan_term=term,
                     loan_amount=loan_amount,
-                    property_value=0, 
+                    property_value=0,
                 )
                 row[f"{rate:.3f}"] = float(mortgage.mortgage_payment)
-            table_data.append(row)  response_data = {
+            table_data.append(row
+                              
+                              
+        response_data = {
             "columns": [f"{rate:.3f}" for rate in rates],
-            "data": table_data
+            "data": table_data,
         }
 
         return jsonify(response_data)
