@@ -72,7 +72,7 @@ export default function Home() {
       return;
     }
 
-    // This is the key fix: always update the selected state to match the calculation being run.
+    // FIX: This now correctly syncs the highlighted cell with the calculation being run
     setSelectedOptions({ rate: rateToUse, term: termToUse });
 
     try {
@@ -121,11 +121,11 @@ export default function Home() {
     const rateFloat = parseFloat(rate);
     const termInt = parseInt(term);
 
-    // Update the main input fields to reflect the selection
+    // FIX: Updates the main input fields to match the clicked cell
     setAnnualRate(rateFloat.toFixed(3));
     setTermInMonths(termInt);
 
-    // Recalculate everything using the new values
+    // Recalculates everything using the new values
     handleCalculate(rateFloat, termInt);
   };
 
@@ -584,7 +584,7 @@ export default function Home() {
               <tr>
                 <th className="term-header">Term (Months)</th>
                 {mortgageOptions.columns.map((rate) => (
-                  <th key={rate}>{(parseFloat(rate) * 100).toFixed(2)}%</th>
+                  <th key={rate}>{parseFloat(rate).toFixed(2)}%</th>
                 ))}
               </tr>
             </thead>
