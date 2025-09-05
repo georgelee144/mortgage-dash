@@ -121,11 +121,9 @@ export default function Home() {
     const rateFloat = parseFloat(rate);
     const termInt = parseInt(term);
 
-    // FIX: Updates the main input fields to match the clicked cell
     setAnnualRate(rateFloat.toFixed(3));
     setTermInMonths(termInt);
 
-    // Recalculates everything using the new values
     handleCalculate(rateFloat, termInt);
   };
 
@@ -584,7 +582,7 @@ export default function Home() {
               <tr>
                 <th className="term-header">Term (Months)</th>
                 {mortgageOptions.columns.map((rate) => (
-                  <th key={rate}>{parseFloat(rate).toFixed(2)}%</th>
+                  <th key={rate}>{(parseFloat(rate) * 100).toFixed(2)}%</th>
                 ))}
               </tr>
             </thead>
@@ -595,7 +593,8 @@ export default function Home() {
                   {mortgageOptions.columns.map((rate) => {
                     const isSelected =
                       selectedOptions.term === row.term &&
-                      selectedOptions.rate === parseFloat(rate);
+                      Math.abs(selectedOptions.rate - parseFloat(rate)) <
+                        0.0001;
                     return (
                       <td
                         key={`${row.term}-${rate}`}
