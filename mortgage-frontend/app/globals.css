@@ -289,3 +289,9 @@ tbody tr:hover {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.optionsTableContainer h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
