@@ -306,3 +306,7 @@ tbody tr:hover {
   padding: 0.75rem;
   border: 1px solid #e2e8f0;
 }
+
+.optionsTable th {
+  background-color: #f7fafc;
+}
