@@ -99,3 +99,8 @@ def get_monte_carlo_simulation():
         return jsonify({"error": str(e)}), 500
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+    
+@app.route("/api/mortgage-options",methods=["POST"])
+def get_mortgage_option():
+    data = request.get_json()
+    
