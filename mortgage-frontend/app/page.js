@@ -413,7 +413,7 @@ export default function Home() {
                 Mortgage payment is calculated, by solving for the payment
                 variable of the present value annuity formula.
               </p>
-              <BlockMath math="\\text{present\\_value\\_of\\_annuity} = \\text{payment} \\times \\frac{(1-(1+\\frac{i}{n})^{-mn})}{\\frac{i}{n}}" />
+              <BlockMath math="\\text{present value of annuity} = \\text{payment} \\times \\frac{1 - (1 + \\frac{i}{n})^{-mn}}{\\frac{i}{n}}" />
               <ul className="formula-vars">
                 <li>
                   <strong>payment</strong> is a constant amount we pay at the
@@ -435,9 +435,9 @@ export default function Home() {
                 We can substitute present_value_of_annuity for loan_amount, i
                 for the APR and n for 12.
               </p>
-              <BlockMath math="\\text{loan\\_amount} = \\text{payment} \\times \\frac{(1-(1+\\frac{APR}{12})^{-12m})}{\\frac{APR}{12}}" />
+              <BlockMath math="\\text{loan amount} = \\text{payment} \\times \\frac{1 - (1 + \\frac{APR}{12})^{-12m}}{\\frac{APR}{12}}" />
               <p>Solving for payment we get:</p>
-              <BlockMath math="\\text{payment} = \\text{loan\\_amount} \\times \\frac{\\frac{APR}{12}}{(1-(1+\\frac{APR}{12})^{-12m})}" />
+              <BlockMath math="\\text{payment} = \\text{loan amount} \\times \\frac{\\frac{APR}{12}}{1 - (1 + \\frac{APR}{12})^{-12m}}" />
               <p>
                 If extra payments were added, we assumed that it was done at the
                 end of the month.
