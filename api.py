@@ -110,3 +110,8 @@ def get_mortgage_option():
     required_keys = ["loanAmount", "annualRate", "termInMonths"]
     if not all(key in data for key in required_keys):
         return jsonify({"error": "Missing required fields"}), 400
+    
+    try:
+        loan_amount = float(data["loanAmount"])
+        annual_rate_percentage = float(data["annualRate"])
+        term_in_months = int(data["termInMonths"])
