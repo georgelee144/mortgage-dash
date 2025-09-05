@@ -295,3 +295,9 @@ tbody tr:hover {
   color: #1a202c;
   margin-bottom: 1.5rem;
 }
+
+.optionsTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
