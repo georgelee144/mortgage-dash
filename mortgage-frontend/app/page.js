@@ -14,9 +14,7 @@ const Plot = dynamic(() => import("react-plotly.js"), {
 export default function Home() {
   // --- State Management ---
   const [activeTab, setActiveTab] = useState("calculator");
-  const [graphType, setGraphType] = useState("area"); // 'bar', 'line', or 'area'
-
-  // Input states
+  const [graphType, setGraphType] = useState("area");
   const [loanAmount, setLoanAmount] = useState("");
   const [propertyValue, setPropertyValue] = useState("");
   const [annualRate, setAnnualRate] = useState("0");
@@ -24,8 +22,6 @@ export default function Home() {
   const [priceIndexKey, setPriceIndexKey] = useState(
     "S&P CoreLogic Case-Shiller U.S. National Home Price Index"
   );
-
-  // Data states
   const [amortizationData, setAmortizationData] = useState([]);
   const [monteCarloData, setMonteCarloData] = useState(null);
   const [mortgageOptions, setMortgageOptions] = useState(null);
@@ -33,15 +29,11 @@ export default function Home() {
     term: null,
     rate: null,
   });
-
-  // UI states
   const [isAmortizationLoading, setIsAmortizationLoading] = useState(false);
   const [isMonteCarloLoading, setIsMonteCarloLoading] = useState(false);
   const [error, setError] = useState("");
 
   const API_BASE_URL = "http://127.0.0.1:5000";
-
-  // --- Data Fetching & Handlers ---
 
   useEffect(() => {
     const fetchInitialRate = async () => {
@@ -52,7 +44,6 @@ export default function Home() {
         if (data.rate) {
           const rateValue = data.rate.toFixed(2);
           setAnnualRate(rateValue);
-          setSelectedOptions({ term: 360, rate: parseFloat(rateValue) });
         }
       } catch (err) {
         console.error("Failed to fetch current rate:", err);
@@ -66,14 +57,19 @@ export default function Home() {
     setIsAmortizationLoading(true);
     setError("");
 
-    const rateToUse = rate !== undefined ? rate : annualRate;
-    const termToUse = term !== undefined ? term : termInMonths;
+    const rateToUse =
+      rate !== undefined ? parseFloat(rate) : parseFloat(annualRate);
+    const termToUse =
+      term !== undefined ? parseInt(term) : parseInt(termInMonths);
 
     if (!loanAmount || !propertyValue || !rateToUse || !termToUse) {
       setError("Please fill in all required fields.");
       setIsAmortizationLoading(false);
       return;
     }
+
+    // This is the key fix: always update the selected state to match the calculation being run.
+    setSelectedOptions({ rate: rateToUse, term: termToUse });
 
     try {
       const amortizationPromise = fetch(`${API_BASE_URL}/api/amortization`, {
@@ -87,6 +83,7 @@ export default function Home() {
         }),
       });
 
+      // The options table is always based on the main input fields, not the clicked cell.
       const optionsPromise = fetch(`${API_BASE_URL}/api/mortgage-options`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -108,13 +105,6 @@ export default function Home() {
 
       setAmortizationData(amortizationJson);
       setMortgageOptions(optionsJson);
-
-      if (rate === undefined && term === undefined) {
-        setSelectedOptions({
-          rate: parseFloat(annualRate),
-          term: parseInt(termInMonths),
-        });
-      }
     } catch (err) {
       setError(err.message);
       setAmortizationData([]);
@@ -125,7 +115,7 @@ export default function Home() {
   };
 
   const handleOptionClick = (term, rate) => {
-    setSelectedOptions({ term: Number(term), rate: Number(rate) });
+    // This function now just calls the main handler with the specific values from the clicked cell.
     handleCalculate(rate, term);
   };
 
@@ -151,7 +141,6 @@ export default function Home() {
 
   const handleDownloadCSV = () => {
     if (amortizationData.length === 0) return;
-
     const headers = Object.keys(amortizationData[0]);
     const csvContent = [
       headers.join(","),
@@ -159,12 +148,9 @@ export default function Home() {
         headers.map((header) => row[header]).join(",")
       ),
     ].join("\n");
-
     const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
     const link = document.createElement("a");
-    if (link.href) {
-      URL.revokeObjectURL(link.href);
-    }
+    if (link.href) URL.revokeObjectURL(link.href);
     const url = URL.createObjectURL(blob);
     link.href = url;
     link.setAttribute("download", "amortization_schedule.csv");
@@ -182,14 +168,14 @@ export default function Home() {
             x: amortizationData.map((d) => d.period),
             y: amortizationData.map((d) => d.equity),
             type: "bar",
-            marker: { color: "#4299e1" }, // Blue for Equity
+            marker: { color: "#4299e1" },
           },
           {
             name: "Remaining Debt",
             x: amortizationData.map((d) => d.period),
             y: amortizationData.map((d) => d.ending_principal * -1),
             type: "bar",
-            marker: { color: "#fc8181" }, // Red for Debt
+            marker: { color: "#fc8181" },
           },
         ];
       case "line":
@@ -239,7 +225,6 @@ export default function Home() {
     }
   };
 
-  // --- Render Logic ---
   return (
     <main className="container">
       <h1 className="header">Home Buyer's Financial Dashboard</h1>
@@ -642,7 +627,7 @@ export default function Home() {
               <tbody>
                 {amortizationData.map((row, rowIndex) => (
                   <tr key={rowIndex}>
-                    {Object.keys(row).map((cellIndex, key) => {
+                    {Object.keys(row).map((key, cellIndex) => {
                       const value = row[key];
                       const displayValue =
                         typeof value === "number" && key !== "period"

@@ -118,7 +118,6 @@ def get_mortgage_options():
             term_in_months_to_display.sort()
 
         rates = []
-        # Widen the range to generate more rate options
         for rate_int in range(
             int(annual_rate_percentage * 1000) - 1000,
             int(annual_rate_percentage * 1000) + 1250,
