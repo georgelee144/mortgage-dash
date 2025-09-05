@@ -127,3 +127,16 @@ def get_mortgage_option():
             int(annual_rate_percentage * 1000) + 750,
             250,
         ):
+            rates.append(rate_int / 1000.0)
+            table_data = []
+        for term in term_in_months_to_display:
+            row = {"term": term}
+            for rate in rates:
+                mortgage = property_math.Mortgage(
+                    annual_rate_percentage=rate,
+                    number_of_periods_for_loan_term=term,
+                    loan_amount=loan_amount,
+                    property_value=0, 
+                )
+                row[f"{rate:.3f}"] = float(mortgage.mortgage_payment)
+            table_data.append(row)
