@@ -422,9 +422,9 @@ export default function Home() {
                 We can substitute present_value_of_annuity for loan_amount, i
                 for the APR and n for 12.
               </p>
-              <BlockMath math="\\text{loan\_amount} = \\text{payment} \\times \\frac{(1-(1+\\frac{APR}{12})^{-12m})}{\\frac{APR}{12}}" />
+              <BlockMath math="\\text{loan\\_amount} = \\text{payment} \\times \\frac{(1-(1+\\frac{APR}{12})^{-12m})}{\\frac{APR}{12}}" />
               <p>Solving for payment we get:</p>
-              <BlockMath math="\\text{payment} = \\text{loan\_amount} \\times \\frac{\\frac{APR}{12}}{(1-(1+\\frac{APR}{12})^{-12m})}" />
+              <BlockMath math="\\text{payment} = \\text{loan\\_amount} \\times \\frac{\\frac{APR}{12}}{(1-(1+\\frac{APR}{12})^{-12m})}" />
               <p>
                 If extra payments were added, we assumed that it was done at the
                 end of the month.
