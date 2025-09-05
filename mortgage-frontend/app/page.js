@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import "katex/dist/katex.min.css";
 import { BlockMath } from "react-katex";
 
 // --- Dynamically import the Plot component with SSR turned off ---
@@ -27,6 +28,11 @@ export default function Home() {
   // Data states
   const [amortizationData, setAmortizationData] = useState([]);
   const [monteCarloData, setMonteCarloData] = useState(null);
+  const [mortgageOptions, setMortgageOptions] = useState(null);
+  const [selectedOptions, setSelectedOptions] = useState({
+    term: null,
+    rate: null,
+  });
 
   // UI states
   const [isAmortizationLoading, setIsAmortizationLoading] = useState(false);
@@ -43,7 +49,11 @@ export default function Home() {
         const response = await fetch(`${API_BASE_URL}/api/current-rate`);
         if (!response.ok) throw new Error("Network response was not ok");
         const data = await response.json();
-        if (data.rate) setAnnualRate(data.rate.toFixed(2));
+        if (data.rate) {
+          const rateValue = data.rate.toFixed(2);
+          setAnnualRate(rateValue);
+          setSelectedOptions({ term: 360, rate: parseFloat(rateValue) });
+        }
       } catch (err) {
         console.error("Failed to fetch current rate:", err);
         setError("Could not fetch the current interest rate from the server.");
@@ -52,29 +62,71 @@ export default function Home() {
     fetchInitialRate();
   }, []);
 
-  const handleCalculateAmortization = async () => {
+  const handleCalculate = async (rate, term) => {
     setIsAmortizationLoading(true);
-    setAmortizationData([]);
     setError("");
+
+    const rateToUse = rate !== undefined ? rate : annualRate;
+    const termToUse = term !== undefined ? term : termInMonths;
+
+    if (!loanAmount || !propertyValue || !rateToUse || !termToUse) {
+      setError("Please fill in all required fields.");
+      setIsAmortizationLoading(false);
+      return;
+    }
+
     try {
-      const response = await fetch(`${API_BASE_URL}/api/amortization`, {
+      const amortizationPromise = fetch(`${API_BASE_URL}/api/amortization`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           loanAmount,
           propertyValue,
-          annualRate,
-          termInMonths,
+          annualRate: rateToUse,
+          termInMonths: termToUse,
         }),
       });
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error || "Calculation failed");
-      setAmortizationData(data);
+
+      const optionsPromise = fetch(`${API_BASE_URL}/api/mortgage-options`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ loanAmount, annualRate, termInMonths }),
+      });
+
+      const [amortizationResponse, optionsResponse] = await Promise.all([
+        amortizationPromise,
+        optionsPromise,
+      ]);
+
+      const amortizationJson = await amortizationResponse.json();
+      const optionsJson = await optionsResponse.json();
+
+      if (!amortizationResponse.ok)
+        throw new Error(amortizationJson.error || "Calculation failed");
+      if (!optionsResponse.ok)
+        throw new Error(optionsJson.error || "Options calculation failed");
+
+      setAmortizationData(amortizationJson);
+      setMortgageOptions(optionsJson);
+
+      if (rate === undefined && term === undefined) {
+        setSelectedOptions({
+          rate: parseFloat(annualRate),
+          term: parseInt(termInMonths),
+        });
+      }
     } catch (err) {
       setError(err.message);
+      setAmortizationData([]);
+      setMortgageOptions(null);
     } finally {
       setIsAmortizationLoading(false);
     }
+  };
+
+  const handleOptionClick = (term, rate) => {
+    setSelectedOptions({ term: Number(term), rate: Number(rate) });
+    handleCalculate(rate, term);
   };
 
   const handleRunSimulation = async () => {
@@ -211,222 +263,6 @@ export default function Home() {
           Frequently Asked Questions (FAQ)
         </div>
       </div>
-      <div className="inputGrid">
-        <div className="inputGroup">
-          <label className="label" htmlFor="loanAmount">
-            Loan Amount ($)
-          </label>
-          <input
-            id="loanAmount"
-            className="input"
-            type="number"
-            value={loanAmount}
-            placeholder="e.g., 500000"
-            onChange={(e) => setLoanAmount(Number(e.target.value))}
-          />
-        </div>
-        <div className="inputGroup">
-          <label className="label" htmlFor="propertyValue">
-            Property Value ($)
-          </label>
-          <input
-            id="propertyValue"
-            className="input"
-            type="number"
-            value={propertyValue}
-            placeholder="e.g., 600000"
-            onChange={(e) => setPropertyValue(Number(e.target.value))}
-          />
-        </div>
-        <div className="inputGroup">
-          <label className="label" htmlFor="annualRate">
-            Annual Interest Rate (%)
-          </label>
-          <input
-            id="annualRate"
-            className="input"
-            type="number"
-            value={annualRate}
-            onChange={(e) => setAnnualRate(e.target.value)}
-          />
-        </div>
-        <div className="inputGroup">
-          <label className="label" htmlFor="termInMonths">
-            Loan Term (Months)
-          </label>
-          <input
-            id="termInMonths"
-            className="input"
-            type="number"
-            value={termInMonths}
-            onChange={(e) => setTermInMonths(Number(e.target.value))}
-          />
-        </div>
-        {activeTab === "calculator" && (
-          <div className="inputGroup">
-            <label className="label" htmlFor="graphType">
-              Graph Type
-            </label>
-            <select
-              id="graphType"
-              className="select"
-              value={graphType}
-              onChange={(e) => setGraphType(e.target.value)}
-            >
-              <option value="area">Area Graph</option>
-              <option value="bar">Bar Graph</option>
-              <option value="line">Line Graph</option>
-            </select>
-          </div>
-        )}
-        {activeTab === "simulation" && (
-          <div className="inputGroup">
-            <label className="label" htmlFor="priceIndex">
-              Price Index for Simulation
-            </label>
-            <select
-              id="priceIndex"
-              className="select"
-              value={priceIndexKey}
-              onChange={(e) => setPriceIndexKey(e.target.value)}
-            >
-              <option>
-                S&P CoreLogic Case-Shiller U.S. National Home Price Index
-              </option>
-            </select>
-          </div>
-        )}
-        {activeTab === "calculator" ? (
-          <button
-            className="button"
-            onClick={handleCalculateAmortization}
-            disabled={isAmortizationLoading}
-          >
-            {isAmortizationLoading ? (
-              <div className="spinner"></div>
-            ) : (
-              "Calculate Amortization"
-            )}
-          </button>
-        ) : activeTab === "simulation" ? (
-          <button
-            className="button"
-            onClick={handleRunSimulation}
-            disabled={isMonteCarloLoading}
-          >
-            {isMonteCarloLoading ? (
-              <div className="spinner"></div>
-            ) : (
-              "Run Simulation"
-            )}
-          </button>
-        ) : null}
-      </div>
-
-      {activeTab === "FAQ" && (
-        <div className="faqContainer">
-          <div className="faqContent">
-            <h4>Mortgage Calculation</h4>
-            <p>
-              By default the interest rate and term in months is already
-              populated. The default interest rate is the most recent average
-              weekly 30 year mortgage rate from Freddie Mac, taken via FRED.
-              Term in months is the number of months for 30 years, the typical
-              number of years for a mortgage.
-            </p>
-            <p>
-              Mortgage payment is calculated, by solving for the payment
-              variable of the present value annuity formula.
-            </p>
-            <BlockMath math="present\_value\_of\_annuity = payment * \frac{(1-(1+\frac{i}{n})^{-mn})}{\frac{i}{n}}" />
-            <p>
-              payment is a constant amount we pay at the end of each compounding
-              period, for mortgages it is at the end of the month
-            </p>
-            <p>i is the annual nominal interest rate</p>
-            <p>n is the number of compounding periods in a year</p>
-            <p>m is the number of years</p>
-            <p>
-              We can substitute present_value_of_annuity for loan_amount, i for
-              the APR and n for 12
-            </p>
-            <BlockMath math="loan\_amount = payment * \frac{(1-(1+\frac{APR}{12})^{-12m})}{\frac{APR}{12}}" />
-
-            <p>Solving for payment we get</p>
-            <BlockMath math="payment = loan\_amount * \frac{\frac{APR}{12}}{(1-(1+\frac{APR}{12})^{-12m})}" />
-
-            <p>
-              If extra payments were added, we assumed that it was done at the
-              end of the month.
-            </p>
-            <h4>Property Value Simulation</h4>
-            <p>
-              The property value simulation should be taken with a grain of salt
-              as past performance is no guarantee of future results. It is a
-              monte carlo simulation that takes the past monthly performance of
-              a selected index and randomly samples monthly performance for the
-              inputted loan term. There is an option to replace or not to
-              replace numbers when sampling. If no indices are to your liking
-              then you may upload your own monthly returns.
-            </p>
-            <h6>General Caution on Simulations</h6>
-            <ul>
-              <li>
-                As stated earlier: "Past performance is no guarantee of future
-                performance". However, it is widely considered to be a decent
-                starting point but one should note that past performance,
-                especially over long periods of time, are riddled with issues
-                that make predictions hard. Data such as real estate prices can
-                be considered non-stationary, statistics used to facilitate
-                predictions such as the average and variance changes over time.
-                This may be due to valuation paradigms, social views, and laws
-                regarding real estate. The effect of those may have
-                significantly influenced prices with varying intensity and over
-                different time frames. Quantifying their effects is a herculean
-                effort. On the other hand, interest rates is a significant
-                determinant of real estate prices and have definitely changed
-                over long periods.{" "}
-              </li>
-              <li>
-                Price indices are a messy average. You should research how the
-                index was constructed and whether or not they are relevant to
-                your property. A broad general index may be deceptive.
-                Weaknesses from declining prices in some locations and/or
-                property types, may be covered up by strong sales in very
-                popular locations.
-              </li>
-              <li>
-                Price indices on illiquid assets like real estate are generally
-                derived from one of two methods, either by transactions or by
-                appraisals. Appraisals are subjective and should not be taken
-                seriously unless transactions are not present. Ironically most
-                appraisals are based on recent transactions but, based on
-                personal experience, can be and usually manipulated to get a
-                desired valuation. An appraisal based on transactions should
-                incorporate other properties with similar features to yours. If
-                there are no such transactions then a cost approach, what would
-                it cost to buy and build the property, or discounted cash flow
-                model, valuation based on if this was a rental property, could
-                be used instead. <br></br> While transactions are preferred as
-                it is what one would expect in real markets, they are still
-                flawed. Real estate is a unique asset and idiosyncrasies may
-                drastically change the price, an index is a dirty average of all
-                that. The included properties may not be representative of your
-                property in terms of property type (single family vs condo vs
-                multifamily), location, local laws, neighborhood, etc.
-              </li>
-              <li>
-                Transactions may not account for the specifics of the sale.
-                Transactions are more likely to happen during favorable market
-                conditions. Transactions during unfavorable market conditions
-                may be overcrowded by distressed sales, like during the Great
-                Financial Crisis.
-              </li>
-              <li>Simulation does not include any selling costs.</li>
-            </ul>
-          </div>
-        </div>
-      )}
 
       {error && <div className="error">{error}</div>}
 
@@ -519,13 +355,13 @@ export default function Home() {
           {activeTab === "calculator" ? (
             <button
               className="button"
-              onClick={handleCalculateAmortization}
+              onClick={() => handleCalculate()}
               disabled={isAmortizationLoading}
             >
               {isAmortizationLoading ? (
                 <div className="spinner"></div>
               ) : (
-                "Calculate Amortization"
+                "Calculate / Update Options"
               )}
             </button>
           ) : (
@@ -564,29 +400,31 @@ export default function Home() {
                 Mortgage payment is calculated, by solving for the payment
                 variable of the present value annuity formula.
               </p>
-              <div className="formula">
-                <p>
-                  PV = Payment × [ (1 - (1 + r)<sup>-n</sup>) / r ]
-                </p>
-              </div>
+              <BlockMath math="\\text{present\\_value\\_of\\_annuity} = \\text{payment} \\times \\frac{(1-(1+\\frac{i}{n})^{-mn})}{\\frac{i}{n}}" />
               <ul className="formula-vars">
                 <li>
-                  <strong>PV (Present Value)</strong>: The total amount of the
-                  loan.
+                  <strong>payment</strong> is a constant amount we pay at the
+                  end of each compounding period, for mortgages it is at the end
+                  of the month.
                 </li>
                 <li>
-                  <strong>Payment</strong>: The amount paid per period (what we
-                  are solving for).
+                  <strong>i</strong> is the annual nominal interest rate.
                 </li>
                 <li>
-                  <strong>r (Rate)</strong>: The interest rate per period (the
-                  annual rate divided by 12).
+                  <strong>n</strong> is the number of compounding periods in a
+                  year.
                 </li>
                 <li>
-                  <strong>n (Number of Periods)</strong>: The total number of
-                  payments (the loan term in months).
+                  <strong>m</strong> is the number of years.
                 </li>
               </ul>
+              <p>
+                We can substitute present_value_of_annuity for loan_amount, i
+                for the APR and n for 12.
+              </p>
+              <BlockMath math="\\text{loan\_amount} = \\text{payment} \\times \\frac{(1-(1+\\frac{APR}{12})^{-12m})}{\\frac{APR}{12}}" />
+              <p>Solving for payment we get:</p>
+              <BlockMath math="\\text{payment} = \\text{loan\_amount} \\times \\frac{\\frac{APR}{12}}{(1-(1+\\frac{APR}{12})^{-12m})}" />
               <p>
                 If extra payments were added, we assumed that it was done at the
                 end of the month.
@@ -646,7 +484,7 @@ export default function Home() {
                   similar features to yours. If there are no such transactions
                   then a cost approach, what would it cost to buy and build the
                   property, or discounted cash flow model, valuation based on if
-                  this was a rental property, could be used instead. <br></br>{" "}
+                  this was a rental property, could be used instead. <br />{" "}
                   While transactions are preferred as it is what one would
                   expect in real markets, they are still flawed. Real estate is
                   a unique asset and idiosyncrasies may drastically change the
@@ -669,9 +507,9 @@ export default function Home() {
         </div>
       )}
 
-      {activeTab !== "FAQ" && (
+      {activeTab !== "FAQ" && amortizationData.length > 0 && (
         <div className="plotContainer">
-          {activeTab === "calculator" && amortizationData.length > 0 && (
+          {activeTab === "calculator" && (
             <Plot
               data={getAmortizationPlotData()}
               layout={{
@@ -743,6 +581,43 @@ export default function Home() {
         </div>
       )}
 
+      {activeTab === "calculator" && mortgageOptions && (
+        <div className="optionsTableContainer">
+          <h2>Select a Payment Option to View Amortization</h2>
+          <table className="optionsTable">
+            <thead>
+              <tr>
+                <th className="term-header">Term (Months)</th>
+                {mortgageOptions.columns.map((rate) => (
+                  <th key={rate}>{(parseFloat(rate) * 100).toFixed(2)}%</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {mortgageOptions.data.map((row) => (
+                <tr key={row.term}>
+                  <td className="term-header">{row.term}</td>
+                  {mortgageOptions.columns.map((rate) => {
+                    const isSelected =
+                      selectedOptions.term === row.term &&
+                      selectedOptions.rate === parseFloat(rate);
+                    return (
+                      <td
+                        key={`${row.term}-${rate}`}
+                        className={isSelected ? "selected" : ""}
+                        onClick={() => handleOptionClick(row.term, rate)}
+                      >
+                        ${row[rate].toFixed(2)}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
       {activeTab === "calculator" && amortizationData.length > 0 && (
         <div className="tableContainer">
           <div className="tableHeader">
@@ -767,7 +642,7 @@ export default function Home() {
               <tbody>
                 {amortizationData.map((row, rowIndex) => (
                   <tr key={rowIndex}>
-                    {Object.keys(row).map((key, cellIndex) => {
+                    {Object.keys(row).map((cellIndex, key) => {
                       const value = row[key];
                       const displayValue =
                         typeof value === "number" && key !== "period"
@@ -782,59 +657,6 @@ export default function Home() {
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        @import url("https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css");
-
-        .faqContainer {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-          padding: 20px 0;
-        }
-
-        .faqContent {
-          width: 100%;
-          min-width: 300px;
-          max-width: 600px;
-          text-align: left;
-          line-height: 1.6;
-        }
-
-        .faqContent h4 {
-          color: #2d3748;
-          margin-top: 24px;
-          margin-bottom: 12px;
-        }
-
-        .faqContent h6 {
-          color: #4a5568;
-          margin-top: 20px;
-          margin-bottom: 10px;
-        }
-
-        .faqContent p {
-          margin-bottom: 12px;
-          color: #4a5568;
-        }
-
-        .faqContent ul {
-          margin-left: 20px;
-          margin-bottom: 16px;
-        }
-
-        .faqContent li {
-          margin-bottom: 12px;
-          color: #4a5568;
-        }
-
-        @media (max-width: 768px) {
-          .faqContent {
-            width: 90%;
-            min-width: unset;
-          }
-        }
-      `}</style>
     </main>
   );
 }
