@@ -316,3 +316,8 @@ tbody tr:hover {
   font-weight: 600;
   background-color: #f7fafc;
 }
+
+.optionsTable td {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
