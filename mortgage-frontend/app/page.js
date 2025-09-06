@@ -616,7 +616,7 @@ export default function Home() {
               <tr>
                 <th className="term-header">Term (Months)</th>
                 {mortgageOptions.columns.map((rate) => (
-                  <th key={rate}>{parseFloat(rate).toFixed(2)}%</th>
+                  <th key={rate}>{parseFloat(rate).toFixed(4)}%</th>
                 ))}
               </tr>
             </thead>
