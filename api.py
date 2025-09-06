@@ -118,13 +118,9 @@ def get_mortgage_options():
             term_in_months_to_display.sort()
 
         rates = []
-        # Widen the range to generate more rate options
-        for rate_int in range(
-            int(annual_rate_percentage * 1000) - 1000,
-            int(annual_rate_percentage * 1000) + 1250,
-            250,
-        ):
-            rates.append(rate_int / 1000.0)
+        start_rate = annual_rate_percentage - 1.0
+        for i in range(9):
+            rates.append((start_rate + (i * 0.25)))
 
         table_data = []
         for term in term_in_months_to_display:
@@ -136,7 +132,7 @@ def get_mortgage_options():
                     loan_amount=loan_amount,
                     property_value=0,
                 )
-                row[f"{rate:.3f}"] = float(mortgage.mortgage_payment)
+                row[f"{rate:.4f}"] = float(mortgage.mortgage_payment)
             table_data.append(row)
 
         response_data = {
@@ -148,3 +144,8 @@ def get_mortgage_options():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+if __name__ == "__main__":
+
+
+    app.run(host="0.0.0.0", port=5000, debug=True)

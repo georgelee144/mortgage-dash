@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import "katex/dist/katex.min.css";
-import { BlockMath } from "react-katex";
 
 // --- Dynamically import the Plot component with SSR turned off ---
 const Plot = dynamic(() => import("react-plotly.js"), {
@@ -125,8 +123,21 @@ export default function Home() {
   };
 
   const handleOptionClick = (term, rate) => {
-    setSelectedOptions({ term: Number(term), rate: Number(rate) });
-    handleCalculate(rate, term);
+    const numericTerm = Number(term);
+    const numericRate = Number(rate);
+
+    // If the currently selected option is clicked again, deselect it.
+    if (
+      selectedOptions.term === numericTerm &&
+      selectedOptions.rate === numericRate
+    ) {
+      setSelectedOptions({ term: null, rate: null });
+      setAmortizationData([]); // Clear the table and graph
+    } else {
+      // Otherwise, select the new option and calculate.
+      setSelectedOptions({ term: numericTerm, rate: numericRate });
+      handleCalculate(rate, term);
+    }
   };
 
   const handleRunSimulation = async () => {
@@ -400,7 +411,13 @@ export default function Home() {
                 Mortgage payment is calculated, by solving for the payment
                 variable of the present value annuity formula.
               </p>
-              <BlockMath math="\\text{present\\_value\\_of\\_annuity} = \\text{payment} \\times \\frac{(1-(1+\\frac{i}{n})^{-mn})}{\\frac{i}{n}}" />
+              <div className="formula">
+                <code>
+                  present_value_of_annuity = payment × [ (1 - (1 + i/n)
+                  <sup>-mn</sup>) / (i/n) ]
+                </code>
+              </div>
+
               <ul className="formula-vars">
                 <li>
                   <strong>payment</strong> is a constant amount we pay at the
@@ -422,9 +439,19 @@ export default function Home() {
                 We can substitute present_value_of_annuity for loan_amount, i
                 for the APR and n for 12.
               </p>
-              <BlockMath math="\\text{loan\\_amount} = \\text{payment} \\times \\frac{(1-(1+\\frac{APR}{12})^{-12m})}{\\frac{APR}{12}}" />
+              <div className="formula">
+                <code>
+                  loan_amount = payment × [ (1 - (1 + APR/12)<sup>-12m</sup>) /
+                  (APR/12) ]
+                </code>
+              </div>
               <p>Solving for payment we get:</p>
-              <BlockMath math="\\text{payment} = \\text{loan\\_amount} \\times \\frac{\\frac{APR}{12}}{(1-(1+\\frac{APR}{12})^{-12m})}" />
+              <div className="formula">
+                <code>
+                  payment = loan_amount × [ (APR/12) / (1 - (1 + APR/12)
+                  <sup>-12m</sup>) ]
+                </code>
+              </div>
               <p>
                 If extra payments were added, we assumed that it was done at the
                 end of the month.
@@ -589,7 +616,7 @@ export default function Home() {
               <tr>
                 <th className="term-header">Term (Months)</th>
                 {mortgageOptions.columns.map((rate) => (
-                  <th key={rate}>{(parseFloat(rate) * 100).toFixed(2)}%</th>
+                  <th key={rate}>{parseFloat(rate).toFixed(4)}%</th>
                 ))}
               </tr>
             </thead>
@@ -642,13 +669,13 @@ export default function Home() {
               <tbody>
                 {amortizationData.map((row, rowIndex) => (
                   <tr key={rowIndex}>
-                    {Object.keys(row).map((cellIndex, key) => {
-                      const value = row[key];
+                    {Object.keys(row).map((keyName, index) => {
+                      const value = row[keyName];
                       const displayValue =
-                        typeof value === "number" && key !== "period"
+                        typeof value === "number" && keyName !== "period"
                           ? value.toFixed(2)
                           : value;
-                      return <td key={cellIndex}>{displayValue}</td>;
+                      return <td key={index}>{displayValue}</td>;
                     })}
                   </tr>
                 ))}
