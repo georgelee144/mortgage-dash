@@ -118,9 +118,9 @@ def get_mortgage_options():
             term_in_months_to_display.sort()
 
         rates = []
-        start_rate = int(annual_rate_percentage * 1000) - 1000
+        start_rate = annual_rate_percentage - 1.0
         for i in range(9):
-            rates.append((start_rate + (i * 250)) / 1000.0)
+            rates.append((start_rate + (i * 25)))
 
         table_data = []
         for term in term_in_months_to_display:
