@@ -132,7 +132,7 @@ def get_mortgage_options():
                     loan_amount=loan_amount,
                     property_value=0,
                 )
-                row[f"{rate:.3f}"] = float(mortgage.mortgage_payment)
+                row[f"{rate:.4f}"] = float(mortgage.mortgage_payment)
             table_data.append(row)
 
         response_data = {
