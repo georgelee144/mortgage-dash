@@ -24,7 +24,7 @@ app.layout = html.Div(
         html.Div(
             children=[
                 dcc.Dropdown(
-                    options=list(fred_data_service.FRED_data_constants.keys())[1:],
+                    options=list(fred_data_service.FRED_home_indicies.keys()),
                     value=None,
                     id="property_price_index",
                 )

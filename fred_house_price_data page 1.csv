@@ -1,0 +1,598 @@
+title,series_id,url,description,last_updated,frequency,units,scraped_at
+S&P CoreLogic Case-Shiller U.S. National Home Price Index,CSUSHPISA,https://fred.stlouisfed.org/series/CSUSHPISA,"View data of a benchmark of average single-family home prices in the U.S., calculated monthly based on changes in home prices over the prior three months.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:05.849604
+S&P CoreLogic Case-Shiller U.S. National Home Price Index,CSUSHPISA,https://fred.stlouisfed.org/series/CSUSHPISA,,,,,2025-09-06T13:36:05.881340
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CSUSHPINSA,https://fred.stlouisfed.org/series/CSUSHPINSA,,,,,2025-09-06T13:36:06.018612
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CSUSHPINSA,https://fred.stlouisfed.org/series/CSUSHPINSA,,,,,2025-09-06T13:36:06.055693
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CSUSHPINSA,https://fred.stlouisfed.org/series/CSUSHPINSA,,,,,2025-09-06T13:36:06.096200
+S&P CoreLogic Case-Shiller 20-City Composite Home Price Index,SPCS20RSA,https://fred.stlouisfed.org/series/SPCS20RSA,View a monthly index that tracks changes in the price of residential real estate in 20 major metropolitan regions in the U.S.,,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:06.196629
+S&P CoreLogic Case-Shiller 20-City Composite Home Price Index,SPCS20RSA,https://fred.stlouisfed.org/series/SPCS20RSA,,,,,2025-09-06T13:36:06.229876
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SPCS20RNSA,https://fred.stlouisfed.org/series/SPCS20RNSA,,,,,2025-09-06T13:36:06.344006
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SPCS20RNSA,https://fred.stlouisfed.org/series/SPCS20RNSA,,,,,2025-09-06T13:36:06.359931
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SPCS20RNSA,https://fred.stlouisfed.org/series/SPCS20RNSA,,,,,2025-09-06T13:36:06.380209
+Purchase Only House Price Index for the United States,HPIPONM226S,https://fred.stlouisfed.org/series/HPIPONM226S,The purchase-only index is based on more than 6 million repeat sales transactions on the same single-family properties.,,"Index Jan 1991=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:06.463490
+Purchase Only House Price Index for the United States,HPIPONM226S,https://fred.stlouisfed.org/series/HPIPONM226S,,,,,2025-09-06T13:36:06.499204
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",HPIPONM226N,https://fred.stlouisfed.org/series/HPIPONM226N,,,,,2025-09-06T13:36:06.639616
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",HPIPONM226N,https://fred.stlouisfed.org/series/HPIPONM226N,,,,,2025-09-06T13:36:06.672468
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",HPIPONM226N,https://fred.stlouisfed.org/series/HPIPONM226N,,,,,2025-09-06T13:36:06.704705
+S&P CoreLogic Case-Shiller CA-San Francisco Home Price Index,SFXRSA,https://fred.stlouisfed.org/series/SFXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for San Francisco, California in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for San Francisco, California. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details (http://us.spindices.com/contact-us/) are available, including phone numbers for all regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:06.763886
+S&P CoreLogic Case-Shiller CA-San Francisco Home Price Index,SFXRSA,https://fred.stlouisfed.org/series/SFXRSA,,,,,2025-09-06T13:36:06.786675
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRNSA,https://fred.stlouisfed.org/series/SFXRNSA,,,,,2025-09-06T13:36:06.878654
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRNSA,https://fred.stlouisfed.org/series/SFXRNSA,,,,,2025-09-06T13:36:06.897844
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRNSA,https://fred.stlouisfed.org/series/SFXRNSA,,,,,2025-09-06T13:36:06.917804
+S&P CoreLogic Case-Shiller CA-Los Angeles Home Price Index,LXXRSA,https://fred.stlouisfed.org/series/LXXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Los Angeles, California in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Los Angeles, California. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:06.986219
+S&P CoreLogic Case-Shiller CA-Los Angeles Home Price Index,LXXRSA,https://fred.stlouisfed.org/series/LXXRSA,,,,,2025-09-06T13:36:07.007476
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LXXRNSA,https://fred.stlouisfed.org/series/LXXRNSA,,,,,2025-09-06T13:36:07.116896
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LXXRNSA,https://fred.stlouisfed.org/series/LXXRNSA,,,,,2025-09-06T13:36:07.151797
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LXXRNSA,https://fred.stlouisfed.org/series/LXXRNSA,,,,,2025-09-06T13:36:07.179116
+S&P CoreLogic Case-Shiller NY-New York Home Price Index,NYXRSA,https://fred.stlouisfed.org/series/NYXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for New York, New York in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for New York, New York. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:07.261999
+S&P CoreLogic Case-Shiller NY-New York Home Price Index,NYXRSA,https://fred.stlouisfed.org/series/NYXRSA,,,,,2025-09-06T13:36:07.294042
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRNSA,https://fred.stlouisfed.org/series/NYXRNSA,,,,,2025-09-06T13:36:07.391324
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRNSA,https://fred.stlouisfed.org/series/NYXRNSA,,,,,2025-09-06T13:36:07.412434
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRNSA,https://fred.stlouisfed.org/series/NYXRNSA,,,,,2025-09-06T13:36:07.432753
+S&P CoreLogic Case-Shiller IL-Chicago Home Price Index,CHXRSA,https://fred.stlouisfed.org/series/CHXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Chicago, Illinois in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Chicago, Illinois. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:07.495802
+S&P CoreLogic Case-Shiller IL-Chicago Home Price Index,CHXRSA,https://fred.stlouisfed.org/series/CHXRSA,,,,,2025-09-06T13:36:07.515198
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRNSA,https://fred.stlouisfed.org/series/CHXRNSA,,,,,2025-09-06T13:36:07.602326
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRNSA,https://fred.stlouisfed.org/series/CHXRNSA,,,,,2025-09-06T13:36:07.625998
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRNSA,https://fred.stlouisfed.org/series/CHXRNSA,,,,,2025-09-06T13:36:07.656540
+S&P CoreLogic Case-Shiller WA-Seattle Home Price Index,SEXRSA,https://fred.stlouisfed.org/series/SEXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Seattle, Washington in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Seattle, Washington. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:07.763125
+S&P CoreLogic Case-Shiller WA-Seattle Home Price Index,SEXRSA,https://fred.stlouisfed.org/series/SEXRSA,,,,,2025-09-06T13:36:07.790455
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SEXRNSA,https://fred.stlouisfed.org/series/SEXRNSA,,,,,2025-09-06T13:36:07.902077
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SEXRNSA,https://fred.stlouisfed.org/series/SEXRNSA,,,,,2025-09-06T13:36:07.925071
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SEXRNSA,https://fred.stlouisfed.org/series/SEXRNSA,,,,,2025-09-06T13:36:07.944622
+S&P CoreLogic Case-Shiller FL-Miami Home Price Index,MIXRSA,https://fred.stlouisfed.org/series/MIXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Miami, Florida in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Miami, Florida. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:08.003992
+S&P CoreLogic Case-Shiller FL-Miami Home Price Index,MIXRSA,https://fred.stlouisfed.org/series/MIXRSA,,,,,2025-09-06T13:36:08.028711
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MIXRNSA,https://fred.stlouisfed.org/series/MIXRNSA,,,,,2025-09-06T13:36:08.135688
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MIXRNSA,https://fred.stlouisfed.org/series/MIXRNSA,,,,,2025-09-06T13:36:08.162677
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MIXRNSA,https://fred.stlouisfed.org/series/MIXRNSA,,,,,2025-09-06T13:36:08.199760
+"Condo Price Index for New York, New York",NYXRCSA,https://fred.stlouisfed.org/series/NYXRCSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:08.305547
+"Condo Price Index for New York, New York",NYXRCSA,https://fred.stlouisfed.org/series/NYXRCSA,,,,,2025-09-06T13:36:08.332943
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRCNSA,https://fred.stlouisfed.org/series/NYXRCNSA,,,,,2025-09-06T13:36:08.459256
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRCNSA,https://fred.stlouisfed.org/series/NYXRCNSA,,,,,2025-09-06T13:36:08.487201
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRCNSA,https://fred.stlouisfed.org/series/NYXRCNSA,,,,,2025-09-06T13:36:08.509284
+S&P CoreLogic Case-Shiller CA-San Diego Home Price Index,SDXRSA,https://fred.stlouisfed.org/series/SDXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for San Diego, California in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for San Diego, California. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:08.588303
+S&P CoreLogic Case-Shiller CA-San Diego Home Price Index,SDXRSA,https://fred.stlouisfed.org/series/SDXRSA,,,,,2025-09-06T13:36:08.625696
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SDXRNSA,https://fred.stlouisfed.org/series/SDXRNSA,,,,,2025-09-06T13:36:08.765429
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SDXRNSA,https://fred.stlouisfed.org/series/SDXRNSA,,,,,2025-09-06T13:36:08.789937
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SDXRNSA,https://fred.stlouisfed.org/series/SDXRNSA,,,,,2025-09-06T13:36:08.824664
+Research Consumer Price Index: Housing,CPIEHOUSE,https://fred.stlouisfed.org/series/CPIEHOUSE,"The BLS calculates a research price index called the Consumer Price Index for Americans 62 years of age and older, or R-CPI-E. The R-CPI-E is used by those interested in measures of price change specifically based on the spending patterns of the elderly (as defined in the construction of this index). Official uses of the R-CPI-E have been considered by other government agencies but not implemented due to several limitations. These limitations must be considered and understood by potential users of the data, and any conclusions drawn from these analyses should be treated as tentative. See the Bureau of Labor Statistics (BLS) (https://www.bls.gov/cpi/research-series/r-cpi-e-home.htm) from more information.",,"Index 1982=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:08.891915
+Research Consumer Price Index: Housing,CPIEHOUSE,https://fred.stlouisfed.org/series/CPIEHOUSE,,,,,2025-09-06T13:36:08.912401
+S&P CoreLogic Case-Shiller CO-Denver Home Price Index,DNXRSA,https://fred.stlouisfed.org/series/DNXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Denver, Colorado in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Denver, Colorado. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:09.014790
+S&P CoreLogic Case-Shiller CO-Denver Home Price Index,DNXRSA,https://fred.stlouisfed.org/series/DNXRSA,,,,,2025-09-06T13:36:09.033222
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DNXRNSA,https://fred.stlouisfed.org/series/DNXRNSA,,,,,2025-09-06T13:36:09.153509
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DNXRNSA,https://fred.stlouisfed.org/series/DNXRNSA,,,,,2025-09-06T13:36:09.181745
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DNXRNSA,https://fred.stlouisfed.org/series/DNXRNSA,,,,,2025-09-06T13:36:09.215161
+S&P CoreLogic Case-Shiller TX-Dallas Home Price Index,DAXRSA,https://fred.stlouisfed.org/series/DAXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Dallas, Texas in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Dallas, Texas. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:09.303743
+S&P CoreLogic Case-Shiller TX-Dallas Home Price Index,DAXRSA,https://fred.stlouisfed.org/series/DAXRSA,,,,,2025-09-06T13:36:09.338454
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DAXRNSA,https://fred.stlouisfed.org/series/DAXRNSA,,,,,2025-09-06T13:36:09.468289
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DAXRNSA,https://fred.stlouisfed.org/series/DAXRNSA,,,,,2025-09-06T13:36:09.496771
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DAXRNSA,https://fred.stlouisfed.org/series/DAXRNSA,,,,,2025-09-06T13:36:09.535537
+S&P CoreLogic Case-Shiller MA-Boston Home Price Index,BOXRSA,https://fred.stlouisfed.org/series/BOXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Boston, Massachusetts in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Boston, Massachusetts. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:09.618085
+S&P CoreLogic Case-Shiller MA-Boston Home Price Index,BOXRSA,https://fred.stlouisfed.org/series/BOXRSA,,,,,2025-09-06T13:36:09.646395
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",BOXRNSA,https://fred.stlouisfed.org/series/BOXRNSA,,,,,2025-09-06T13:36:09.742048
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",BOXRNSA,https://fred.stlouisfed.org/series/BOXRNSA,,,,,2025-09-06T13:36:09.768655
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",BOXRNSA,https://fred.stlouisfed.org/series/BOXRNSA,,,,,2025-09-06T13:36:09.793337
+S&P CoreLogic Case-Shiller AZ-Phoenix Home Price Index,PHXRSA,https://fred.stlouisfed.org/series/PHXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Phoenix, Arizona in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Phoenix, Arizona. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:09.884398
+S&P CoreLogic Case-Shiller AZ-Phoenix Home Price Index,PHXRSA,https://fred.stlouisfed.org/series/PHXRSA,,,,,2025-09-06T13:36:09.899835
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",PHXRNSA,https://fred.stlouisfed.org/series/PHXRNSA,,,,,2025-09-06T13:36:09.990041
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",PHXRNSA,https://fred.stlouisfed.org/series/PHXRNSA,,,,,2025-09-06T13:36:10.004070
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",PHXRNSA,https://fred.stlouisfed.org/series/PHXRNSA,,,,,2025-09-06T13:36:10.020676
+S&P CoreLogic Case-Shiller NV-Las Vegas Home Price Index,LVXRSA,https://fred.stlouisfed.org/series/LVXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Las Vegas, Nevada in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Las Vegas, Nevada. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:10.112542
+S&P CoreLogic Case-Shiller NV-Las Vegas Home Price Index,LVXRSA,https://fred.stlouisfed.org/series/LVXRSA,,,,,2025-09-06T13:36:10.142614
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LVXRNSA,https://fred.stlouisfed.org/series/LVXRNSA,,,,,2025-09-06T13:36:10.241099
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LVXRNSA,https://fred.stlouisfed.org/series/LVXRNSA,,,,,2025-09-06T13:36:10.267987
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LVXRNSA,https://fred.stlouisfed.org/series/LVXRNSA,,,,,2025-09-06T13:36:10.290947
+S&P CoreLogic Case-Shiller 10-City Composite Home Price Index,SPCS10RSA,https://fred.stlouisfed.org/series/SPCS10RSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of S&P Case-Shiller 10-City Home Price Index in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of S&P Case-Shiller 10-City Home Price Index. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:10.356662
+S&P CoreLogic Case-Shiller 10-City Composite Home Price Index,SPCS10RSA,https://fred.stlouisfed.org/series/SPCS10RSA,,,,,2025-09-06T13:36:10.379569
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SPCS10RNSA,https://fred.stlouisfed.org/series/SPCS10RNSA,,,,,2025-09-06T13:36:10.470498
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SPCS10RNSA,https://fred.stlouisfed.org/series/SPCS10RNSA,,,,,2025-09-06T13:36:10.493043
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SPCS10RNSA,https://fred.stlouisfed.org/series/SPCS10RNSA,,,,,2025-09-06T13:36:10.522473
+S&P CoreLogic Case-Shiller FL-Tampa Home Price Index,TPXRSA,https://fred.stlouisfed.org/series/TPXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Tampa, Florida in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Tampa, Florida. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:10.628520
+S&P CoreLogic Case-Shiller FL-Tampa Home Price Index,TPXRSA,https://fred.stlouisfed.org/series/TPXRSA,,,,,2025-09-06T13:36:10.668752
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",TPXRNSA,https://fred.stlouisfed.org/series/TPXRNSA,,,,,2025-09-06T13:36:10.818364
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",TPXRNSA,https://fred.stlouisfed.org/series/TPXRNSA,,,,,2025-09-06T13:36:10.850622
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",TPXRNSA,https://fred.stlouisfed.org/series/TPXRNSA,,,,,2025-09-06T13:36:10.871852
+S&P CoreLogic Case-Shiller GA-Atlanta Home Price Index,ATXRSA,https://fred.stlouisfed.org/series/ATXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Atlanta, Georgia in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Atlanta, Georgia. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:10.979045
+S&P CoreLogic Case-Shiller GA-Atlanta Home Price Index,ATXRSA,https://fred.stlouisfed.org/series/ATXRSA,,,,,2025-09-06T13:36:11.007114
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",ATXRNSA,https://fred.stlouisfed.org/series/ATXRNSA,,,,,2025-09-06T13:36:11.154014
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",ATXRNSA,https://fred.stlouisfed.org/series/ATXRNSA,,,,,2025-09-06T13:36:11.189803
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",ATXRNSA,https://fred.stlouisfed.org/series/ATXRNSA,,,,,2025-09-06T13:36:11.221604
+S&P CoreLogic Case-Shiller OR-Portland Home Price Index,POXRSA,https://fred.stlouisfed.org/series/POXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Portland, Oregon in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Portland, Oregon. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:11.321588
+S&P CoreLogic Case-Shiller OR-Portland Home Price Index,POXRSA,https://fred.stlouisfed.org/series/POXRSA,,,,,2025-09-06T13:36:11.353331
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",POXRNSA,https://fred.stlouisfed.org/series/POXRNSA,,,,,2025-09-06T13:36:11.482519
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",POXRNSA,https://fred.stlouisfed.org/series/POXRNSA,,,,,2025-09-06T13:36:11.509842
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",POXRNSA,https://fred.stlouisfed.org/series/POXRNSA,,,,,2025-09-06T13:36:11.544700
+S&P CoreLogic Case-Shiller DC-Washington Home Price Index,WDXRSA,https://fred.stlouisfed.org/series/WDXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Washington D.C. in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Washington D.C.. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:11.663233
+S&P CoreLogic Case-Shiller DC-Washington Home Price Index,WDXRSA,https://fred.stlouisfed.org/series/WDXRSA,,,,,2025-09-06T13:36:11.706287
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",WDXRNSA,https://fred.stlouisfed.org/series/WDXRNSA,,,,,2025-09-06T13:36:11.845898
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",WDXRNSA,https://fred.stlouisfed.org/series/WDXRNSA,,,,,2025-09-06T13:36:11.874253
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",WDXRNSA,https://fred.stlouisfed.org/series/WDXRNSA,,,,,2025-09-06T13:36:11.896642
+"Condo Price Index for Chicago, Illinois",CHXRCSA,https://fred.stlouisfed.org/series/CHXRCSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:11.983432
+"Condo Price Index for Chicago, Illinois",CHXRCSA,https://fred.stlouisfed.org/series/CHXRCSA,,,,,2025-09-06T13:36:12.020969
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRCNSA,https://fred.stlouisfed.org/series/CHXRCNSA,,,,,2025-09-06T13:36:12.128472
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRCNSA,https://fred.stlouisfed.org/series/CHXRCNSA,,,,,2025-09-06T13:36:12.146174
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRCNSA,https://fred.stlouisfed.org/series/CHXRCNSA,,,,,2025-09-06T13:36:12.170988
+"Condo Price Index for San Francisco, California",SFXRCSA,https://fred.stlouisfed.org/series/SFXRCSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:12.261271
+"Condo Price Index for San Francisco, California",SFXRCSA,https://fred.stlouisfed.org/series/SFXRCSA,,,,,2025-09-06T13:36:12.294714
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRCNSA,https://fred.stlouisfed.org/series/SFXRCNSA,,,,,2025-09-06T13:36:12.433525
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRCNSA,https://fred.stlouisfed.org/series/SFXRCNSA,,,,,2025-09-06T13:36:12.457907
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRCNSA,https://fred.stlouisfed.org/series/SFXRCNSA,,,,,2025-09-06T13:36:12.486809
+S&P CoreLogic Case-Shiller MN-Minneapolis Home Price Index,MNXRSA,https://fred.stlouisfed.org/series/MNXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Minneapolis, Minnesota in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Minneapolis, Minnesota. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:12.591525
+S&P CoreLogic Case-Shiller MN-Minneapolis Home Price Index,MNXRSA,https://fred.stlouisfed.org/series/MNXRSA,,,,,2025-09-06T13:36:12.625335
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MNXRNSA,https://fred.stlouisfed.org/series/MNXRNSA,,,,,2025-09-06T13:36:12.735355
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MNXRNSA,https://fred.stlouisfed.org/series/MNXRNSA,,,,,2025-09-06T13:36:12.753453
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MNXRNSA,https://fred.stlouisfed.org/series/MNXRNSA,,,,,2025-09-06T13:36:12.773296
+S&P CoreLogic Case-Shiller NC-Charlotte Home Price Index,CRXRSA,https://fred.stlouisfed.org/series/CRXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Charlotte, North Carolina in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Charlotte, North Carolina. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:12.872603
+S&P CoreLogic Case-Shiller NC-Charlotte Home Price Index,CRXRSA,https://fred.stlouisfed.org/series/CRXRSA,,,,,2025-09-06T13:36:12.907967
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CRXRNSA,https://fred.stlouisfed.org/series/CRXRNSA,,,,,2025-09-06T13:36:12.971957
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CRXRNSA,https://fred.stlouisfed.org/series/CRXRNSA,,,,,2025-09-06T13:36:12.985916
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CRXRNSA,https://fred.stlouisfed.org/series/CRXRNSA,,,,,2025-09-06T13:36:13.004360
+S&P CoreLogic Case-Shiller MI-Detroit Home Price Index,DEXRSA,https://fred.stlouisfed.org/series/DEXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Detroit, Michigan in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Detroit, Michigan. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:13.071690
+S&P CoreLogic Case-Shiller MI-Detroit Home Price Index,DEXRSA,https://fred.stlouisfed.org/series/DEXRSA,,,,,2025-09-06T13:36:13.090938
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DEXRNSA,https://fred.stlouisfed.org/series/DEXRNSA,,,,,2025-09-06T13:36:13.162498
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DEXRNSA,https://fred.stlouisfed.org/series/DEXRNSA,,,,,2025-09-06T13:36:13.186140
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DEXRNSA,https://fred.stlouisfed.org/series/DEXRNSA,,,,,2025-09-06T13:36:13.211150
+S&P CoreLogic Case-Shiller OH-Cleveland Home Price Index,CEXRSA,https://fred.stlouisfed.org/series/CEXRSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). Copyright © 2016, S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Cleveland, Ohio in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC ""S&P"". S&P does not guarantee the accuracy, adequacy, completeness or availability of any information and is not responsible for any errors or omissions, regardless of the cause or for the results obtained from the use of such information. S&P DISCLAIMS ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE. In no event shall S&P be liable for any direct, indirect, special or consequential damages, costs, expenses, legal fees, or losses (including lost income or lost profit and opportunity costs) in connection with subscriber's or others' user of Home Price Index for Cleveland, Ohio. Permission to reproduce this series can be requested from index_services@spdji.com. More contact details are available from http://us.spindices.com/contact-us/, including phone numbers for all of its regional offices.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:13.270042
+S&P CoreLogic Case-Shiller OH-Cleveland Home Price Index,CEXRSA,https://fred.stlouisfed.org/series/CEXRSA,,,,,2025-09-06T13:36:13.305008
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CEXRNSA,https://fred.stlouisfed.org/series/CEXRNSA,,,,,2025-09-06T13:36:13.429781
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CEXRNSA,https://fred.stlouisfed.org/series/CEXRNSA,,,,,2025-09-06T13:36:13.451343
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CEXRNSA,https://fred.stlouisfed.org/series/CEXRNSA,,,,,2025-09-06T13:36:13.466287
+"Home Price Index (High Tier) for Chicago, Illinois",CHXRHTSA,https://fred.stlouisfed.org/series/CHXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:13.538278
+"Home Price Index (High Tier) for Chicago, Illinois",CHXRHTSA,https://fred.stlouisfed.org/series/CHXRHTSA,,,,,2025-09-06T13:36:13.572288
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRHTNSA,https://fred.stlouisfed.org/series/CHXRHTNSA,,,,,2025-09-06T13:36:13.707471
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRHTNSA,https://fred.stlouisfed.org/series/CHXRHTNSA,,,,,2025-09-06T13:36:13.731239
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRHTNSA,https://fred.stlouisfed.org/series/CHXRHTNSA,,,,,2025-09-06T13:36:13.750701
+"Condo Price Index for Los Angeles, California",LXXRCSA,https://fred.stlouisfed.org/series/LXXRCSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:13.832479
+"Condo Price Index for Los Angeles, California",LXXRCSA,https://fred.stlouisfed.org/series/LXXRCSA,,,,,2025-09-06T13:36:13.861750
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LXXRCNSA,https://fred.stlouisfed.org/series/LXXRCNSA,,,,,2025-09-06T13:36:13.949602
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LXXRCNSA,https://fred.stlouisfed.org/series/LXXRCNSA,,,,,2025-09-06T13:36:13.969098
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LXXRCNSA,https://fred.stlouisfed.org/series/LXXRCNSA,,,,,2025-09-06T13:36:13.986560
+"Condo Price Index for Boston, Massachusetts",BOXRCSA,https://fred.stlouisfed.org/series/BOXRCSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:14.065662
+"Condo Price Index for Boston, Massachusetts",BOXRCSA,https://fred.stlouisfed.org/series/BOXRCSA,,,,,2025-09-06T13:36:14.097940
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",BOXRCNSA,https://fred.stlouisfed.org/series/BOXRCNSA,,,,,2025-09-06T13:36:14.217554
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",BOXRCNSA,https://fred.stlouisfed.org/series/BOXRCNSA,,,,,2025-09-06T13:36:14.243773
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",BOXRCNSA,https://fred.stlouisfed.org/series/BOXRCNSA,,,,,2025-09-06T13:36:14.260431
+"Home Price Index (Middle Tier) for Phoenix, Arizona",PHXRMTSA,https://fred.stlouisfed.org/series/PHXRMTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:14.351614
+"Home Price Index (Middle Tier) for Phoenix, Arizona",PHXRMTSA,https://fred.stlouisfed.org/series/PHXRMTSA,,,,,2025-09-06T13:36:14.383374
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",PHXRMTNSA,https://fred.stlouisfed.org/series/PHXRMTNSA,,,,,2025-09-06T13:36:14.471350
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",PHXRMTNSA,https://fred.stlouisfed.org/series/PHXRMTNSA,,,,,2025-09-06T13:36:14.490174
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",PHXRMTNSA,https://fred.stlouisfed.org/series/PHXRMTNSA,,,,,2025-09-06T13:36:14.514906
+"Home Price Index (High Tier) for Seattle, Washington",SEXRHTSA,https://fred.stlouisfed.org/series/SEXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:14.614116
+"Home Price Index (High Tier) for Seattle, Washington",SEXRHTSA,https://fred.stlouisfed.org/series/SEXRHTSA,,,,,2025-09-06T13:36:14.649595
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SEXRHTNSA,https://fred.stlouisfed.org/series/SEXRHTNSA,,,,,2025-09-06T13:36:14.779399
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SEXRHTNSA,https://fred.stlouisfed.org/series/SEXRHTNSA,,,,,2025-09-06T13:36:14.804804
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SEXRHTNSA,https://fred.stlouisfed.org/series/SEXRHTNSA,,,,,2025-09-06T13:36:14.828837
+"Home Price Index (High Tier) for San Francisco, California",SFXRHTSA,https://fred.stlouisfed.org/series/SFXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:14.944392
+"Home Price Index (High Tier) for San Francisco, California",SFXRHTSA,https://fred.stlouisfed.org/series/SFXRHTSA,,,,,2025-09-06T13:36:14.978692
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRHTNSA,https://fred.stlouisfed.org/series/SFXRHTNSA,,,,,2025-09-06T13:36:15.120607
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRHTNSA,https://fred.stlouisfed.org/series/SFXRHTNSA,,,,,2025-09-06T13:36:15.152418
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRHTNSA,https://fred.stlouisfed.org/series/SFXRHTNSA,,,,,2025-09-06T13:36:15.189098
+Home Price Index (High Tier) for Washington D.C.,WDXRHTSA,https://fred.stlouisfed.org/series/WDXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:15.300486
+Home Price Index (High Tier) for Washington D.C.,WDXRHTSA,https://fred.stlouisfed.org/series/WDXRHTSA,,,,,2025-09-06T13:36:15.336624
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",WDXRHTNSA,https://fred.stlouisfed.org/series/WDXRHTNSA,,,,,2025-09-06T13:36:15.474201
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",WDXRHTNSA,https://fred.stlouisfed.org/series/WDXRHTNSA,,,,,2025-09-06T13:36:15.511430
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",WDXRHTNSA,https://fred.stlouisfed.org/series/WDXRHTNSA,,,,,2025-09-06T13:36:15.548047
+S&P CoreLogic Case-Shiller 20-City Home Price Sales Pair Counts,SPCS20RPSNSA,https://fred.stlouisfed.org/series/SPCS20RPSNSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Units, Monthly, Not Seasonally Adjusted",,2025-09-06T13:36:15.653774
+S&P CoreLogic Case-Shiller 20-City Home Price Sales Pair Counts,SPCS20RPSNSA,https://fred.stlouisfed.org/series/SPCS20RPSNSA,,,,,2025-09-06T13:36:15.686552
+"Home Price Index (High Tier) for New York, New York",NYXRHTSA,https://fred.stlouisfed.org/series/NYXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:15.813908
+"Home Price Index (High Tier) for New York, New York",NYXRHTSA,https://fred.stlouisfed.org/series/NYXRHTSA,,,,,2025-09-06T13:36:15.828574
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRHTNSA,https://fred.stlouisfed.org/series/NYXRHTNSA,,,,,2025-09-06T13:36:15.932989
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRHTNSA,https://fred.stlouisfed.org/series/NYXRHTNSA,,,,,2025-09-06T13:36:15.970441
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRHTNSA,https://fred.stlouisfed.org/series/NYXRHTNSA,,,,,2025-09-06T13:36:15.993284
+"Home Price Index (High Tier) for Denver, Colorado",DNXRHTSA,https://fred.stlouisfed.org/series/DNXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:16.091649
+"Home Price Index (High Tier) for Denver, Colorado",DNXRHTSA,https://fred.stlouisfed.org/series/DNXRHTSA,,,,,2025-09-06T13:36:16.125566
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DNXRHTNSA,https://fred.stlouisfed.org/series/DNXRHTNSA,,,,,2025-09-06T13:36:16.289502
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DNXRHTNSA,https://fred.stlouisfed.org/series/DNXRHTNSA,,,,,2025-09-06T13:36:16.320144
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",DNXRHTNSA,https://fred.stlouisfed.org/series/DNXRHTNSA,,,,,2025-09-06T13:36:16.353964
+"Home Price Index (High Tier) for Boston, Massachusetts",BOXRHTSA,https://fred.stlouisfed.org/series/BOXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:16.424064
+"Home Price Index (High Tier) for Boston, Massachusetts",BOXRHTSA,https://fred.stlouisfed.org/series/BOXRHTSA,,,,,2025-09-06T13:36:16.436091
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",BOXRHTNSA,https://fred.stlouisfed.org/series/BOXRHTNSA,,,,,2025-09-06T13:36:16.502657
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",BOXRHTNSA,https://fred.stlouisfed.org/series/BOXRHTNSA,,,,,2025-09-06T13:36:16.518957
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",BOXRHTNSA,https://fred.stlouisfed.org/series/BOXRHTNSA,,,,,2025-09-06T13:36:16.534572
+"Home Price Index (High Tier) for San Diego, California",SDXRHTSA,https://fred.stlouisfed.org/series/SDXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:16.606108
+"Home Price Index (High Tier) for San Diego, California",SDXRHTSA,https://fred.stlouisfed.org/series/SDXRHTSA,,,,,2025-09-06T13:36:16.625321
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SDXRHTNSA,https://fred.stlouisfed.org/series/SDXRHTNSA,,,,,2025-09-06T13:36:16.741256
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SDXRHTNSA,https://fred.stlouisfed.org/series/SDXRHTNSA,,,,,2025-09-06T13:36:16.774853
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SDXRHTNSA,https://fred.stlouisfed.org/series/SDXRHTNSA,,,,,2025-09-06T13:36:16.813202
+"Home Price Index (High Tier) for Miami, Florida",MIXRHTSA,https://fred.stlouisfed.org/series/MIXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:16.887814
+"Home Price Index (High Tier) for Miami, Florida",MIXRHTSA,https://fred.stlouisfed.org/series/MIXRHTSA,,,,,2025-09-06T13:36:16.902802
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MIXRHTNSA,https://fred.stlouisfed.org/series/MIXRHTNSA,,,,,2025-09-06T13:36:16.974344
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MIXRHTNSA,https://fred.stlouisfed.org/series/MIXRHTNSA,,,,,2025-09-06T13:36:16.985730
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MIXRHTNSA,https://fred.stlouisfed.org/series/MIXRHTNSA,,,,,2025-09-06T13:36:17.014267
+"Home Price Index (High Tier) for Los Angeles, California",LXXRHTSA,https://fred.stlouisfed.org/series/LXXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:17.112317
+"Home Price Index (High Tier) for Los Angeles, California",LXXRHTSA,https://fred.stlouisfed.org/series/LXXRHTSA,,,,,2025-09-06T13:36:17.144893
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LXXRHTNSA,https://fred.stlouisfed.org/series/LXXRHTNSA,,,,,2025-09-06T13:36:17.279945
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LXXRHTNSA,https://fred.stlouisfed.org/series/LXXRHTNSA,,,,,2025-09-06T13:36:17.304443
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LXXRHTNSA,https://fred.stlouisfed.org/series/LXXRHTNSA,,,,,2025-09-06T13:36:17.322716
+Purchase Only House Price Index for the New England Census Division,PONHPI00101M226S,https://fred.stlouisfed.org/series/PONHPI00101M226S,The purchase-only index is based on more than 6 million repeat sales transactions on the same single-family properties.,,"Index Jan 1991=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:17.379945
+Purchase Only House Price Index for the New England Census Division,PONHPI00101M226S,https://fred.stlouisfed.org/series/PONHPI00101M226S,,,,,2025-09-06T13:36:17.399055
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",PONHPI00101M226N,https://fred.stlouisfed.org/series/PONHPI00101M226N,,,,,2025-09-06T13:36:17.477201
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",PONHPI00101M226N,https://fred.stlouisfed.org/series/PONHPI00101M226N,,,,,2025-09-06T13:36:17.503239
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",PONHPI00101M226N,https://fred.stlouisfed.org/series/PONHPI00101M226N,,,,,2025-09-06T13:36:17.527382
+"Home Price Sales Pair Counts for San Diego, California",SDXRPSNSA,https://fred.stlouisfed.org/series/SDXRPSNSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Units, Monthly, Not Seasonally Adjusted",,2025-09-06T13:36:17.596556
+"Home Price Sales Pair Counts for San Diego, California",SDXRPSNSA,https://fred.stlouisfed.org/series/SDXRPSNSA,,,,,2025-09-06T13:36:17.623848
+"Home Price Index (High Tier) for Las Vegas, Nevada",LVXRHTSA,https://fred.stlouisfed.org/series/LVXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:17.766249
+"Home Price Index (High Tier) for Las Vegas, Nevada",LVXRHTSA,https://fred.stlouisfed.org/series/LVXRHTSA,,,,,2025-09-06T13:36:17.789972
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LVXRHTNSA,https://fred.stlouisfed.org/series/LVXRHTNSA,,,,,2025-09-06T13:36:17.852524
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LVXRHTNSA,https://fred.stlouisfed.org/series/LVXRHTNSA,,,,,2025-09-06T13:36:17.885161
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",LVXRHTNSA,https://fred.stlouisfed.org/series/LVXRHTNSA,,,,,2025-09-06T13:36:17.922078
+S&P CoreLogic Case-Shiller 10-City Home Price Sales Pair Counts,SPCS10RPSNSA,https://fred.stlouisfed.org/series/SPCS10RPSNSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Units, Monthly, Not Seasonally Adjusted",,2025-09-06T13:36:17.970151
+S&P CoreLogic Case-Shiller 10-City Home Price Sales Pair Counts,SPCS10RPSNSA,https://fred.stlouisfed.org/series/SPCS10RPSNSA,,,,,2025-09-06T13:36:17.989433
+"Home Price Sales Pair Counts for Dallas, Texas",DAXRPSNSA,https://fred.stlouisfed.org/series/DAXRPSNSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Units, Monthly, Not Seasonally Adjusted",,2025-09-06T13:36:18.142903
+"Home Price Sales Pair Counts for Dallas, Texas",DAXRPSNSA,https://fred.stlouisfed.org/series/DAXRPSNSA,,,,,2025-09-06T13:36:18.169030
+"Home Price Index (High Tier) for Tampa, Florida",TPXRHTSA,https://fred.stlouisfed.org/series/TPXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:18.334632
+"Home Price Index (High Tier) for Tampa, Florida",TPXRHTSA,https://fred.stlouisfed.org/series/TPXRHTSA,,,,,2025-09-06T13:36:18.353804
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",TPXRHTNSA,https://fred.stlouisfed.org/series/TPXRHTNSA,,,,,2025-09-06T13:36:18.417457
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",TPXRHTNSA,https://fred.stlouisfed.org/series/TPXRHTNSA,,,,,2025-09-06T13:36:18.439152
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",TPXRHTNSA,https://fred.stlouisfed.org/series/TPXRHTNSA,,,,,2025-09-06T13:36:18.456767
+"Home Price Index (Low Tier) for San Francisco, California",SFXRLTSA,https://fred.stlouisfed.org/series/SFXRLTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:18.525635
+"Home Price Index (Low Tier) for San Francisco, California",SFXRLTSA,https://fred.stlouisfed.org/series/SFXRLTSA,,,,,2025-09-06T13:36:18.540961
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRLTNSA,https://fred.stlouisfed.org/series/SFXRLTNSA,,,,,2025-09-06T13:36:18.597565
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRLTNSA,https://fred.stlouisfed.org/series/SFXRLTNSA,,,,,2025-09-06T13:36:18.610548
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SFXRLTNSA,https://fred.stlouisfed.org/series/SFXRLTNSA,,,,,2025-09-06T13:36:18.627844
+"Home Price Index (Middle Tier) for San Diego, California",SDXRMTSA,https://fred.stlouisfed.org/series/SDXRMTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:18.703917
+"Home Price Index (Middle Tier) for San Diego, California",SDXRMTSA,https://fred.stlouisfed.org/series/SDXRMTSA,,,,,2025-09-06T13:36:18.729450
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SDXRMTNSA,https://fred.stlouisfed.org/series/SDXRMTNSA,,,,,2025-09-06T13:36:18.838987
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SDXRMTNSA,https://fred.stlouisfed.org/series/SDXRMTNSA,,,,,2025-09-06T13:36:18.855266
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",SDXRMTNSA,https://fred.stlouisfed.org/series/SDXRMTNSA,,,,,2025-09-06T13:36:18.874876
+"Home Price Index (High Tier) for Minneapolis, Minnesota",MNXRHTSA,https://fred.stlouisfed.org/series/MNXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:18.978009
+"Home Price Index (High Tier) for Minneapolis, Minnesota",MNXRHTSA,https://fred.stlouisfed.org/series/MNXRHTSA,,,,,2025-09-06T13:36:19.011621
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MNXRHTNSA,https://fred.stlouisfed.org/series/MNXRHTNSA,,,,,2025-09-06T13:36:19.154041
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MNXRHTNSA,https://fred.stlouisfed.org/series/MNXRHTNSA,,,,,2025-09-06T13:36:19.187993
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",MNXRHTNSA,https://fred.stlouisfed.org/series/MNXRHTNSA,,,,,2025-09-06T13:36:19.221043
+"Home Price Index (High Tier) for Atlanta, Georgia",ATXRHTSA,https://fred.stlouisfed.org/series/ATXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:19.318286
+"Home Price Index (High Tier) for Atlanta, Georgia",ATXRHTSA,https://fred.stlouisfed.org/series/ATXRHTSA,,,,,2025-09-06T13:36:19.350775
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",ATXRHTNSA,https://fred.stlouisfed.org/series/ATXRHTNSA,,,,,2025-09-06T13:36:19.488797
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",ATXRHTNSA,https://fred.stlouisfed.org/series/ATXRHTNSA,,,,,2025-09-06T13:36:19.524379
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",ATXRHTNSA,https://fred.stlouisfed.org/series/ATXRHTNSA,,,,,2025-09-06T13:36:19.561229
+"Home Price Sales Pair Counts for Tampa, Florida",TPXRPSNSA,https://fred.stlouisfed.org/series/TPXRPSNSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Units, Monthly, Not Seasonally Adjusted",,2025-09-06T13:36:19.667834
+"Home Price Sales Pair Counts for Tampa, Florida",TPXRPSNSA,https://fred.stlouisfed.org/series/TPXRPSNSA,,,,,2025-09-06T13:36:19.697283
+"Home Price Index (High Tier) for Portland, Oregon",POXRHTSA,https://fred.stlouisfed.org/series/POXRHTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:19.867633
+"Home Price Index (High Tier) for Portland, Oregon",POXRHTSA,https://fred.stlouisfed.org/series/POXRHTSA,,,,,2025-09-06T13:36:19.902541
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",POXRHTNSA,https://fred.stlouisfed.org/series/POXRHTNSA,,,,,2025-09-06T13:36:20.040900
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",POXRHTNSA,https://fred.stlouisfed.org/series/POXRHTNSA,,,,,2025-09-06T13:36:20.073790
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",POXRHTNSA,https://fred.stlouisfed.org/series/POXRHTNSA,,,,,2025-09-06T13:36:20.100022
+Purchase Only House Price Index for the Pacific Census Division,PONHPI00109M226S,https://fred.stlouisfed.org/series/PONHPI00109M226S,The purchase-only index is based on more than 6 million repeat sales transactions on the same single-family properties.,,"Index Jan 1991=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:20.202164
+Purchase Only House Price Index for the Pacific Census Division,PONHPI00109M226S,https://fred.stlouisfed.org/series/PONHPI00109M226S,,,,,2025-09-06T13:36:20.235421
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",PONHPI00109M226N,https://fred.stlouisfed.org/series/PONHPI00109M226N,,,,,2025-09-06T13:36:20.369145
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",PONHPI00109M226N,https://fred.stlouisfed.org/series/PONHPI00109M226N,,,,,2025-09-06T13:36:20.405716
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",PONHPI00109M226N,https://fred.stlouisfed.org/series/PONHPI00109M226N,,,,,2025-09-06T13:36:20.439757
+Purchase Only House Price Index for the Middle Atlantic Census Division,PONHPI00102M226S,https://fred.stlouisfed.org/series/PONHPI00102M226S,The purchase-only index is based on more than 6 million repeat sales transactions on the same single-family properties.,,"Index Jan 1991=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:20.506914
+Purchase Only House Price Index for the Middle Atlantic Census Division,PONHPI00102M226S,https://fred.stlouisfed.org/series/PONHPI00102M226S,,,,,2025-09-06T13:36:20.533599
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",PONHPI00102M226N,https://fred.stlouisfed.org/series/PONHPI00102M226N,,,,,2025-09-06T13:36:20.654566
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",PONHPI00102M226N,https://fred.stlouisfed.org/series/PONHPI00102M226N,,,,,2025-09-06T13:36:20.689187
+"Monthly,
+                        Index Jan 1991=100,
+                        Not Seasonally Adjusted",PONHPI00102M226N,https://fred.stlouisfed.org/series/PONHPI00102M226N,,,,,2025-09-06T13:36:20.727939
+"Home Price Index (Middle Tier) for Atlanta, Georgia",ATXRMTSA,https://fred.stlouisfed.org/series/ATXRMTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:20.831946
+"Home Price Index (Middle Tier) for Atlanta, Georgia",ATXRMTSA,https://fred.stlouisfed.org/series/ATXRMTSA,,,,,2025-09-06T13:36:20.857770
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",ATXRMTNSA,https://fred.stlouisfed.org/series/ATXRMTNSA,,,,,2025-09-06T13:36:20.978964
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",ATXRMTNSA,https://fred.stlouisfed.org/series/ATXRMTNSA,,,,,2025-09-06T13:36:21.016890
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",ATXRMTNSA,https://fred.stlouisfed.org/series/ATXRMTNSA,,,,,2025-09-06T13:36:21.051483
+"Home Price Index (Middle Tier) for Chicago, Illinois",CHXRMTSA,https://fred.stlouisfed.org/series/CHXRMTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:21.180024
+"Home Price Index (Middle Tier) for Chicago, Illinois",CHXRMTSA,https://fred.stlouisfed.org/series/CHXRMTSA,,,,,2025-09-06T13:36:21.212364
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRMTNSA,https://fred.stlouisfed.org/series/CHXRMTNSA,,,,,2025-09-06T13:36:21.328821
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRMTNSA,https://fred.stlouisfed.org/series/CHXRMTNSA,,,,,2025-09-06T13:36:21.361244
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",CHXRMTNSA,https://fred.stlouisfed.org/series/CHXRMTNSA,,,,,2025-09-06T13:36:21.400468
+"Home Price Index (Low Tier) for New York, New York",NYXRLTSA,https://fred.stlouisfed.org/series/NYXRLTSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Index Jan 2000=100, Monthly, Seasonally Adjusted",,2025-09-06T13:36:21.495777
+"Home Price Index (Low Tier) for New York, New York",NYXRLTSA,https://fred.stlouisfed.org/series/NYXRLTSA,,,,,2025-09-06T13:36:21.522843
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRLTNSA,https://fred.stlouisfed.org/series/NYXRLTNSA,,,,,2025-09-06T13:36:21.643518
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRLTNSA,https://fred.stlouisfed.org/series/NYXRLTNSA,,,,,2025-09-06T13:36:21.676737
+"Monthly,
+                        Index Jan 2000=100,
+                        Not Seasonally Adjusted",NYXRLTNSA,https://fred.stlouisfed.org/series/NYXRLTNSA,,,,,2025-09-06T13:36:21.715960
+"Home Price Sales Pair Counts for Las Vegas, Nevada",LVXRPSNSA,https://fred.stlouisfed.org/series/LVXRPSNSA,"For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",,"Units, Monthly, Not Seasonally Adjusted",,2025-09-06T13:36:21.825375
+"Home Price Sales Pair Counts for Las Vegas, Nevada",LVXRPSNSA,https://fred.stlouisfed.org/series/LVXRPSNSA,,,,,2025-09-06T13:36:21.856041

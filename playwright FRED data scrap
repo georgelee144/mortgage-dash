@@ -1,0 +1,217 @@
+import asyncio
+import json
+import csv
+from playwright.async_api import async_playwright
+from datetime import datetime
+
+
+async def scrape_fred_house_price_data():
+    """
+    Scrapes FRED house price search results and saves to JSON and CSV files
+    """
+
+    async with async_playwright() as p:
+        # Launch browser
+        browser = await p.chromium.launch(
+            headless=False,  # Set to True for headless mode
+            slow_mo=1000,  # Add delay between actions for debugging
+        )
+
+        context = await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        )
+
+        page = await context.new_page()
+
+        try:
+            print("Navigating to FRED search results...")
+
+            # Navigate to the URL
+            url = "https://fred.stlouisfed.org/searchresults/?st=house+price&t=hpi%3Bmonthly&ob=sr&od=desc&pageID=2"
+            await page.goto(url, wait_until="networkidle", timeout=30000)
+
+            # Extract all search results
+            results = []
+
+            # Get all search result items
+            result_items = await page.query_selector_all(
+                ".search-results .series-item, .search-results .search-result-item"
+            )
+
+            if not result_items:
+                # Try alternative selectors if the main ones don't work
+                result_items = await page.query_selector_all(
+                    '[class*="search-result"], [class*="series"]'
+                )
+
+            print(f"Found {len(result_items)} result items")
+
+            for i, item in enumerate(result_items):
+                try:
+                    # Extract title and URL
+                    title_element = await item.query_selector(
+                        'h4 a, .series-title a, h3 a, a[href*="/series/"]'
+                    )
+                    title = ""
+                    url = ""
+                    series_id = ""
+
+                    if title_element:
+                        title = await title_element.inner_text()
+                        url = await title_element.get_attribute("href")
+
+                        # Extract series ID from URL
+                        if url and "/series/" in url:
+                            series_id = url.split("/series/")[-1].split("/")[0]
+
+                    # Extract description
+                    description_element = await item.query_selector(
+                        ".series-description, .search-result-description, p"
+                    )
+                    description = ""
+                    if description_element:
+                        description = await description_element.inner_text()
+
+                    # Extract metadata
+                    last_updated = ""
+                    frequency = ""
+                    units = ""
+
+                    # Look for metadata elements
+                    meta_elements = await item.query_selector_all(
+                        '.series-meta span, .meta span, [class*="meta"] span'
+                    )
+                    for meta in meta_elements:
+                        meta_text = await meta.inner_text()
+                        if "updated" in meta_text.lower():
+                            last_updated = meta_text
+                        elif any(
+                            freq in meta_text.lower()
+                            for freq in ["monthly", "quarterly", "annual", "daily"]
+                        ):
+                            frequency = meta_text
+                        elif any(
+                            unit in meta_text.lower()
+                            for unit in ["index", "percent", "dollars", "rate"]
+                        ):
+                            units = meta_text
+
+                    # Only add if we have at least a title
+                    if title.strip():
+                        result = {
+                            "title": title.strip(),
+                            "series_id": series_id,
+                            "url": f"https://fred.stlouisfed.org{url}"
+                            if url and not url.startswith("http")
+                            else url,
+                            "description": description.strip(),
+                            "last_updated": last_updated.strip(),
+                            "frequency": frequency.strip(),
+                            "units": units.strip(),
+                            "scraped_at": datetime.now().isoformat(),
+                        }
+                        results.append(result)
+                        print(f"Extracted: {title[:50]}...")
+
+                except Exception as e:
+                    print(f"Error extracting item {i}: {e}")
+                    continue
+
+            # If no results found with specific selectors, try a more general approach
+            if not results:
+                print(
+                    "No results found with specific selectors, trying general approach..."
+                )
+
+                # Get all links that contain 'series' in the href
+                series_links = await page.query_selector_all('a[href*="/series/"]')
+
+                for link in series_links:
+                    try:
+                        title = await link.inner_text()
+                        url = await link.get_attribute("href")
+
+                        if title.strip() and url:
+                            series_id = (
+                                url.split("/series/")[-1].split("/")[0]
+                                if "/series/" in url
+                                else ""
+                            )
+
+                            result = {
+                                "title": title.strip(),
+                                "series_id": series_id,
+                                "url": f"https://fred.stlouisfed.org{url}"
+                                if not url.startswith("http")
+                                else url,
+                                "description": "",
+                                "last_updated": "",
+                                "frequency": "",
+                                "units": "",
+                                "scraped_at": datetime.now().isoformat(),
+                            }
+                            results.append(result)
+
+                    except Exception as e:
+                        print(f"Error with general extraction: {e}")
+                        continue
+
+            print(f"\nSuccessfully scraped {len(results)} house price series")
+
+            # Save results to JSON
+            with open("fred_house_price_data.json", "w", encoding="utf-8") as f:
+                json.dump(results, f, indent=2, ensure_ascii=False)
+
+            # Save results to CSV
+            if results:
+                with open(
+                    "fred_house_price_data.csv", "w", newline="", encoding="utf-8"
+                ) as f:
+                    writer = csv.DictWriter(f, fieldnames=results[0].keys())
+                    writer.writeheader()
+                    writer.writerows(results)
+
+            print(
+                f"Data saved to 'fred_house_price_data.json' and 'fred_house_price_data.csv'"
+            )
+
+            # Print first few results as preview
+            if results:
+                print("\nFirst 3 results:")
+                for i, result in enumerate(results[:3]):
+                    print(f"\n{i + 1}. {result['title']}")
+                    print(f"   Series ID: {result['series_id']}")
+                    print(f"   URL: {result['url']}")
+                    print(
+                        f"   Description: {result['description'][:100]}..."
+                        if len(result["description"]) > 100
+                        else f"   Description: {result['description']}"
+                    )
+
+            return results
+
+        except Exception as e:
+            print(f"Error during scraping: {e}")
+            return []
+
+        finally:
+            await browser.close()
+
+
+async def main():
+    """Main function to run the scraper"""
+    print("Starting FRED House Price Data Scraper...")
+    results = await scrape_fred_house_price_data()
+
+    if results:
+        print(f"\nScraping completed successfully! Found {len(results)} series.")
+    else:
+        print("\nNo data was scraped. Please check the website structure or selectors.")
+
+
+if __name__ == "__main__":
+    # Install required packages:
+    # pip install playwright
+    # playwright install
+
+    asyncio.run(main())

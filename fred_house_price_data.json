@@ -1,0 +1,2072 @@
+[
+  {
+    "title": "Home Price Index (Low Tier) for Seattle, Washington",
+    "series_id": "SEXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.410193"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Seattle, Washington",
+    "series_id": "SEXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.425859"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SEXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.527700"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SEXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.548594"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SEXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.567501"
+  },
+  {
+    "title": "Home Price Index (High Tier) for Phoenix, Arizona",
+    "series_id": "PHXRHTSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRHTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.641326"
+  },
+  {
+    "title": "Home Price Index (High Tier) for Phoenix, Arizona",
+    "series_id": "PHXRHTSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRHTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.674692"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PHXRHTNSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRHTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.756582"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PHXRHTNSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRHTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.786141"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PHXRHTNSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRHTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.819172"
+  },
+  {
+    "title": "Purchase Only House Price Index for the West North Central Census Division",
+    "series_id": "PONHPI00107M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00107M226S",
+    "description": "The purchase-only index is based on more than 6 million repeat sales transactions on the same single-family properties.",
+    "last_updated": "",
+    "frequency": "Index Jan 1991=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.913360"
+  },
+  {
+    "title": "Purchase Only House Price Index for the West North Central Census Division",
+    "series_id": "PONHPI00107M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00107M226S",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:13.946966"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00107M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00107M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.085183"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00107M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00107M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.120572"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00107M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00107M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.162733"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Los Angeles, California",
+    "series_id": "LXXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.270373"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Los Angeles, California",
+    "series_id": "LXXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.292386"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LXXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.409134"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LXXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.451386"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LXXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.483722"
+  },
+  {
+    "title": "Condo Price Sales Pair Counts for New York, New York",
+    "series_id": "NYXRCPSNSA",
+    "url": "https://fred.stlouisfed.org/series/NYXRCPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.528330"
+  },
+  {
+    "title": "Condo Price Sales Pair Counts for New York, New York",
+    "series_id": "NYXRCPSNSA",
+    "url": "https://fred.stlouisfed.org/series/NYXRCPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.543040"
+  },
+  {
+    "title": "Condo Price Sales Pair Counts for Boston, Massachusetts",
+    "series_id": "BOXRCPSNSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRCPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.645368"
+  },
+  {
+    "title": "Condo Price Sales Pair Counts for Boston, Massachusetts",
+    "series_id": "BOXRCPSNSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRCPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.670433"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Tampa, Florida",
+    "series_id": "TPXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/TPXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.809683"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Tampa, Florida",
+    "series_id": "TPXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/TPXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.827812"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "TPXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/TPXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.962832"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "TPXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/TPXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.979982"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "TPXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/TPXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:14.999122"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for San Francisco, California",
+    "series_id": "SFXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/SFXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.059946"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for San Francisco, California",
+    "series_id": "SFXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/SFXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.076114"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SFXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/SFXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.151488"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SFXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/SFXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.168710"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SFXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/SFXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.188700"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Chicago, Illinois",
+    "series_id": "CHXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/CHXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.241672"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Chicago, Illinois",
+    "series_id": "CHXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/CHXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.264793"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "CHXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/CHXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.386590"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "CHXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/CHXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.402610"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "CHXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/CHXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.418827"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Miami, Florida",
+    "series_id": "MIXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.463919"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Miami, Florida",
+    "series_id": "MIXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.476613"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MIXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.552190"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MIXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.568450"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MIXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.588607"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Seattle, Washington",
+    "series_id": "SEXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.673414"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Seattle, Washington",
+    "series_id": "SEXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.698888"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SEXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.803750"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SEXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.834168"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SEXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.868177"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Minneapolis, Minnesota",
+    "series_id": "MNXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.921649"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Minneapolis, Minnesota",
+    "series_id": "MNXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.935341"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MNXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:15.992594"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MNXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.022839"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MNXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.059636"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Tampa, Florida",
+    "series_id": "TPXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/TPXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.177113"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Tampa, Florida",
+    "series_id": "TPXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/TPXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.215294"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "TPXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/TPXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.325301"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "TPXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/TPXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.359394"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "TPXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/TPXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.390819"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Los Angeles, California",
+    "series_id": "LXXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.484582"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Los Angeles, California",
+    "series_id": "LXXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.514615"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LXXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.656201"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LXXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.679266"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LXXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.699705"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Cleveland, Ohio",
+    "series_id": "CEXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/CEXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.753369"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Cleveland, Ohio",
+    "series_id": "CEXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/CEXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.779053"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Charlotte, North Carolina",
+    "series_id": "CRXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/CRXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.851222"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Charlotte, North Carolina",
+    "series_id": "CRXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/CRXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.865705"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Miami, Florida",
+    "series_id": "MIXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.944513"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Miami, Florida",
+    "series_id": "MIXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:16.957660"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Minneapolis, Minnesota",
+    "series_id": "MNXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:17.044825"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Minneapolis, Minnesota",
+    "series_id": "MNXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:17.082975"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Phoenix, Arizona",
+    "series_id": "PHXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:17.252845"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Phoenix, Arizona",
+    "series_id": "PHXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:17.277791"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Chicago, Illinois",
+    "series_id": "CHXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/CHXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:17.454292"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Chicago, Illinois",
+    "series_id": "CHXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/CHXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:17.487515"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Detroit, Michigan",
+    "series_id": "DEXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/DEXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:17.655929"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Detroit, Michigan",
+    "series_id": "DEXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/DEXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:17.693750"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Denver, Colorado",
+    "series_id": "DNXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:17.867795"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Denver, Colorado",
+    "series_id": "DNXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:17.892730"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Portland, Oregon",
+    "series_id": "POXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/POXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:18.069918"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Portland, Oregon",
+    "series_id": "POXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/POXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:18.104906"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Seattle, Washington",
+    "series_id": "SEXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:18.289965"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Seattle, Washington",
+    "series_id": "SEXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/SEXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:18.317278"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for New York, New York",
+    "series_id": "NYXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/NYXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:18.490682"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for New York, New York",
+    "series_id": "NYXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/NYXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:18.525203"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Washington D.C.",
+    "series_id": "WDXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:18.678426"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Washington D.C.",
+    "series_id": "WDXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:18.709475"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Miami, Florida",
+    "series_id": "MIXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:18.884704"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Miami, Florida",
+    "series_id": "MIXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:18.915677"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MIXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.050534"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MIXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.080022"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MIXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/MIXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.114984"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Denver, Colorado",
+    "series_id": "DNXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.219169"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Denver, Colorado",
+    "series_id": "DNXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.242591"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "DNXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.324819"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "DNXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.341327"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "DNXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.357892"
+  },
+  {
+    "title": "Condo Price Sales Pair Counts for Los Angeles, California",
+    "series_id": "LXXRCPSNSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRCPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.422465"
+  },
+  {
+    "title": "Condo Price Sales Pair Counts for Los Angeles, California",
+    "series_id": "LXXRCPSNSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRCPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.436851"
+  },
+  {
+    "title": "Purchase Only House Price Index for the East South Central Census Division",
+    "series_id": "PONHPI00104M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00104M226S",
+    "description": "The purchase-only index is based on more than 6 million repeat sales transactions on the same single-family properties.",
+    "last_updated": "",
+    "frequency": "Index Jan 1991=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.501873"
+  },
+  {
+    "title": "Purchase Only House Price Index for the East South Central Census Division",
+    "series_id": "PONHPI00104M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00104M226S",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.517898"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00104M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00104M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.608463"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00104M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00104M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.647784"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00104M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00104M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.687959"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for New York, New York",
+    "series_id": "NYXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/NYXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.790457"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for New York, New York",
+    "series_id": "NYXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/NYXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.828374"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "NYXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/NYXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.959972"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "NYXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/NYXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:19.992056"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "NYXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/NYXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.032340"
+  },
+  {
+    "title": "Purchase Only House Price Index for the West South Central Census Division",
+    "series_id": "PONHPI00105M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00105M226S",
+    "description": "The purchase-only index is based on more than 6 million repeat sales transactions on the same single-family properties.",
+    "last_updated": "",
+    "frequency": "Index Jan 1991=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.130826"
+  },
+  {
+    "title": "Purchase Only House Price Index for the West South Central Census Division",
+    "series_id": "PONHPI00105M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00105M226S",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.149912"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00105M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00105M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.248736"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00105M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00105M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.277980"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00105M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00105M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.310018"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Las Vegas, Nevada",
+    "series_id": "LVXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/LVXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.415416"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Las Vegas, Nevada",
+    "series_id": "LVXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/LVXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.453346"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LVXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/LVXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.564639"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LVXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/LVXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.584127"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LVXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/LVXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.601020"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Minneapolis, Minnesota",
+    "series_id": "MNXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.647530"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Minneapolis, Minnesota",
+    "series_id": "MNXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.665446"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MNXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.758380"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MNXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.783383"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "MNXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/MNXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.809214"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Portland, Oregon",
+    "series_id": "POXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/POXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.882383"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Portland, Oregon",
+    "series_id": "POXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/POXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.898596"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "POXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/POXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.969939"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "POXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/POXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:20.994003"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "POXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/POXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.018921"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Boston, Massachusetts",
+    "series_id": "BOXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.103383"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Boston, Massachusetts",
+    "series_id": "BOXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.128053"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "BOXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.234632"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "BOXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.262424"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "BOXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.291700"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for San Diego, California",
+    "series_id": "SDXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/SDXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.365284"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for San Diego, California",
+    "series_id": "SDXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/SDXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.395784"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SDXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/SDXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.486338"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SDXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/SDXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.517440"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "SDXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/SDXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.544978"
+  },
+  {
+    "title": "Purchase Only House Price Index for the Mountain Census Division",
+    "series_id": "PONHPI00108M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00108M226S",
+    "description": "The purchase-only index is based on more than 6 million repeat sales transactions on the same single-family properties.",
+    "last_updated": "",
+    "frequency": "Index Jan 1991=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.622275"
+  },
+  {
+    "title": "Purchase Only House Price Index for the Mountain Census Division",
+    "series_id": "PONHPI00108M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00108M226S",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.649550"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00108M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00108M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.725648"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00108M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00108M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.745539"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00108M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00108M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.757688"
+  },
+  {
+    "title": "Condo Price Sales Pair Counts for Chicago, Illinois",
+    "series_id": "CHXRCPSNSA",
+    "url": "https://fred.stlouisfed.org/series/CHXRCPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.813214"
+  },
+  {
+    "title": "Condo Price Sales Pair Counts for Chicago, Illinois",
+    "series_id": "CHXRCPSNSA",
+    "url": "https://fred.stlouisfed.org/series/CHXRCPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.852536"
+  },
+  {
+    "title": "Purchase Only House Price Index for the East North Central Census Division",
+    "series_id": "PONHPI00106M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00106M226S",
+    "description": "The purchase-only index is based on more than 6 million repeat sales transactions on the same single-family properties.",
+    "last_updated": "",
+    "frequency": "Index Jan 1991=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.986329"
+  },
+  {
+    "title": "Purchase Only House Price Index for the East North Central Census Division",
+    "series_id": "PONHPI00106M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00106M226S",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:21.999609"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00106M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00106M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.076108"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00106M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00106M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.101605"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00106M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00106M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.136922"
+  },
+  {
+    "title": "Purchase Only House Price Index for the South Atlantic Census Division",
+    "series_id": "PONHPI00103M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00103M226S",
+    "description": "The purchase-only index is based on more than 6 million repeat sales transactions on the same single-family properties.",
+    "last_updated": "",
+    "frequency": "Index Jan 1991=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.234291"
+  },
+  {
+    "title": "Purchase Only House Price Index for the South Atlantic Census Division",
+    "series_id": "PONHPI00103M226S",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00103M226S",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.260475"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00103M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00103M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.378312"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00103M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00103M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.405811"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 1991=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PONHPI00103M226N",
+    "url": "https://fred.stlouisfed.org/series/PONHPI00103M226N",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.437893"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Boston, Massachusetts",
+    "series_id": "BOXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.539551"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Boston, Massachusetts",
+    "series_id": "BOXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.569906"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "BOXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.710010"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "BOXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.744447"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "BOXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.783083"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Portland, Oregon",
+    "series_id": "POXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/POXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.880540"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Portland, Oregon",
+    "series_id": "POXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/POXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:22.909860"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "POXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/POXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.037217"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "POXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/POXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.072309"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "POXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/POXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.093806"
+  },
+  {
+    "title": "Condo Price Sales Pair Counts for San Francisco, California",
+    "series_id": "SFXRCPSNSA",
+    "url": "https://fred.stlouisfed.org/series/SFXRCPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.168452"
+  },
+  {
+    "title": "Condo Price Sales Pair Counts for San Francisco, California",
+    "series_id": "SFXRCPSNSA",
+    "url": "https://fred.stlouisfed.org/series/SFXRCPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.197181"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Atlanta, Georgia",
+    "series_id": "ATXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/ATXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.329862"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Atlanta, Georgia",
+    "series_id": "ATXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/ATXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.357128"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "ATXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/ATXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.448003"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "ATXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/ATXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.475540"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "ATXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/ATXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.497842"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Denver, Colorado",
+    "series_id": "DNXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.591109"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Denver, Colorado",
+    "series_id": "DNXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.619669"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "DNXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.758956"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "DNXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.791757"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "DNXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/DNXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.821771"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Phoenix, Arizona",
+    "series_id": "PHXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.921441"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Phoenix, Arizona",
+    "series_id": "PHXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:23.951825"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PHXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.101331"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PHXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.138117"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "PHXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/PHXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.179933"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Washington D.C.",
+    "series_id": "WDXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.280177"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Washington D.C.",
+    "series_id": "WDXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.303351"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "WDXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.404794"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "WDXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.430955"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "WDXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.456399"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Washington D.C.",
+    "series_id": "WDXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRMTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.516450"
+  },
+  {
+    "title": "Home Price Index (Middle Tier) for Washington D.C.",
+    "series_id": "WDXRMTSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRMTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.537962"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "WDXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.668374"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "WDXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.703297"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "WDXRMTNSA",
+    "url": "https://fred.stlouisfed.org/series/WDXRMTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.740738"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Atlanta, Georgia",
+    "series_id": "ATXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/ATXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.817363"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Atlanta, Georgia",
+    "series_id": "ATXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/ATXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.850323"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Boston, Massachusetts",
+    "series_id": "BOXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:24.991194"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Boston, Massachusetts",
+    "series_id": "BOXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/BOXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:25.016503"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Los Angeles, California",
+    "series_id": "LXXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:25.164354"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for Los Angeles, California",
+    "series_id": "LXXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/LXXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:25.197731"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for San Francisco, California",
+    "series_id": "SFXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/SFXRPSNSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Units, Monthly, Not Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:25.368073"
+  },
+  {
+    "title": "Home Price Sales Pair Counts for San Francisco, California",
+    "series_id": "SFXRPSNSA",
+    "url": "https://fred.stlouisfed.org/series/SFXRPSNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:25.385648"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Las Vegas, Nevada",
+    "series_id": "LVXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/LVXRLTSA",
+    "description": "For more information regarding the index, please visit Standard & Poor's (https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-corelogic-cs-home-price-indices.pdf). There is more information about home price sales pairs in the Methodology section. Copyright, 2016, Standard & Poor's Financial Services LLC. Reprinted with permission.",
+    "last_updated": "",
+    "frequency": "Index Jan 2000=100, Monthly, Seasonally Adjusted",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:25.520409"
+  },
+  {
+    "title": "Home Price Index (Low Tier) for Las Vegas, Nevada",
+    "series_id": "LVXRLTSA",
+    "url": "https://fred.stlouisfed.org/series/LVXRLTSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:25.540629"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LVXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/LVXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:25.633002"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LVXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/LVXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:25.652685"
+  },
+  {
+    "title": "Monthly,\n                        Index Jan 2000=100,\n                        Not Seasonally Adjusted",
+    "series_id": "LVXRLTNSA",
+    "url": "https://fred.stlouisfed.org/series/LVXRLTNSA",
+    "description": "",
+    "last_updated": "",
+    "frequency": "",
+    "units": "",
+    "scraped_at": "2025-09-06T13:44:25.681554"
+  }
+]
