@@ -634,7 +634,7 @@ export default function Home() {
                         className={isSelected ? "selected" : ""}
                         onClick={() => handleOptionClick(row.term, rate)}
                       >
-                        ${row[rate].toFixed(2)}
+                        ${row.rate}
                       </td>
                     );
                   })}
