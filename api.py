@@ -31,6 +31,17 @@ def get_current_rate():
         return jsonify({"error": str(e)}), 500
 
 
+@app.route("/api/price-index-options", methods=["GET"])
+def get_price_index_options():
+    if not fred_data_service:
+        return jsonify({"error": "FRED service not available"}), 500
+    try:
+        price_index_options = list(fred_data_service.FRED_home_indicies.keys())
+        return jsonify({"list_of_price_indicies": price_index_options})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route("/api/amortization", methods=["POST"])
 def get_amortization_schedule():
     data = request.get_json()

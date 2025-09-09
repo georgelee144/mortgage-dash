@@ -27,7 +27,8 @@ async def scrape_fred_house_price_data():
             print("Navigating to FRED search results...")
 
             # Navigate to the URL
-            url = "https://fred.stlouisfed.org/searchresults/?st=house+price&t=hpi%3Bmonthly&ob=sr&od=desc&pageID=2"
+            url = "https://fred.stlouisfed.org/searchresults/?st=house+price&t=hpi%3Bmonthly&ob=sr&od=desc&pageID=1"
+            # url = "https://fred.stlouisfed.org/searchresults/?st=house+price&t=hpi%3Bmonthly&ob=sr&od=desc&pageID=2"
             await page.goto(url, wait_until="networkidle", timeout=30000)
 
             # Extract all search results

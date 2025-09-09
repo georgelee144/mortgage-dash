@@ -158,7 +158,7 @@ def update_cdf_graphs(
     term_in_months: int,
     property_value: float,
     property_price_index: str,
-) -> dcc.Graph:
+) -> Tuple[dcc.Graph, dcc.Graph]:
     if term_in_months is None or property_value is None or property_price_index is None:
         raise PreventUpdate
 
