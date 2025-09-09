@@ -136,7 +136,7 @@ def get_mortgage_options():
             table_data.append(row)
 
         response_data = {
-            "columns": [f"{rate:.3f}" for rate in rates],
+            "columns": [f"{rate:.4f}" for rate in rates],
             "data": table_data,
         }
 
@@ -145,7 +145,3 @@ def get_mortgage_options():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-if __name__ == "__main__":
-
-
-    app.run(host="0.0.0.0", port=5000, debug=True)
