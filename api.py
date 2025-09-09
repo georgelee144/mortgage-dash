@@ -147,7 +147,7 @@ def get_mortgage_options():
             table_data.append(row)
 
         response_data = {
-            "columns": [f"{rate:.3f}" for rate in rates],
+            "columns": [f"{rate:.4f}" for rate in rates],
             "data": table_data,
         }
 
