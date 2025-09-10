@@ -67,10 +67,15 @@ def get_amortization_schedule():
 
 @app.route("/api/monte-carlo", methods=["POST"])
 def get_monte_carlo_simulation():
-    data = request.get_json()
+    if request.is_json:
+        data = request.get_json()
+    else:
+        data = request.form.to_dict()
+    
+    file = request.files.get("file")
 
     # Define and check for the keys this endpoint actually needs
-    required_keys = ["propertyValue", "termInMonths", "priceIndexKey"]
+    required_keys = ["propertyValue", "termInMonths"]
     if not all(key in data for key in required_keys):
         return jsonify(
             {"error": "Missing required fields for Monte Carlo simulation"}
