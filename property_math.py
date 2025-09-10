@@ -269,10 +269,17 @@ class MonteCarloPropertyValue:
 
         return self.__make_cdf_x_y(data=df_last_row)
 
+    def get_cdf_data(self):
+        returns_x, returns_y = self.get_returns_cdf()
+        ending_x, ending_y = self.get_ending_prices_cdf()
+        return {
+            "returns_cdf": {"x": returns_x.tolist(), "y": returns_y.tolist()},
+            "ending_prices_cdf": {"x": ending_x.tolist(), "y": ending_y.tolist()},
+        }
+
     def selective_runs_to_plot(self, max_number_runs=100):
         # max_number_runs - 5
         return
-
 
 if __name__ == "__main__":
     sample_data = [
