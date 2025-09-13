@@ -1,3 +1,4 @@
+import warnings
 import numpy as np
 import pandas as pd
 from decimal import Decimal, getcontext
@@ -31,21 +32,29 @@ def generate_mortgage_amortization_table(
     loan_amount: float,
     mortgage_payment: float | Decimal,
     property_value: float | Decimal,
+    regular_extra_payment: float | Decimal,
+    irregular_extra_payments: List[float | int],
 ) -> pd.DataFrame:
     getcontext().prec = int(Decimal(loan_amount).log10().quantize(Decimal("1"))) + 2
 
     property_value = Decimal(property_value)
     mortgage_payment = Decimal(mortgage_payment)
+    regular_extra_payment = Decimal(regular_extra_payment)
 
     beginning_principal: List[Decimal] = [Decimal(loan_amount)]
     ending_principal: List[Decimal] = []
     interest_to_pay: List[Decimal] = []
-    principal_payment: List[Decimal] = []
+    remaining_payment_to_principal: List[Decimal] = []
+    irregular_extra_payments_for_df: List[Decimal] = []
+
+    total_principal_payment: List[Decimal] = []
     equity: List[Decimal] = []
 
     effective_interest_rate = Decimal(
         annual_rate_percentage / number_of_periods_per_compounding_term
     )
+
+    iteratation = 0
 
     while True:
         interest_to_pay.append(
@@ -53,25 +62,47 @@ def generate_mortgage_amortization_table(
                 beginning_principal[-1] * effective_interest_rate
             )
         )
-        principal_payment.append(mortgage_payment - interest_to_pay[-1])
-        ending_principal.append(beginning_principal[-1] - principal_payment[-1])
+        remaining_payment_to_principal.append(mortgage_payment - interest_to_pay[-1])
+        total_principal = mortgage_payment - interest_to_pay[-1] + regular_extra_payment
+        if total_principal == Decimal("0.00"):
+            total_principal += Decimal("0.01")
+        # print(iteratation, beginning_principal[-1])
+        try:
+            single_irregular_extra_payment = Decimal(
+                irregular_extra_payments[iteratation]
+            )
+            irregular_extra_payments_for_df.append(single_irregular_extra_payment)
+            total_principal += single_irregular_extra_payment
+        except Exception as error:
+            warnings.warn(f"{error}")
+            irregular_extra_payments_for_df.append(Decimal("0.00"))
+
+        total_principal_payment.append(total_principal)
+
+        ending_principal.append(beginning_principal[-1] - total_principal_payment[-1])
+
         equity.append(property_value - ending_principal[-1])
         beginning_principal.append(ending_principal[-1])
 
         if beginning_principal[-1] <= 0:
             break
 
-    data = {
+        iteratation += 1
+
+    data: Dict[str, List[Decimal] | List[float]] = {
         "beginning_principal": beginning_principal[:-1],
         "interest_to_pay": interest_to_pay,
-        "principal_payment": principal_payment,
+        "mortgage_payment_to_principal": remaining_payment_to_principal,
+        "irregular_extra_payment": irregular_extra_payments_for_df,
+        "total_principal_payment": total_principal_payment,
         "ending_principal": ending_principal,
         "equity": equity,
     }
 
     df = pd.DataFrame(data=data).reset_index(names=["period"])
     df["period"] = df["period"] + 1
-    df["percent of payment to principal"] = df["principal_payment"].div(
+    df["regular extra payment"] = regular_extra_payment
+    df["percent of payment to principal"] = df["mortgage_payment_to_principal"].div(
         mortgage_payment
     )
     df["percent of payment to interest"] = df["interest_to_pay"].div(mortgage_payment)
@@ -88,6 +119,8 @@ class Mortgage:
         number_of_periods_for_loan_term: int,
         loan_amount: float,
         property_value: float,
+        regular_extra_payment: float | None,
+        irregular_extra_payments: List[float | int] | None = [],
         number_of_periods_per_compounding_term: int = 12,
     ) -> None:
         self.annual_rate_percentage = annual_rate_percentage / 100
@@ -98,6 +131,24 @@ class Mortgage:
 
         self.loan_amount = loan_amount
         self.property_value = property_value
+
+        if regular_extra_payment is None:
+            regular_extra_payment = 0
+
+        self.regular_extra_payment = regular_extra_payment
+
+        if irregular_extra_payments is None:
+            self.irregular_extra_payments = [0.0] * (
+                number_of_periods_for_loan_term + 1
+            )
+
+        elif len(irregular_extra_payments) < number_of_periods_for_loan_term:
+            zero_padding = [0.0] * (
+                number_of_periods_for_loan_term - len(irregular_extra_payments) + 1
+            )
+            self.irregular_extra_payments = irregular_extra_payments + zero_padding
+        else:
+            self.irregular_extra_payments = irregular_extra_payments + [0]
 
         self.effective_interest_rate_per_compounding_period = (
             self.annual_rate_percentage / self.number_of_periods_per_compounding_term
@@ -111,7 +162,7 @@ class Mortgage:
 
     def get_mortgage_ammortization(self) -> pd.DataFrame:
         if hasattr(Mortgage, "mortgage_ammortization_df"):
-            return self.mortgage_ammortization_df
+            pass
 
         else:
             self.mortgage_ammortization_df = generate_mortgage_amortization_table(
@@ -120,7 +171,10 @@ class Mortgage:
                 loan_amount=self.loan_amount,
                 mortgage_payment=self.mortgage_payment,
                 property_value=self.property_value,
+                regular_extra_payment=self.regular_extra_payment,
+                irregular_extra_payments=self.irregular_extra_payments,
             )
+
         return self.mortgage_ammortization_df
 
 

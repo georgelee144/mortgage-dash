@@ -1,14 +1,13 @@
 import os
-import pandas as pd
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from dotenv import load_dotenv
+import FRED_data_service
+import property_math
 
 load_dotenv()
 print(f"--- API KEY LOADED: '{os.getenv('FRED_API')}' ---")
 
-import FRED_data_service
-import property_math
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})

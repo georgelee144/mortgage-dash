@@ -89,7 +89,7 @@ class FRED_data:
         series_key_or_series_id: str,
         realtime_start: str = "1776-07-04",
         realtime_end: str = "9999-12-31",
-    ):
+    ) -> pd.DataFrame:
         series_id = self.FRED_data_constants.get(
             series_key_or_series_id, series_key_or_series_id
         )

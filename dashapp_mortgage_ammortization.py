@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Any, Dict, List, Tuple
 import os
 from dash import Dash, dcc, html, Input, Output, callback, dash_table
 from dash.exceptions import PreventUpdate
@@ -13,17 +13,28 @@ fred_data_service = FRED_data_service.FRED_data(API_key=os.getenv("FRED_API", ""
 
 app.layout = html.Div(
     children=[
-        dcc.Input(id="loan_amount", type="number", placeholder="loan_amount", min=1),
-        dcc.Input(
-            id="property_value", type="number", placeholder="property_value", min=1
+        html.Div(
+            children=[
+                dcc.Input(
+                    id="loan_amount", type="number", placeholder="loan_amount", min=1
+                ),
+                dcc.Input(
+                    id="property_value",
+                    type="number",
+                    placeholder="property_value",
+                    min=1,
+                ),
+                dcc.Input(
+                    id="annual_rate_percentage",
+                    type="number",
+                    placeholder="interest_rate",
+                    value=float(fred_data_service.get_most_recent_interest_rate()),
+                ),
+                dcc.Input(id="term_in_months", type="number", value=360, min=1),
+                dcc.Input(id="regular_prepayment", type="number", value=0, min=0),
+            ],
+            id="input_div",
         ),
-        dcc.Input(
-            id="annual_rate_percentage",
-            type="number",
-            placeholder="interest_rate",
-            value=float(fred_data_service.get_most_recent_interest_rate()),
-        ),
-        dcc.Input(id="term_in_months", type="number", value=360, min=1),
         html.Div(
             children=[dash_table.DataTable(id="estimated_mortgage_payment_grid")],
             id="estimated_mortgage_payment_grid_div",
@@ -67,10 +78,10 @@ app.layout = html.Div(
     Input(component_id="term_in_months", component_property="value"),
 )
 def update_mortgage_option_range_figure(
-    loan_amount: float,
-    annual_rate_percentage: float,
-    term_in_months: int,
-):
+    loan_amount: float | None,
+    annual_rate_percentage: float | None,
+    term_in_months: int | None,
+) -> Tuple[Dict[str, List[Any]], Dict[str, Any]]:
     if loan_amount is None or annual_rate_percentage is None or term_in_months is None:
         raise PreventUpdate
 
@@ -94,6 +105,8 @@ def update_mortgage_option_range_figure(
                 number_of_periods_for_loan_term=term,
                 loan_amount=loan_amount,
                 property_value=0,
+                regular_extra_payment=0,
+                irregular_extra_payments=[],
             )
 
         df = pd.DataFrame(
@@ -109,7 +122,7 @@ def update_mortgage_option_range_figure(
     columns_of_df_all = df_all.columns
     df_all = df_all[[columns_of_df_all[-1]] + columns_of_df_all[:-1].to_list()]
 
-    active_cell = {
+    active_cell: Dict[str, Any] = {
         "row": len(df_all) - 1,
         "column": 5,
         "column_id": f"{annual_rate_percentage}%",
@@ -123,6 +136,7 @@ def update_mortgage_option_range_figure(
     Input(component_id="loan_amount", component_property="value"),
     Input(component_id="term_in_months", component_property="value"),
     Input(component_id="property_value", component_property="value"),
+    Input(component_id="regular_prepayment", component_property="value"),
     Input(
         component_id="estimated_mortgage_payment_grid", component_property="active_cell"
     ),
@@ -132,6 +146,7 @@ def update_ammortization_figure(
     loan_amount: float,
     term_in_months: int,
     property_value: float,
+    regular_prepayment: float,
     active_cell_selected: Dict[str, str],
     graph_selector: str,
 ):
@@ -153,6 +168,8 @@ def update_ammortization_figure(
         number_of_periods_for_loan_term=term_in_months_to_use,
         loan_amount=loan_amount,
         property_value=property_value,
+        regular_extra_payment=regular_prepayment,
+        irregular_extra_payments=[],
     )
     df = mortgage.get_mortgage_ammortization()
 
@@ -193,6 +210,7 @@ def update_ammortization_figure(
     Input(component_id="loan_amount", component_property="value"),
     Input(component_id="term_in_months", component_property="value"),
     Input(component_id="property_value", component_property="value"),
+    Input(component_id="regular_prepayment", component_property="value"),
     Input(
         component_id="estimated_mortgage_payment_grid", component_property="active_cell"
     ),
@@ -201,6 +219,7 @@ def update_ammortization_table(
     loan_amount: float,
     term_in_months: int,
     property_value: float,
+    regular_prepayment: float,
     active_cell_selected: Dict[str, str],
 ):
     if active_cell_selected is None or property_value is None:
@@ -221,6 +240,8 @@ def update_ammortization_table(
         number_of_periods_for_loan_term=term_in_months_to_use,
         loan_amount=loan_amount,
         property_value=property_value,
+        regular_extra_payment=regular_prepayment,
+        irregular_extra_payments=[],
     )
 
     df = mortgage.get_mortgage_ammortization()
