@@ -147,6 +147,16 @@ export default function Home() {
     setIsMonteCarloLoading(true);
     setMonteCarloData(null);
     setError("");
+
+    const formData = new FormData();
+    formData.append("propertyValue", propertyValue);
+    formData.append("termInMonths", termInMonths);
+    formData.append("priceIndexKey", priceIndexKey);
+    formData.append("replace", replace);
+    if (uploadedFile) {
+      formData.append("file", uploadedFile);
+    }
+
     try {
       const response = await fetch(`${API_BASE_URL}/api/monte-carlo`, {
         method: "POST",
