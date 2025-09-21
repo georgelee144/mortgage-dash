@@ -38,6 +38,7 @@ export default function Home() {
   const [error, setError] = useState("");
 
   const [replace, setReplace] = useState(true);
+  const [uploadedFile, setUploadedFile] = useState(null);
 
   const API_BASE_URL = "http://127.0.0.1:5000";
 
@@ -150,7 +151,12 @@ export default function Home() {
       const response = await fetch(`${API_BASE_URL}/api/monte-carlo`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ propertyValue, termInMonths, priceIndexKey, replace }),
+        body: JSON.stringify({
+          propertyValue,
+          termInMonths,
+          priceIndexKey,
+          replace,
+        }),
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Simulation failed");
