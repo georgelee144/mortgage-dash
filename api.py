@@ -71,7 +71,7 @@ def get_monte_carlo_simulation():
         data = request.get_json()
     else:
         data = request.form.to_dict()
-    
+
     file = request.files.get("file")
 
     # Define and check for the keys this endpoint actually needs
@@ -95,6 +95,7 @@ def get_monte_carlo_simulation():
             sample_data=sample_data,
             length_of_each_run=int(data["termInMonths"]),
             number_of_runs=100,  # Keep runs low for faster API response
+            replace=data.get("replace", True), 
         )
 
         df_sim = monte_carlo_simulator.generate_sample_data()
