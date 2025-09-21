@@ -37,6 +37,8 @@ export default function Home() {
   const [isMonteCarloLoading, setIsMonteCarloLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const [replace,setReplace] = useState(true);
+  
   const API_BASE_URL = "http://127.0.0.1:5000";
 
   // --- Data Fetching & Handlers ---
