@@ -80,7 +80,7 @@ export default function Home() {
     };
     fetchPriceIndexOptions();
   }, []);
-  
+
   const handleCalculate = async (rate, term) => {
     setIsAmortizationLoading(true);
     setError("");
@@ -400,9 +400,11 @@ export default function Home() {
                 value={priceIndexKey}
                 onChange={(e) => setPriceIndexKey(e.target.value)}
               >
-                <option>
-                  S&P CoreLogic Case-Shiller U.S. National Home Price Index
-                </option>
+                {priceIndexOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
               </select>
             </div>
           )}{" "}
