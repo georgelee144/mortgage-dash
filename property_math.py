@@ -149,11 +149,11 @@ class MonteCarloPropertyValue:
 
         return np_sample_data[~np.isnan(np_sample_data)]
 
-    def generate_sample_data(self, replace=True):
+    def generate_sample_data(self):
         sampled_runs = self.random_number_generator.choice(
             a=self.sample_data,
             size=(self.number_of_runs, self.length_of_each_run),
-            replace=replace,
+            replace=self.replace
         )
         sampled_runs = np.add(sampled_runs, 1)
         self.sampled_runs = np.insert(
