@@ -64,6 +64,23 @@ export default function Home() {
     fetchInitialRate();
   }, []);
 
+  useEffect(() => {
+    const fetchPriceIndexOptions = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/price-index-options`);
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
+        if (data.list_of_price_indicies) {
+          setPriceIndexOptions(data.list_of_price_indicies);
+        }
+      } catch (err) {
+        console.error("Failed to fetch price index options:", err);
+        setError("Could not fetch the price index options from the server.");
+      }
+    };
+    fetchPriceIndexOptions();
+  }, []);
+  
   const handleCalculate = async (rate, term) => {
     setIsAmortizationLoading(true);
     setError("");
