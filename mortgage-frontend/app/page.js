@@ -150,7 +150,7 @@ export default function Home() {
       const response = await fetch(`${API_BASE_URL}/api/monte-carlo`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ propertyValue, termInMonths, priceIndexKey }),
+        body: JSON.stringify({ propertyValue, termInMonths, priceIndexKey, replace }),
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Simulation failed");
