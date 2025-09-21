@@ -31,6 +31,17 @@ def get_current_rate():
         return jsonify({"error": str(e)}), 500
 
 
+@app.route("/api/price-index-options", methods=["GET"])
+def get_price_index_options():
+    if not fred_data_service:
+        return jsonify({"error": "FRED service not available"}), 500
+    try:
+        price_index_options = list(fred_data_service.FRED_home_indicies.keys())
+        return jsonify({"list_of_price_indicies": price_index_options})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route("/api/amortization", methods=["POST"])
 def get_amortization_schedule():
     data = request.get_json()
@@ -56,10 +67,15 @@ def get_amortization_schedule():
 
 @app.route("/api/monte-carlo", methods=["POST"])
 def get_monte_carlo_simulation():
-    data = request.get_json()
+    if request.is_json:
+        data = request.get_json()
+    else:
+        data = request.form.to_dict()
+
+    file = request.files.get("file")
 
     # Define and check for the keys this endpoint actually needs
-    required_keys = ["propertyValue", "termInMonths", "priceIndexKey"]
+    required_keys = ["propertyValue", "termInMonths"]
     if not all(key in data for key in required_keys):
         return jsonify(
             {"error": "Missing required fields for Monte Carlo simulation"}
@@ -79,6 +95,7 @@ def get_monte_carlo_simulation():
             sample_data=sample_data,
             length_of_each_run=int(data["termInMonths"]),
             number_of_runs=100,  # Keep runs low for faster API response
+            replace=data.get("replace", True), 
         )
 
         df_sim = monte_carlo_simulator.generate_sample_data()

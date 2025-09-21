@@ -37,6 +37,10 @@ export default function Home() {
   const [isMonteCarloLoading, setIsMonteCarloLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const [replace, setReplace] = useState(true);
+  const [uploadedFile, setUploadedFile] = useState(null);
+
+  const [priceIndexOptions, setPriceIndexOptions] = useState([]);
   const API_BASE_URL = "http://127.0.0.1:5000";
 
   // --- Data Fetching & Handlers ---
@@ -58,6 +62,23 @@ export default function Home() {
       }
     };
     fetchInitialRate();
+  }, []);
+
+  useEffect(() => {
+    const fetchPriceIndexOptions = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/price-index-options`);
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
+        if (data.list_of_price_indicies) {
+          setPriceIndexOptions(data.list_of_price_indicies);
+        }
+      } catch (err) {
+        console.error("Failed to fetch price index options:", err);
+        setError("Could not fetch the price index options from the server.");
+      }
+    };
+    fetchPriceIndexOptions();
   }, []);
 
   const handleCalculate = async (rate, term) => {
@@ -144,11 +165,20 @@ export default function Home() {
     setIsMonteCarloLoading(true);
     setMonteCarloData(null);
     setError("");
+
+    const formData = new FormData();
+    formData.append("propertyValue", propertyValue);
+    formData.append("termInMonths", termInMonths);
+    formData.append("priceIndexKey", priceIndexKey);
+    formData.append("replace", replace);
+    if (uploadedFile) {
+      formData.append("file", uploadedFile);
+    }
+
     try {
       const response = await fetch(`${API_BASE_URL}/api/monte-carlo`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ propertyValue, termInMonths, priceIndexKey }),
+        body: formData, // The body is now formData
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Simulation failed");
@@ -305,6 +335,19 @@ export default function Home() {
               onChange={(e) => setPropertyValue(Number(e.target.value))}
             />
           </div>
+          {activeTab === "simulation" && (
+            <div className="inputGroup">
+              <label className="label" htmlFor="file">
+                Upload returns file
+              </label>
+              <input
+                id="file"
+                className="input"
+                type="file"
+                onChange={(e) => setUploadedFile(e.target.files[0])}
+              />
+            </div>
+          )}
           <div className="inputGroup">
             <label className="label" htmlFor="annualRate">
               Annual Interest Rate (%)
@@ -357,10 +400,26 @@ export default function Home() {
                 value={priceIndexKey}
                 onChange={(e) => setPriceIndexKey(e.target.value)}
               >
-                <option>
-                  S&P CoreLogic Case-Shiller U.S. National Home Price Index
-                </option>
+                {priceIndexOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
               </select>
+            </div>
+          )}{" "}
+          {activeTab === "simulation" && (
+            <div className="inputGroup">
+              <label className="label" htmlFor="replace">
+                Replace values
+              </label>
+              <input
+                id="replace"
+                className="input"
+                type="checkbox"
+                checked={replace}
+                onChange={(e) => setReplace(e.target.checked)}
+              />
             </div>
           )}
           {activeTab === "calculator" ? (

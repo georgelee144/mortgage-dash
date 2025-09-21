@@ -129,18 +129,20 @@ class MonteCarloPropertyValue:
         self,
         starting_property_value: float,
         sample_data: ArrayLike,
-        assumed_constant_annual_inflation: float = 0.02,
+        assumed_constant_annual_growth_rate: float = 0.02,
         seed: int | None = None,
         length_of_each_run: int = 360,
         number_of_runs: int = 1000,
+        replace: bool = True,
     ) -> None:
         self.starting_property_value = starting_property_value
         self.sample_data = self.__clean_sample_data(sample_data)
-        self.assumed_constant_annual_inflation = assumed_constant_annual_inflation
+        self.assumed_constant_annual_growth_rate = assumed_constant_annual_growth_rate
         self.length_of_each_run = length_of_each_run
         self.number_of_runs = number_of_runs
 
         self.random_number_generator = np.random.default_rng(seed=seed)
+        self.replace=replace
 
     def __clean_sample_data(self, sample_data: ArrayLike) -> np.ndarray:
         np_sample_data = np.array(sample_data)
@@ -151,7 +153,7 @@ class MonteCarloPropertyValue:
         sampled_runs = self.random_number_generator.choice(
             a=self.sample_data,
             size=(self.number_of_runs, self.length_of_each_run),
-            replace=True,
+            replace=self.replace
         )
         sampled_runs = np.add(sampled_runs, 1)
         self.sampled_runs = np.insert(
@@ -175,9 +177,9 @@ class MonteCarloPropertyValue:
 
         stats: Dict[str, float | np.floating] = {}
 
-        inflation_price = (
+        price_with_assumed_constant_growth_rate = (
             self.starting_property_value
-            * (1 + self.assumed_constant_annual_inflation / 12)
+            * (1 + self.assumed_constant_annual_growth_rate / 12)
             ** self.length_of_each_run
         )
         average_ending_price = np.average(df_last_row)
@@ -191,9 +193,16 @@ class MonteCarloPropertyValue:
             / self.number_of_runs
         )
 
-        stats["Starting Price adjusted for inflation"] = inflation_price
-        stats["Precent greater than inflation adjusted price"] = (
-            len(df_last_row[df_last_row > inflation_price].index) / self.number_of_runs
+        stats["Starting Price adjusted for constant growth rate"] = (
+            price_with_assumed_constant_growth_rate
+        )
+        stats[
+            "Precent greater than starting Price adjusted for constant growth rate"
+        ] = (
+            len(
+                df_last_row[df_last_row > price_with_assumed_constant_growth_rate].index
+            )
+            / self.number_of_runs
         )
         stats["Precent greater than average ending price"] = (
             len(df_last_row[df_last_row > average_ending_price].index)
@@ -235,6 +244,40 @@ class MonteCarloPropertyValue:
         ) ** (12 / self.length_of_each_run) - 1
 
         return self.df_stats
+
+    def __make_cdf_x_y(self, data: ArrayLike):
+        data = np.array(data).flatten()
+        data = data[~np.isnan(data)]
+
+        if len(data) == 0:
+            return np.array([]), np.array([])
+
+        sorted_data = np.sort(data)
+        n = len(sorted_data)
+
+        x = sorted_data
+        y = np.arange(1, n + 1) / n
+
+        return x, y
+
+    def get_returns_cdf(self):
+        return self.__make_cdf_x_y(data=self.sample_data)
+
+    def get_ending_prices_cdf(self):
+        if not hasattr(self, "df"):
+            self.generate_sample_data()
+
+        df_last_row = self.df.iloc[-1, 1:]
+
+        return self.__make_cdf_x_y(data=df_last_row)
+
+    def get_cdf_data(self):
+        returns_x, returns_y = self.get_returns_cdf()
+        ending_x, ending_y = self.get_ending_prices_cdf()
+        return {
+            "returns_cdf": {"x": returns_x.tolist(), "y": returns_y.tolist()},
+            "ending_prices_cdf": {"x": ending_x.tolist(), "y": ending_y.tolist()},
+        }
 
     def selective_runs_to_plot(self, max_number_runs=100):
         # max_number_runs - 5
