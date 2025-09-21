@@ -133,6 +133,7 @@ class MonteCarloPropertyValue:
         seed: int | None = None,
         length_of_each_run: int = 360,
         number_of_runs: int = 1000,
+        replace: bool = True,
     ) -> None:
         self.starting_property_value = starting_property_value
         self.sample_data = self.__clean_sample_data(sample_data)
@@ -141,6 +142,7 @@ class MonteCarloPropertyValue:
         self.number_of_runs = number_of_runs
 
         self.random_number_generator = np.random.default_rng(seed=seed)
+        self.replace=replace
 
     def __clean_sample_data(self, sample_data: ArrayLike) -> np.ndarray:
         np_sample_data = np.array(sample_data)
@@ -280,6 +282,7 @@ class MonteCarloPropertyValue:
     def selective_runs_to_plot(self, max_number_runs=100):
         # max_number_runs - 5
         return
+
 
 if __name__ == "__main__":
     sample_data = [
