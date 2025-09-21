@@ -313,6 +313,19 @@ export default function Home() {
               onChange={(e) => setPropertyValue(Number(e.target.value))}
             />
           </div>
+          {activeTab === "simulation" && (
+            <div className="inputGroup">
+              <label className="label" htmlFor="file">
+                Upload returns file
+              </label>
+              <input
+                id="file"
+                className="input"
+                type="file"
+                onChange={(e) => setUploadedFile(e.target.files[0])}
+              />
+            </div>
+          )}
           <div className="inputGroup">
             <label className="label" htmlFor="annualRate">
               Annual Interest Rate (%)
