@@ -37,8 +37,8 @@ export default function Home() {
   const [isMonteCarloLoading, setIsMonteCarloLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const [replace,setReplace] = useState(true);
-  
+  const [replace, setReplace] = useState(true);
+
   const API_BASE_URL = "http://127.0.0.1:5000";
 
   // --- Data Fetching & Handlers ---
@@ -363,6 +363,20 @@ export default function Home() {
                   S&P CoreLogic Case-Shiller U.S. National Home Price Index
                 </option>
               </select>
+            </div>
+          )}{" "}
+          {activeTab === "simulation" && (
+            <div className="inputGroup">
+              <label className="label" htmlFor="replace">
+                Replace values
+              </label>
+              <input
+                id="replace"
+                className="input"
+                type="checkbox"
+                checked={replace}
+                onChange={(e) => setReplace(e.target.checked)}
+              />
             </div>
           )}
           {activeTab === "calculator" ? (
